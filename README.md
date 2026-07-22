@@ -2,11 +2,11 @@
 
 # K E S T R E L
 
-**sUAS flight trainer — fly any coordinate on Earth, on physics derived from real part specs.**
+**An FPV drone sim you can fly at any coordinate on Earth.**
 
-[**Download the latest build →**](../../releases/latest)
+[**Download →**](../../releases/latest)
 
-*a Ceradon Systems product · Windows x64 · alpha*
+*Free · Windows x64 · alpha*
 
 </div>
 
@@ -15,17 +15,15 @@
 <div align="center"><sub>Industrial flats · banked over structures · Times Square · desert badlands — all real coordinates, streamed live.
 <a href="../../releases/latest">Full trailer in the release assets</a></sub></div>
 
-KESTREL is an FPV/sUAS simulator built in Unreal Engine 5. Build a drone from
-**real component specifications**, fly it with faithful Betaflight feel and a
-Betaflight-style OSD on your own RC radio, over **photoreal real-world terrain
-streamed at any GPS coordinate you type in.**
+Type in a grid or drop a pin, and that exact spot loads in photoreal terrain —
+the same imagery as Google Earth. Build a quad out of real parts and it flies
+like those parts: real motor KV, real prop, real pack. Betaflight rates and a
+Betaflight OSD, on your own radio.
 
-It is not a game about drones. It is an attempt at a *training device*: the loop
-runs **configure a specific aircraft → fly that exact aircraft on a meaningful
-task → get a record out the other end.**
+The point is stick time without burning packs, props, or airspace.
 
-> **Alpha.** It is playable and it is rough. Things will break. Bug reports are
-> automatic — see below — and genuinely useful.
+> **This is an alpha and it is rough.** It will crash on you. Bug reports are
+> automatic and they genuinely help — see below.
 
 ![Banked FPV pass over photoreal terrain](media/flight-banked.png)
 
@@ -36,39 +34,38 @@ task → get a record out the other end.**
 1. [**Download**](../../releases/latest) `KESTREL-alpha-win64.zip` and unzip it
    **to its own folder**.
 2. Run **`KESTREL.exe`**. That is the only thing to click — no install, no
-   account, no setup. Photoreal terrain works out of the box.
-   SmartScreen will warn (the build is unsigned) → *More info* → *Run anyway*.
+   account. Terrain works out of the box.
+   SmartScreen will warn (unsigned build) → *More info* → *Run anyway*.
 3. If it will not start, run the bundled **`vc_redist.x64.exe`** once. A missing
-   Microsoft C++ runtime is the most common cause.
+   Microsoft C++ runtime is the usual cause.
 4. **CALIBRATE CONTROLLER → AUTO-DETECT → SAVE → BACK.**
-5. **LOCATION** → drop a pin on the map, or type `40.7580, -73.9855` → fly.
+5. **LOCATION** → drop a pin, or type `40.7580, -73.9855` → fly.
    Throttle down, then Enter (or your mapped switch) to arm.
 
-Needs a network connection for tile streaming. Keyboard and gamepad work, but an
-RC radio in USB-Joystick mode is the point.
+Needs internet for terrain streaming. Keyboard and gamepad work, but a radio in
+USB-Joystick mode is the point.
 
 ---
 
-## What makes it real
+## What is actually modelled
 
-- **Fly any coordinate on Earth.** Drop a pin, or type MGRS or `lat, lon`, and
-  that exact spot loads in photoreal 3D tiles. Ground elevation is looked up and
-  the world self-calibrates against the streamed terrain, so you spawn on the
-  actual street.
-- **Physics from real specs.** Mass, KV, cell count, capacity and prop size come
-  from the loadout. Motors top out at the spec sheet's *loaded* rated point, not
-  an impossible no-load speed — so thrust-to-weight and the feel of weight are
-  honest. Checked against an independent reference model with 125 tests.
-- **Battery reality.** Nonlinear LiPo discharge, IR sag, a real voltage cliff.
-  Fly the pack down and it browns out — the aircraft falls out of the sky.
-- **RF link that means something.** RSSI is computed from real distance *and*
-  line-of-sight through the photoreal geometry. Fly behind a building at range
-  and the video tears and snows, then the link fails.
-- **Conditions from where and when.** Real solar position for the site's
-  latitude, longitude and date. Weather you can see. Wind that acts on
-  **airspeed**, so you crab into it. Density altitude fed to the physics.
-- **Failure is modelled, not scripted.** Impacts crack the camera, kill
-  individual motors, or destroy the airframe. Nothing is on a timer.
+- **Any coordinate on Earth.** Drop a pin, or type MGRS or `lat, lon`. Ground
+  elevation gets looked up and the world calibrates against the streamed
+  terrain, so you spawn on the actual street.
+- **Physics from real parts.** Mass, KV, cells, capacity, prop size. Motors top
+  out at the spec sheet's *loaded* rated point, not an impossible no-load
+  number, so thrust-to-weight and the feel of weight are honest. Checked against
+  a separate reference model with 125 tests.
+- **Batteries behave.** Nonlinear LiPo discharge, IR sag, a real voltage cliff.
+  Fly the pack down and it browns out — it falls out of the sky.
+- **The link is real.** RSSI comes from actual distance *and* line-of-sight
+  through the terrain geometry. Get a building between you and the quad at range
+  and the video tears and snows, then you lose it.
+- **Time of day and weather.** Real solar position for wherever and whenever you
+  are flying — dawn in Tucson is actually dawn in Tucson. Wind acts on airspeed,
+  so you crab into it. Density altitude is fed to the physics.
+- **Damage sticks.** Impacts crack the camera, kill individual motors, or write
+  the airframe off. Nothing is on a timer.
 
 ---
 
@@ -77,25 +74,26 @@ RC radio in USB-Joystick mode is the point.
 | | |
 |---|---|
 | ![Title](media/title-backdrop.png) | ![Main menu](media/main-menu.png) |
-| Title, while the world streams in. | Front end, over the live AO. |
+| Title, while terrain streams in. | Front end, over the live area. |
 | ![Settings](media/settings.png) | ![Low pass](media/flight-lowpass.png) |
 | Audio, display, environment, flight. | Low pass over real streets. |
 
 ---
 
-## Found a bug?
+## When it breaks
 
-**Reporting is automatic.** Crashes write their own report, and **F12** captures
-one on any screen. Everything lands in:
+**Reporting is automatic.** Crashes write their own report, and **F12** grabs one
+on any screen. It all lands in:
 
 ```
 Documents\KESTREL\reports\
 ```
 
-Zip that folder and send it to **contact@ceradonsystems.com** — subject
-`KESTREL bug`. That is everything needed; you do not have to describe it well.
+Zip that folder and send it — or just open an
+[issue](../../issues) here and drag it in. That is everything needed; you do not
+have to write it up well.
 
-If you would rather write it up, three things help most:
+If you would rather just describe it, three things help most:
 1. **Version** — printed top-right on screen.
 2. **What you did** — "hit RANDOM AO", "mapped a switch to arm and flipped it".
 3. **What happened** vs. what you expected.
@@ -113,18 +111,12 @@ Known issues ship in `CHANGELOG.md` inside the zip.
 | RAM | 8 GB | 16 GB |
 | GPU | DirectX 12, 4 GB VRAM (GTX 1060 / RX 580) | RTX 2060 / RX 5700+ |
 | Disk | 2 GB free | — |
-| Controller | RC radio in USB-Joystick mode (RadioMaster / EdgeTX / TBS) | RC radio |
+| Controller | Radio in USB-Joystick mode (RadioMaster / EdgeTX / TBS) | Radio |
 
-A **discrete GPU is effectively required** — UE5 will not run acceptably on
-basic integrated graphics. Windows x64 only for now; no Mac or Linux build.
+You need a **discrete GPU** — UE5 will not run acceptably on integrated
+graphics. Windows x64 only for now.
 
 ---
 
-## About
-
-KESTREL is developed by [Ceradon Systems](https://ceradonsystems.com).
-
-This repository hosts **releases and documentation only** — the engine source is
-private. Issues and feedback are welcome here.
-
-*Photoreal terrain © Google, streamed via Cesium ion. Map imagery © Esri.*
+<sub>Built in Unreal Engine 5. Source is private; this repo is releases and docs.
+Terrain © Google via Cesium ion · map imagery © Esri.</sub>
