@@ -10,7 +10,10 @@
 
 </div>
 
-![KESTREL — banked FPV pass over photoreal terrain](media/flight-banked.png)
+![KESTREL gameplay — flying real coordinates around the world](media/gameplay.gif)
+
+<div align="center"><sub>Industrial flats · banked over structures · Times Square · desert badlands — all real coordinates, streamed live.
+<a href="../../releases/latest">Full trailer in the release assets</a></sub></div>
 
 KESTREL is an FPV/sUAS simulator built in Unreal Engine 5. Build a drone from
 **real component specifications**, fly it with faithful Betaflight feel and a
@@ -23,6 +26,8 @@ task → get a record out the other end.**
 
 > **Alpha.** It is playable and it is rough. Things will break. Bug reports are
 > automatic — see below — and genuinely useful.
+
+![Banked FPV pass over photoreal terrain](media/flight-banked.png)
 
 ---
 
