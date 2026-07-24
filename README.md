@@ -88,11 +88,17 @@ then the terminal run.
 
 Pick a time and the sky, sun, and lighting move with it — computed from the real
 solar position at that coordinate and date, not a canned skybox. Dawn and dusk
-are genuine golden hour; noon is hard overhead light.
+are genuine golden hour; noon is hard overhead light; night scales with the real
+moon phase, so a new-moon AO is genuinely dark.
 
-![Dusk over a real city, flown FPV](media/dusk-nyc.png)
+![FPV over a real city at midday, flight OSD burned in](media/osd-day.png)
 
-<div align="center"><sub>Dusk, real coordinates — the sun on the horizon, the avenue lit between the towers.</sub></div>
+| | |
+|---|---|
+| ![Dawn, banked over the skyline](media/osd-dawn.png) | ![Dusk over a real city](media/dusk-nyc.png) |
+| Dawn — sun breaking between the towers. | Dusk — the avenue lit between the towers. |
+
+<div align="center"><sub>Betaflight-style OSD burned in — altitude, speed, home, RSSI, compass, MGRS — over photoreal terrain at any time of day.</sub></div>
 
 ---
 
