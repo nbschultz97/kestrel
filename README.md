@@ -69,6 +69,21 @@ USB-Joystick mode is the point.
 
 ---
 
+## Strike missions
+
+Author a mission and fly it. A `strike` objective is a one-way attack run: fly
+the terminal dive onto the target and the warhead functions — the vehicles in
+the blast are wrecked, not despawned, and because the drone is the munition, the
+feed cuts and hands off to an overhead ISR sensor for the battle-damage
+assessment. The bundled demo is a **convoy strike**: ingress, PID the column,
+then the terminal run.
+
+![A convoy laid on a real street, seen from overhead before the strike](media/convoy-strike.png)
+
+<div align="center"><sub>The demo convoy on real terrain — vehicles placed on the actual surface, not floating.</sub></div>
+
+---
+
 ## Real time of day
 
 Pick a time and the sky, sun, and lighting move with it — computed from the real
