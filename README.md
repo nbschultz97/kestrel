@@ -69,6 +69,18 @@ USB-Joystick mode is the point.
 
 ---
 
+## Real time of day
+
+Pick a time and the sky, sun, and lighting move with it — computed from the real
+solar position at that coordinate and date, not a canned skybox. Dawn and dusk
+are genuine golden hour; noon is hard overhead light.
+
+![Dusk over a real city, flown FPV](media/dusk-nyc.png)
+
+<div align="center"><sub>Dusk, real coordinates — the sun on the horizon, the avenue lit between the towers.</sub></div>
+
+---
+
 ## Screens
 
 | | |
