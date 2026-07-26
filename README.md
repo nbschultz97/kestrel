@@ -17,15 +17,16 @@
 
 Type in a grid or drop a pin, and that exact spot loads in photoreal terrain —
 the same imagery as Google Earth. Build a quad out of real parts and it flies
-like those parts: real motor KV, real prop, real pack. Betaflight rates and a
-Betaflight OSD, on your own radio.
+like those parts: real motor KV, real prop, real pack. Betaflight rates, and the
+OSD is rendered in the stock Betaflight MAX7456 character set - the same glyphs
+a real analog OSD chip draws - on your own radio.
 
 The point is stick time without burning packs, props, or airspace.
 
 > **This is an alpha and it is rough.** It will crash on you. Bug reports are
 > automatic and they genuinely help — see below.
 
-![Banked FPV pass over photoreal terrain](media/flight-banked.png)
+![FPV pass through the Taipei 101 district - photoreal tiles, authentic Betaflight OSD](media/hero-taipei.png)
 
 ---
 
@@ -78,9 +79,11 @@ feed cuts and hands off to an overhead ISR sensor for the battle-damage
 assessment. The bundled demo is a **convoy strike**: ingress, PID the column,
 then the terminal run.
 
-![A convoy laid on a real street, seen from overhead before the strike](media/convoy-strike.png)
+![Strike detonation - real fire and a building smoke column over the target](media/strike-fire.png)
 
-<div align="center"><sub>The demo convoy on real terrain — vehicles placed on the actual surface, not floating.</sub></div>
+<div align="center"><sub>The warhead functions: live fire, dirt, and a smoke column that builds and drifts — rendered in-engine.</sub></div>
+
+![Inside the smoke column seconds after impact](media/strike-smoke.png)
 
 ---
 
@@ -95,10 +98,12 @@ moon phase, so a new-moon AO is genuinely dark.
 
 | | |
 |---|---|
-| ![Dawn, banked over the skyline](media/osd-dawn.png) | ![Dusk over a real city](media/dusk-nyc.png) |
-| Dawn — sun breaking between the towers. | Dusk — the avenue lit between the towers. |
+| ![Dawn over the Grand Canyon](media/canyon-dawn.png) | ![Dusk over Lower Manhattan](media/nyc-dusk.png) |
+| Dawn — terrain flying over the Grand Canyon. | Dusk — golden hour over Lower Manhattan. |
+| ![Night over the Las Vegas Strip](media/vegas-night.png) | ![Afternoon haze over Dubai Marina](media/dubai-haze.png) |
+| Night — moon-phase lighting over the Strip. | Haze — Dubai Marina in desert air. |
 
-<div align="center"><sub>Betaflight-style OSD burned in — altitude, speed, home, RSSI, compass, MGRS — over photoreal terrain at any time of day.</sub></div>
+<div align="center"><sub>The real MAX7456 OSD burned in — timer, RSSI, home arrow, battery, alt, speed, MGRS — over photoreal terrain at any time of day, anywhere on Earth.</sub></div>
 
 ---
 
@@ -115,8 +120,10 @@ moon phase, so a new-moon AO is genuinely dark.
 
 ## When it breaks
 
-**Reporting is automatic.** Crashes write their own report, and **F12** grabs one
-on any screen. It all lands in:
+**Reporting is automatic.** Crashes and bugs write their own reports - no
+hotkey needed. **F12** toggles a live dev-metrics overlay (audio, flight,
+mission state) so you can read off exactly what the sim was doing when
+something looked wrong. Reports land in:
 
 ```
 Documents\KESTREL\reports\
