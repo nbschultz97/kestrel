@@ -12,8 +12,7 @@
 
 ![KESTREL gameplay — flying real coordinates around the world](media/gameplay.gif)
 
-<div align="center"><sub>Orbiting the Taipei 101 district — real coordinates, streamed live, the MAX7456 flight OSD burned in.
-<a href="../../releases/latest">Full 1080p clip in the release assets</a></sub></div>
+<div align="center"><sub>Orbiting the Taipei 101 district — real coordinates, streamed live, the MAX7456 flight OSD burned in.</sub></div>
 
 Type in a grid or drop a pin, and that exact spot loads in photoreal terrain —
 the same imagery as Google Earth. Build a quad out of real parts and it flies
