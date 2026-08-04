@@ -1,8 +1,8 @@
 <div align="center">
 
-# K E S T R E L
+<img src="media/kestrel-lockup-web.png" alt="KESTREL — Advanced sUAS Training Platform" width="720">
 
-**An FPV drone sim you can fly at any coordinate on Earth.**
+**Advanced sUAS training at any coordinate on Earth.**
 
 [**Download →**](../../releases/latest)
 
@@ -16,13 +16,14 @@
 
 [**▶ Watch the full trailer with sound**](https://github.com/nbschultz97/kestrel/releases/download/v0.24.2-alpha/kestrel-trailer-v4.mp4)</div>
 
-Type in a grid or drop a pin, and that exact spot loads in photoreal terrain —
-the same imagery as Google Earth. Build a quad out of real parts and it flies
-like those parts: real motor KV, real prop, real pack. Betaflight rates, and the
-OSD is rendered in the stock Betaflight MAX7456 character set - the same glyphs
-a real analog OSD chip draws - on your own radio.
+Choose a training mission, type in a grid, or drop a pin, and that exact area
+loads in photoreal terrain. Build an aircraft from real parts and it flies like
+those parts: real motor KV, prop, pack, and mass. Import a Betaflight diff to
+train on your own rates, tune, modes, and switches; the OSD uses the stock
+Betaflight MAX7456 character set—the same glyphs a real analog OSD chip draws.
 
-The point is stick time without burning packs, props, or airspace.
+The point is repeatable mission rehearsal and honest stick time without burning
+packs, props, or airspace.
 
 > **This is an alpha and it is rough.** It will crash on you. Bug reports are
 > automatic and they genuinely help — see below.
@@ -57,7 +58,7 @@ USB-Joystick mode is the point.
 - **Physics from real parts.** Mass, KV, cells, capacity, prop size. Motors top
   out at the spec sheet's *loaded* rated point, not an impossible no-load
   number, so thrust-to-weight and the feel of weight are honest. Checked against
-  a separate reference model with 125 tests.
+  a separate reference model with 153 tests.
 - **Batteries behave.** Nonlinear LiPo discharge, IR sag, a real voltage cliff.
   Fly the pack down and it browns out — it falls out of the sky.
 - **The link is real.** RSSI comes from actual distance *and* line-of-sight
@@ -71,14 +72,17 @@ USB-Joystick mode is the point.
 
 ---
 
-## Strike missions
+## Mission training
 
-Author a mission and fly it. A `strike` objective is a one-way attack run: fly
-the terminal dive onto the target and the warhead functions — the vehicles in
-the blast are wrecked, not despawned, and because the drone is the munition, the
-feed cuts and hands off to an overhead ISR sensor for the battle-damage
-assessment. The bundled demo is a **convoy strike**: ingress, PID the column,
-then the terminal run.
+Three built-in missions cover different skills: **GAUNTLET** is a timed Chicago
+river-canyon gate run, **BRIDGE STRIKE** is a low Pittsburgh ingress with a
+terminal window, and **RELAY DASH** stretches the RF link across Seattle's
+Elliott Bay. Mission scoring grades objective completion, time, link discipline,
+power management, and crashes, while personal bests persist between sessions.
+
+A `strike` objective is a one-way attack run: fly the terminal dive onto the
+target and the warhead functions. Vehicles in the blast are wrecked rather than
+despawned, and the feed hands off to an overhead ISR view for assessment.
 
 ![Strike detonation - real fire and a building smoke column over the target](media/strike-fire.png)
 
@@ -112,8 +116,6 @@ moon phase, so a new-moon AO is genuinely dark.
 
 | | |
 |---|---|
-| ![Title](media/title-backdrop.png) | ![Main menu](media/main-menu.png) |
-| Title, while terrain streams in. | Front end, over the live area. |
 | ![Settings](media/settings.png) | ![Low pass](media/flight-lowpass.png) |
 | Audio, display, environment, flight. | Low pass over real streets. |
 

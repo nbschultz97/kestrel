@@ -1,37 +1,29 @@
-First public build.
+# KESTREL v0.26.0-alpha
 
-**Download `KESTREL-alpha-win64.zip`, unzip it to its own folder, and run
-`KESTREL.exe`.** No install, no account. Photoreal terrain works out of the box.
+This release refreshes KESTREL's identity and makes missions calmer, clearer,
+and more forgiving without softening the underlying flight model.
 
-If it will not start, run the bundled `vc_redist.x64.exe` once — a missing
-Microsoft C++ runtime is the most common cause.
+## Highlights
 
-### What is in this build
+- New KESTREL emblem, title lockup, and **ADVANCED sUAS TRAINING PLATFORM**
+  positioning across the splash, main menu, and mission loading screen.
+- Title/menu music restored as a verified, indefinitely looping release asset.
+- Mission progress now moves forward monotonically through terrain loading,
+  ground alignment, and flight-area verification instead of dropping backward.
+- Small waypoint gates now use a 20 m horizontal corridor and a separate 12 m
+  altitude band; larger authored radii remain unchanged.
+- Synthetic throttle- and RSSI-driven camera shake removed. Physical airframe
+  motion and restrained head lag remain, while RF degradation stays in the
+  video-link effects.
+- Corrupted punctuation and warning symbols repaired in documentation, with
+  explicit UTF-8 handling added to release-note generation.
 
-- Fly any coordinate on Earth over photoreal terrain — drop a pin, or type MGRS
-  / `lat, lon`
-- Physics from real component specs, checked against a separate reference model
-  with 125 tests
-- Betaflight-faithful rates, PID and OSD, including TPA
-- Selectable time of day using real solar position, and weather you can see
-- Battery brownout, RF failsafe with true line-of-sight, and damage that sticks
-- A bundled demo mission with a briefing, radio talk-on and scoring
+## Install or update
 
-### Known rough edges
+Existing installations update automatically the next time `KESTREL.exe` is
+launched. For a new installation, download `KESTREL-alpha-win64.zip`, extract it
+to its own folder, and run `KESTREL.exe`.
 
-This is an **alpha**. Expect crashes.
-
-- **Reporting is automatic.** Crashes write their own report, and **F12**
-  captures one on any screen, to `Documents\KESTREL\reports\`. Zip that folder and
-  attach it to an issue here — that is genuinely the most useful thing you can
-  do.
-- The **no-coverage fallback** — flying somewhere Google has no 3D tiles — is
-  implemented but has never been observed firing in testing. If you pick a
-  mid-ocean coordinate and it hangs, that is the likely cause; please report it.
-- **Missions can express four objective types** (gate, hover, recon, land). The
-  scenario layer is the next major piece of work, not a finished feature.
-- Controller binding works but is rough, and one report of the arm binding not
-  taking has not been reproduced. If it happens to you, F12 immediately.
-
-Windows x64 only. A discrete GPU is effectively required — UE5 will not run
-acceptably on integrated graphics.
+The archive is Windows x64 and requires a discrete GPU for practical UE5
+performance. This remains an alpha release; report crashes or unexpected
+behavior through the repository issues page.
