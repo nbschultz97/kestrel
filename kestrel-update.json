@@ -1,8 +1,8 @@
 {
-    "version": "v0.28.3-alpha",
-    "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.28.3-alpha/KESTREL-alpha-win64.zip",
-    "sha256": "336a9181e3f8e545b9c2b8e095c4ab4532316006b46d9d2b7721ee67ac3fd8dc",
-    "size": 544430513,
+    "version": "v0.29.0-alpha",
+    "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.29.0-alpha/KESTREL-alpha-win64.zip",
+    "sha256": "233cdd3f317f9ccb503750d52bd71b77721154a11e2a8d1e2801adfb2ced91ae",
+    "size": 544609759,
     "minLauncherVersion": "1.0.0",
     "notes": "See CHANGELOG.md"
 }
