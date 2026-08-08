@@ -10,9 +10,9 @@
 
 </div>
 
-![KESTREL trailer — one FPV flight across the world, weather and time switching live](media/gameplay.gif)
+![KESTREL trailer — fly real cities, build the aircraft, build the mission, fly it](media/gameplay.gif)
 
-<div align="center"><sub>One low FPV run across real cities — noon to overcast to dusk to night vision, streamed live, MAX7456 OSD burned in.</sub>
+<div align="center"><sub>Chicago, San Francisco, Tokyo, Singapore, Sydney, Paris, London — real coordinates, streamed live. Then build the aircraft from real parts, drop the objective on real ground, and fly the mission you just made.</sub>
 
 [**▶ Watch the full trailer with sound**](https://github.com/nbschultz97/kestrel/releases/download/v0.24.2-alpha/kestrel-trailer-v4.mp4)</div>
 
