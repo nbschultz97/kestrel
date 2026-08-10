@@ -12,9 +12,9 @@
 
 ![KESTREL trailer — fly real cities, build the aircraft, build the mission, fly it](media/gameplay.gif)
 
-<div align="center"><sub>Chicago, San Francisco, Tokyo, Singapore, Sydney, Paris, London — real coordinates, streamed live. Then build the aircraft from real parts, drop the objective on real ground, and fly the mission you just made.</sub>
+<div align="center"><sub>Drop a pin anywhere on Earth and that coordinate loads in photoreal terrain. Build the aircraft from real parts, drop the objective on real ground, and fly the mission you just made.</sub>
 
-[**▶ Watch the full trailer with sound**](https://github.com/nbschultz97/kestrel/releases/download/v0.24.2-alpha/kestrel-trailer-v4.mp4)</div>
+[**▶ Watch the full trailer with sound**](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-trailer-v9.mp4) · [LinkedIn 35 s cut](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-short-linkedin.mp4) · [Vertical 60 s](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-short-vertical.mp4)</div>
 
 Choose a training mission, type in a grid, or drop a pin, and that exact area
 loads in photoreal terrain. Build an aircraft from real parts and it flies like

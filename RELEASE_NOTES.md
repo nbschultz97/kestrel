@@ -1,22 +1,39 @@
-# KESTREL v0.26.0-alpha
+# KESTREL v0.29.1-alpha
 
-This release refreshes KESTREL's identity and makes missions calmer, clearer,
-and more forgiving without softening the underlying flight model.
+The current public release. The strike line landed after v0.29.0 was packaged,
+so the working strike mission went out to nobody before this build. v0.29.1 is
+the build testers actually have on disk.
 
-## Highlights
+For the full per-build changelog (v0.26.0 → v0.29.1, every play-test wave, every
+flight-model fix), see `CHANGELOG.md` inside the zip. This file is a one-page
+summary of the public-facing surface.
 
-- New KESTREL emblem, title lockup, and **ADVANCED sUAS TRAINING PLATFORM**
-  positioning across the splash, main menu, and mission loading screen.
-- Title/menu music restored as a verified, indefinitely looping release asset.
-- Mission progress now moves forward monotonically through terrain loading,
-  ground alignment, and flight-area verification instead of dropping backward.
-- Small waypoint gates now use a 20 m horizontal corridor and a separate 12 m
-  altitude band; larger authored radii remain unchanged.
-- Synthetic throttle- and RSSI-driven camera shake removed. Physical airframe
-  motion and restrained head lag remain, while RF degradation stays in the
-  video-link effects.
-- Corrupted punctuation and warning symbols repaired in documentation, with
-  explicit UTF-8 handling added to release-note generation.
+## What's new since the last public release
+
+- **The strike is a one-way attack, and the pilot now flies it like one.** On the
+  terminal leg the avoidance response and the AGL speed brake come off: the thing
+  filling the look-ahead IS the aim point, so every avoidance reaction was a miss,
+  and the brake's premise — *"this aircraft has to still be flying in two seconds"*
+  — is false for a munition. Left in, the dive sat inside the floor band for its
+  whole length and bled back the forward stick producing it, so the aircraft
+  settled into a controlled descent and arrived at walking pace. Impact speed
+  is now logged.
+- **Analog FPV feed** — a 4:3 window with deterministic noise, framed last over
+  everything, because an element that lands in the pillarbox was never
+  transmitted on a real analog link.
+- **Convoy placement that survives contact with the map** — the column was in
+  the median because its heading came from OSM, and the warhead fired on a
+  radius instead of on the hull.
+- **A play-test wave** — nineteen reports from v0.28.3 (black inventory tiles,
+  spawning underground, the 10–20 s launch freeze, black bars in fullscreen,
+  the minus key eating the MGRS northing, the weather clamp, etc.). See the
+  changelog for the long form.
+- **Test range with user-set wind / weather / atmosphere** — controls live in
+  the flight view, sliders drive the same atmosphere the physics reads.
+- **New markers** (waypoints, spawn, strike) replacing the old black platforms.
+- **WORK BENCH renamed to HANGAR** and reorganized.
+- **Flight controller on its own 1 kHz clock** instead of the render clock, with
+  per-airframe rate scaling.
 
 ## Install or update
 
@@ -27,3 +44,9 @@ to its own folder, and run `KESTREL.exe`.
 The archive is Windows x64 and requires a discrete GPU for practical UE5
 performance. This remains an alpha release; report crashes or unexpected
 behavior through the repository issues page.
+
+## Trailer and clips
+
+- [Full trailer (v9, 92 s, 1080p)](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-trailer-v9.mp4)
+- [LinkedIn 35 s cut](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-short-linkedin.mp4)
+- [Vertical 60 s cut (IG / TikTok)](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-short-vertical.mp4)
