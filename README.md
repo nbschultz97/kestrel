@@ -161,5 +161,18 @@ graphics. Windows x64 only for now.
 
 ---
 
+## License
+
+KESTREL is **free to download and fly, but it is not open source.** The
+[KESTREL Evaluation License](LICENSE.txt) covers every copy: free for U.S.
+Government personnel for training, familiarization, and evaluation, and free
+for personal non-commercial use. No redistribution outside published channels,
+no commercial use, and no reverse engineering without a written license —
+commercial licensing is available via
+[nbschultz97@gmail.com](mailto:nbschultz97@gmail.com).
+© 2026 Noah Schultz / Ceradon Systems. All rights reserved.
+
+---
+
 <sub>Built in Unreal Engine 5. Source is private; this repo is releases and docs.
 Terrain © Google via Cesium ion · map imagery © Esri.</sub>
