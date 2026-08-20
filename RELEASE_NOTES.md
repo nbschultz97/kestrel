@@ -1,3 +1,69 @@
+# Unreleased — v0.30.0-alpha (in development)
+
+Not published. This section tracks what is on the development branch and will
+ship in the next release; there is no download for it yet. The current public
+build is v0.29.1-alpha, below.
+
+v0.30.0 is an asset release. The flight model, terrain, and OSD are unchanged;
+what changed is that the aircraft you build finally looks like the parts you
+picked.
+
+![The same 5-inch build, before and after the asset overhaul](media/next-release/oldnew-build-5in.jpg)
+
+### Aircraft & parts
+
+- **169 part meshes, up from 99, and all of them textured.** Carbon weave
+  oriented per part, silkscreen and components on the PCBs, anodised motor
+  bells, printed battery wraps. No untextured placeholder geometry remains in
+  the build catalogue.
+- **Airframes calibrated against manufacturer CAD.** The TBS Source family was
+  measured out of the vendor's own STEP files — plate outline, arm taper, stack
+  mounting, standoff heights — and the rest of the airframe classes were scaled
+  to sit correctly against them.
+- **Propellers rebuilt from measurement.** Real prop geometry plus 84 product
+  photos, resolved into ten planform families. Pitch and blade count are visual
+  axes now, and the blades are translucent polycarbonate rather than opaque
+  slabs.
+- **Li-ion packs are cylinder banks, LiPo packs are bricks.** They were the same
+  mesh with a different label; they are now different objects with different
+  silhouettes and wraps.
+- **Full antenna, VTX, camera, GPS and receiver families**, each with the
+  pigtails and connectors the real part carries.
+- **Showcase builds are wired end to end** — camera looms, VTX coax, receiver
+  antenna tubes, and XT60s that mate to their counterpart instead of floating
+  beside it.
+
+### In flight
+
+- **Props are visible in the FPV view.** The camera near clip was culling the
+  blades out of frame; it now sits inside the disc, which restores the sweep
+  across the top and bottom of the picture that defines the FPV look.
+- **The fitted camera drives the flight FOV.** Choosing a narrow analog cam and
+  a wide digital cam changes what you see out the front, not just the part list.
+- **Prop-wash dust on takeoff** — a ring and puffs lifted off the pad, scaled by
+  thrust over hover.
+- **Kills swap in a wrecked airframe** rather than deleting the aircraft.
+- **The HANGAR spools the props** while you build.
+
+### World & characters
+
+- **New pilot and twelve mission characters**, rebuilt on a corrected skeleton —
+  the old rig had joint orientations that broke every pose it was given.
+- **In progress, not yet landed:** a full vehicle fleet with civilian traffic,
+  and mission-objective set pieces.
+
+### Under the hood
+
+- Part meshes re-authored and re-exported through a single generator, so the
+  catalogue, the HANGAR preview, and the flight mesh all read the same source.
+- Materials consolidated onto shared textured masters (weave, silkscreen,
+  anodise, wrap) instead of per-part flat colours.
+- Reference measurement set — vendor STEP files, prop geometry, and product
+  photography — captured alongside the generator so parts can be re-derived
+  rather than re-eyeballed.
+
+---
+
 # KESTREL v0.29.1-alpha
 
 The current public release. The strike line landed after v0.29.0 was packaged,

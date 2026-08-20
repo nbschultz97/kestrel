@@ -28,7 +28,80 @@ packs, props, or airspace.
 > **This is an alpha and it is rough.** It will crash on you. Bug reports are
 > automatic and they genuinely help — see below.
 
-![FPV pass through the Taipei 101 district - photoreal tiles, authentic Betaflight OSD](media/hero-taipei.png)
+---
+
+## Next release: the realism overhaul
+
+Every part in the sim has been rebuilt from real manufacturer geometry. Not
+re-textured — remodelled, measured, and re-wired.
+
+![The same 5-inch build, before and after the asset overhaul](media/next-release/oldnew-build-5in.jpg)
+
+<div align="center"><sub>Same aircraft, same camera. Left is what ships in the current build; right is what comes next.</sub></div>
+
+The part library went from 99 meshes to 169, and every one of them is textured
+now: carbon weave that runs the right way, silkscreen and components on the
+PCBs, anodised motor bells, printed pack wraps, and wiring that actually goes
+somewhere. Airframes are dimensionally calibrated against manufacturer CAD —
+the TBS Source family was measured out of the vendor's own STEP files, so the
+5-inch on screen is the 5-inch on the bench.
+
+| | |
+|---|---|
+| ![A 5-inch airframe, old geometry beside the STEP-calibrated rebuild](media/next-release/oldnew-frame-carbon.jpg) | ![The pilot character, old model beside the rebuild](media/next-release/oldnew-pilot.jpg) |
+| Airframes measured out of vendor STEP files. | The pilot and twelve mission characters, rebuilt on a corrected skeleton. |
+
+![Six airframes, 1.6-inch whoop through 13-inch heavy-lift, at true relative scale](media/next-release/family-frames.jpg)
+
+![Twelve mission characters on the corrected skeleton](media/next-release/mission-characters.jpg)
+
+Propellers were rebuilt from measurements rather than guessed at — real prop
+geometry plus 84 product photos, resolved into ten planform families. Pitch and
+blade count read at a glance, and the polycarbonate is translucent the way the
+real thing is.
+
+![Ten propeller planform families, 1.6-inch through 13-inch, translucent polycarbonate](media/next-release/family-props.jpg)
+
+Showcase builds are wired end to end: camera looms, VTX coax, receiver antenna
+tubes, and XT60s that mate instead of floating near each other.
+
+![A fully wired 5-inch build - camera loom, VTX coax, receiver antennas, mated XT60](media/next-release/build-5in-wired.jpg)
+
+| | |
+|---|---|
+| ![A 7-inch long-range build carrying a Li-ion cylinder pack](media/next-release/build-7in-liion.jpg) | ![The pack family - LiPo bricks through Li-ion cylinder packs](media/next-release/family-batteries.jpg) |
+| Li-ion packs are cylinders now, not bricks with a different label. | The full pack family, 550 mAh through 6S Li-ion. |
+
+Antennas, VTXs, cameras, GPS units and receivers all got their own families, so
+the aircraft you build in the HANGAR looks like the parts you picked.
+
+![Camera, VTX, receiver, GPS and antenna part families](media/next-release/family-electronics.jpg)
+
+### In the air
+
+**Props are visible in the FPV view.** The near clip was cutting them out of
+frame; it is fixed, and the signature FPV look — blades sweeping the top and
+bottom of the picture — is back. The camera you fit drives the flight FOV, so a
+narrow analog cam and a wide digital one no longer see the same thing.
+
+| | |
+|---|---|
+| ![A 5-inch freestyle build, captured in engine](media/next-release/inengine-5in-freestyle.jpg) | ![A 13-inch heavy-lift build, captured in engine](media/next-release/inengine-13in-heavy.jpg) |
+| 5-inch freestyle. | 13-inch heavy-lift. Both captured in engine. |
+
+Takeoff lifts prop-wash dust off the pad. A kill swaps in a wrecked airframe
+instead of deleting one. The HANGAR spools the props while you build.
+
+![Prop-wash dust lifting off the pad on takeoff](media/next-release/propwash-takeoff.gif)
+
+<div align="center"><sub>Prop-wash on takeoff — offline VFX tuning preview, real sprites and shipped parameters.</sub></div>
+
+Still in work: a full vehicle fleet with civilian traffic, and mission-objective
+set pieces.
+
+![The rebuilt part suite - frames, builds, motors, packs, props, electronics and antennas](media/next-release/asset-suite-poster.jpg)
+
+<div align="center"><sub>169 meshes. Fresh off the development branch — none of this is downloadable yet. It ships with the next release.</sub></div>
 
 ---
 
@@ -51,6 +124,8 @@ USB-Joystick mode is the point.
 ---
 
 ## What is actually modelled
+
+![FPV pass through the Taipei 101 district - photoreal tiles, authentic Betaflight OSD](media/hero-taipei.png)
 
 - **Any coordinate on Earth.** Drop a pin, or type MGRS or `lat, lon`. Ground
   elevation gets looked up and the world calibrates against the streamed
