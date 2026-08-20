@@ -49,8 +49,13 @@ picked.
 
 - **New pilot and twelve mission characters**, rebuilt on a corrected skeleton —
   the old rig had joint orientations that broke every pose it was given.
-- **In progress, not yet landed:** a full vehicle fleet with civilian traffic,
-  and mission-objective set pieces.
+- **The vehicle fleet rebuilt** — twenty military vehicles with real role
+  silhouettes and wheels/doors as separate parts, plus the first civilian
+  traffic set (sedan, hatchback, van, pickup) for the road network. Wrecks
+  regenerated to match.
+- **Twelve mission-objective set pieces and the support props re-authored** —
+  sandbagged bunker, camo-net command post, radar, fuel depot, helipad, and
+  the rest, each readable from recon altitude.
 
 ### Under the hood
 
@@ -61,6 +66,37 @@ picked.
 - Reference measurement set — vendor STEP files, prop geometry, and product
   photography — captured alongside the generator so parts can be re-derived
   rather than re-eyeballed.
+
+### Preview gallery
+
+| | |
+|---|---|
+| ![A 5-inch airframe, old geometry beside the STEP-calibrated rebuild](media/next-release/oldnew-frame-carbon.jpg) | ![The pilot character, old model beside the rebuild](media/next-release/oldnew-pilot.jpg) |
+| Airframes measured out of vendor STEP files. | The pilot, rebuilt on the corrected skeleton. |
+
+![Six airframes, 1.6-inch whoop through 13-inch heavy-lift, at true relative scale](media/next-release/family-frames.jpg)
+
+![Ten propeller planform families, 1.6-inch through 13-inch, translucent polycarbonate](media/next-release/family-props.jpg)
+
+![A fully wired 5-inch build - camera loom, VTX coax, receiver antennas, mated XT60](media/next-release/build-5in-wired.jpg)
+
+| | |
+|---|---|
+| ![A 7-inch long-range build carrying a Li-ion cylinder pack](media/next-release/build-7in-liion.jpg) | ![The pack family - LiPo bricks through Li-ion cylinder packs](media/next-release/family-batteries.jpg) |
+| A 7-inch long-range build on a Li-ion cylinder pack. | The pack family, 550 mAh through 6S Li-ion. |
+
+![Camera, VTX, receiver, GPS and antenna part families](media/next-release/family-electronics.jpg)
+
+![Twelve mission characters on the corrected skeleton](media/next-release/mission-characters.jpg)
+
+| | |
+|---|---|
+| ![A 5-inch freestyle build, captured in engine](media/next-release/inengine-5in-freestyle.jpg) | ![A 13-inch heavy-lift build, captured in engine](media/next-release/inengine-13in-heavy.jpg) |
+| 5-inch freestyle, captured in engine. | 13-inch heavy-lift, captured in engine. |
+
+![Prop-wash dust lifting off the pad on takeoff - offline VFX tuning preview](media/next-release/propwash-takeoff.gif)
+
+![The rebuilt part suite - frames, builds, motors, packs, props, electronics and antennas](media/next-release/asset-suite-poster.jpg)
 
 ---
 
