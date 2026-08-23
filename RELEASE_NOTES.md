@@ -1,14 +1,28 @@
-# Unreleased — v0.30.0-alpha (in development)
+# KESTREL v0.31.0-alpha — the current public release
 
-Not published. This section tracks what is on the development branch and will
-ship in the next release; there is no download for it yet. The current public
-build is v0.29.1-alpha, below.
-
-v0.30.0 is an asset release. The flight model, terrain, and OSD are unchanged;
-what changed is that the aircraft you build finally looks like the parts you
-picked.
+Published. v0.29.2, v0.30.0 and v0.31.0 are out to testers through the
+auto-updater; this page summarizes the three waves. The headline of v0.30 is
+visual — the aircraft you build finally looks like the parts you picked — while
+v0.29.2 and v0.31.0 carried the flight-model honesty work underneath it.
 
 ![The same 5-inch build, before and after the asset overhaul](media/next-release/oldnew-build-5in.jpg)
+
+### Flight model
+
+- **A 10-inch is not a heavy 5-inch.** One factory tune went to every aircraft
+  in the sim; rates and feed-forward are now scheduled off airframe authority
+  (667/422/299 deg/s; F = 120/65/41), and the WORK BENCH prints what a build
+  got.
+- **Missions fly what was authored.** A leg's authored speed is a contract now —
+  the altitude floor's gentle climb ramp no longer quietly clamps the forward
+  stick.
+- **Rendered footage stopped lying twice.** The virtual pilot's yaw hunt (a
+  relay measured in the wrong unit) is dead, and so is its avoidance chatter on
+  the other axis: the pilot holds an attitude like a pilot does instead of
+  arguing with gusts through a speed loop.
+- **Impact you can read** — thresholds moved so a belly-slide, a real auger-in,
+  and a catastrophic slam are three different outcomes instead of two silent
+  ones.
 
 ### Aircraft & parts
 
@@ -41,14 +55,18 @@ picked.
 - **The fitted camera drives the flight FOV.** Choosing a narrow analog cam and
   a wide digital cam changes what you see out the front, not just the part list.
 - **Prop-wash dust on takeoff** — a ring and puffs lifted off the pad, scaled by
-  thrust over hover.
+  thrust over hover; visible from the pilot's seat in v0.31, with faint rotor
+  arcs on the lens at steep nose-down.
 - **Kills swap in a wrecked airframe** rather than deleting the aircraft.
 - **The HANGAR spools the props** while you build.
 
 ### World & characters
 
 - **New pilot and twelve mission characters**, rebuilt on a corrected skeleton —
-  the old rig had joint orientations that broke every pose it was given.
+  the old rig had joint orientations that broke every pose it was given. v0.31
+  shipped all thirteen fully textured.
+- **The range remembers which venue it is** — flying again right after bench
+  work brings up the range you asked for, not the one you were last in.
 - **The vehicle fleet rebuilt** — twenty military vehicles with real role
   silhouettes and wheels/doors as separate parts, plus the first civilian
   traffic set (sedan, hatchback, van, pickup) for the road network. Wrecks
@@ -100,17 +118,13 @@ picked.
 
 ---
 
-# KESTREL v0.29.1-alpha
+# KESTREL v0.29.1-alpha (historical)
 
-The current public release. The strike line landed after v0.29.0 was packaged,
-so the working strike mission went out to nobody before this build. v0.29.1 is
-the build testers actually have on disk.
+The release before the current one — the strike line, the analog FPV feed, the
+test range, and the nineteen-item play-test wave. Kept for reference; the
+full per-build history is in `CHANGELOG.md` inside the zip.
 
-For the full per-build changelog (v0.26.0 → v0.29.1, every play-test wave, every
-flight-model fix), see `CHANGELOG.md` inside the zip. This file is a one-page
-summary of the public-facing surface.
-
-## What's new since the last public release
+## What shipped in it
 
 - **The strike is a one-way attack, and the pilot now flies it like one.** On the
   terminal leg the avoidance response and the AGL speed brake come off: the thing
