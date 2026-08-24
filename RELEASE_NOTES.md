@@ -1,7 +1,68 @@
-# KESTREL v0.31.0-alpha — the current public release
+# KESTREL v0.32.0-alpha — the current public release
 
-Published. v0.29.2, v0.30.0 and v0.31.0 are out to testers through the
-auto-updater; this page summarizes the three waves. The headline of v0.30 is
+Published August 24, 2026. v0.32 combines the rendered-flight rework, missions
+that fly exactly what they author, and a bench that finally explains what a
+build will feel like. Existing installations receive it through the
+auto-updater on their next `KESTREL.exe` launch.
+
+### Mission-authoritative flight
+
+- **The authored objective list is now the flown route.** Each objective becomes
+  a leg of intent; moving a waypoint in mission JSON changes the route without a
+  separate hard-coded filming path.
+- **Per-leg `agl_m` follows the ground**, not the launch plane, and authored
+  `speed_mps` remains the commanded speed while clearance control works
+  independently over rising terrain.
+- **Below-datum objectives are explicit and supported.** `"below_datum": true`
+  opts a leg into negative launch-plane altitude; all five `cw-*` training
+  missions mark exactly their valley objectives this way.
+- **Live link behavior is available for authored runs.** `-CeradonFlyRfLive`
+  uses real RF conditions instead of the scripted 94 percent filming overlay.
+
+### Flight model and rendered pilot
+
+- **The pilot holds attitude, not airspeed.** Pitch now behaves like an ACRO
+  pilot: pulse to a lean, center, and hold, with airframe feed-forward, slow
+  trim learning, and climb-out anti-windup. In disturbed air, pitch movement is
+  3.7–4.8 times lower and peak-to-peak nose motion drops from 15° to 4° while
+  calm-air performance and authored speed remain intact.
+- **Turns use coordinated bank on the flight path.** The previous roll relay
+  saturated at small course errors and swung roughly 95° of horizon. The new
+  coordinated-turn relation reduces ring-flight bank standard deviation from
+  29° to 1.15° and improves disturbed-air cross-track performance.
+- **Authored speed and altitude protection are separate signals.** Legs authored
+  at 12, 15, and 22 m/s no longer collapse to about 11.7 m/s; a 15 m/s leg now
+  makes 15.03 m/s over the same rising terrain while keeping clearance.
+- The yaw sideslip deadband widens from 1.2 to 2.0 m/s so gusty forward flight
+  does not hold unnecessary rudder on roughly a third of frames.
+
+### HANGAR and WORK BENCH
+
+- **HOVER THROTTLE is predicted and banded.** The seventh bench stat reports the
+  expected percentage and labels the 35–45 percent range Nominal, with Caution
+  outside it. A floater or brick remains a design choice; the result is visible
+  before launch.
+- **Every predicted stat has an airframe-specific reference band.** All-up
+  weight, thrust-to-weight, hover time, and top speed use the fitted prop class
+  (whoop, 5-inch freestyle, 7-inch long range, or lifter) and deliberately say
+  Normal rather than Good.
+
+### Verification notes
+
+- The C++ automation suite expanded to 161 tests and runs in CI, including the
+  airframe-consistency suite and steady-cruise / bank-through-turn benches.
+- Headless verification cannot judge Cesium collision, tonemapping, the v0.31
+  prop-wash collar, or rotor pip; those remain visual-session checks.
+- This public package is traceable to Ceradon Sim source commit
+  `b50242464501444c0d268eeef953f143400decfe`; the same commit is embedded in
+  `source-commit.txt` inside the archive and in `kestrel-update.json`.
+
+---
+
+# KESTREL v0.31.0-alpha (historical)
+
+v0.29.2, v0.30.0 and v0.31.0 shipped to testers through the auto-updater. This
+historical section summarizes those three waves. The headline of v0.30 is
 visual — the aircraft you build finally looks like the parts you picked — while
 v0.29.2 and v0.31.0 carried the flight-model honesty work underneath it.
 
@@ -13,13 +74,9 @@ v0.29.2 and v0.31.0 carried the flight-model honesty work underneath it.
   in the sim; rates and feed-forward are now scheduled off airframe authority
   (667/422/299 deg/s; F = 120/65/41), and the WORK BENCH prints what a build
   got.
-- **Missions fly what was authored.** A leg's authored speed is a contract now —
-  the altitude floor's gentle climb ramp no longer quietly clamps the forward
-  stick.
-- **Rendered footage stopped lying twice.** The virtual pilot's yaw hunt (a
-  relay measured in the wrong unit) is dead, and so is its avoidance chatter on
-  the other axis: the pilot holds an attitude like a pilot does instead of
-  arguing with gusts through a speed loop.
+- **Three rendered-flight fixes were recovered before release.** The virtual
+  pilot's yaw hunt, the avoidance probe's chatter on the other axis, and the
+  altitude-floor press clamping the forward stick were all removed.
 - **Impact you can read** — thresholds moved so a belly-slide, a real auger-in,
   and a catastrophic slam are three different outcomes instead of two silent
   ones.

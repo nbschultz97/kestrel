@@ -30,14 +30,22 @@ packs, props, or airspace.
 
 ---
 
-## Coming in the next release
+## Current release — v0.32.0-alpha
 
-Every part, character and vehicle in the sim is being rebuilt from real
-manufacturer geometry — and props are back in the FPV view where they belong.
+v0.32 makes authored missions authoritative in flight and makes aircraft feel
+easier to reason about before launch:
 
-![The same 5-inch build, before and after the asset overhaul](media/next-release/oldnew-build-5in.jpg)
+- Mission objectives now become the flown route, with authored per-leg AGL,
+  speed, below-datum intent, and optional live RF behavior.
+- The virtual pilot holds attitude through weather and uses coordinated bank on
+  the flight path, eliminating the persistent pitch hunt and hard-left /
+  hard-right roll relay.
+- HOVER THROTTLE and airframe-specific reference bands now appear beside the
+  HANGAR and WORK BENCH predictions.
 
-<div align="center"><sub>Same aircraft, same camera. Left is the current build; right is what ships next. Full preview gallery and changelog in <a href="RELEASE_NOTES.md">RELEASE_NOTES</a>.</sub></div>
+Existing installations update automatically when `KESTREL.exe` starts. See the
+[full release notes](RELEASE_NOTES.md) for the complete v0.32 and historical
+release record.
 
 ---
 
