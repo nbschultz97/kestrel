@@ -1,4 +1,70 @@
-# KESTREL v0.33.0-alpha — the current public release
+# KESTREL v0.34.0-alpha - the current public release
+
+Published August 24, 2026. v0.34 finishes the focused WORK BENCH and tactical
+mission-brief pass, replaces provisional map shapes with image-backed military
+symbols, and fixes the TEST RANGE's authoritative structure collision. Existing
+installations receive it through the updater on their next `KESTREL.exe` launch.
+
+![The v0.34 WORK BENCH with an empty airframe and readable carbon](media/ui-garage-airframe.png)
+
+### Tactical C2 mission brief
+
+- Friendly launch points, route points, and hostile point targets now use
+  rasterized MIL-STD-2525E-style frames generated from their SIDCs instead of
+  improvised circles and diamonds. The exact PNG assets and attribution ship
+  inside the game.
+- Symbols scale with the mission footprint, spread apart when their screen
+  positions collide, and retain leader lines to their true map locations.
+  Labels are separately deconflicted so dense routes remain readable.
+- The loading backdrop fits and centers on the complete mission footprint. A
+  persistent dark information tray, stronger type hierarchy, and a minimum
+  display time keep mission details readable.
+- Centerless locations such as TEST RANGE explicitly clear the prior mission
+  state, so a label such as COLUMN HALT cannot carry into the next load.
+
+![The v0.34 mission brief with scaled tactical symbols](media/ui-mission-brief.png)
+
+### WORK BENCH completion
+
+- **New builds start with no selected parts.** Selecting a frame, motor, prop,
+  battery, or camera updates the large model immediately; incomplete aircraft
+  remain visibly incomplete instead of receiving generic fallback pieces.
+- **SAVE BUILD and SAVE & FLY are separate actions.** TEST RANGE first validates
+  and saves the aircraft currently shown, rather than launching an older shelf
+  build.
+- Manual exposure and a calibrated key/fill/rim setup replace the blue checker
+  field. Carbon stays dark, edge-readable, and consistent between the main
+  viewer and part thumbnails.
+- Camera, battery, stack, VTX, and antenna auto-fit positions were corrected,
+  and performance/validation panels were reorganized to avoid overlapping the
+  part controls.
+
+### Range and verification
+
+- TEST RANGE structures now have authoritative query collision owned by the
+  persistent range actor. Terrain-height and overhead probes choose the nearest
+  valid surface, including the visible 72 m tower.
+- All 863 Python tests and 209 subtests passed; all 94 launcher/update tests
+  passed; UE 5.8 Editor and Development game targets built; content validation
+  reported zero errors; and the packaged range self-test passed every assertion.
+- The public archive contains 14 validated missions, 71 audio files, 3,723 part
+  files, and the new symbol image set. It is traceable to Ceradon Sim source
+  commit `9adfaa8bf8d2061db9e507c3f6a77cd51c5f3ae5`.
+
+### Scope that remains open
+
+- Multi-team launch points are implemented, but one pilot flies at a time.
+  Simultaneous multiplayer and multiplayer voice are not implemented.
+- Anniston/Pelham remains a planned scenario. Its DSM conversion experiment is
+  complete, but the bare-earth terrain, imagery, placed content, and playable
+  mission are not in this release.
+- VTX, antenna, and stack are still read-only auto-fitted categories rather
+  than independently selectable saved parts. The broader game-wide UI overhaul
+  also continues beyond this focused WORK BENCH/loading-screen pass.
+
+---
+
+# KESTREL v0.33.0-alpha (historical)
 
 Published August 24, 2026. v0.33 adds the first tactical C2 layer to mission
 loading and rebuilds the WORK BENCH presentation around a darker, more legible

@@ -30,22 +30,23 @@ packs, props, or airspace.
 
 ---
 
-## Current release — v0.33.0-alpha
+## Current release — v0.34.0-alpha
 
-v0.33 turns mission loading into a tactical picture and gives the WORK BENCH a
-focused visual/assembly pass:
+v0.34 completes the focused tactical-brief and WORK BENCH pass:
 
-- The loading map shows LCC launch points, the ordered route, military-style
-  waypoints, strike objectives, and designated targets.
-- New builds start with no selected parts, while return-from-test preserves the
-  aircraft being tuned.
-- Locked studio exposure, a dark neutral backdrop, tighter framing, and more
-  realistic pack/camera/VTX/antenna placement replace the washed-out builder.
-- Mission briefs and predicted-performance panels have stronger contrast,
-  borders, and organization.
+- The loading map uses image-backed MIL-STD-2525E-style symbols for launch
+  points, route points, and hostile targets, with map-fit scaling, leader lines,
+  and collision-aware symbol and label placement.
+- New aircraft start empty, selected parts appear immediately, and dedicated
+  SAVE BUILD and SAVE & FLY actions preserve the aircraft currently on screen.
+- Calibrated studio lighting and a dark neutral backdrop restore readable carbon
+  while corrected pack, camera, VTX, stack, and antenna fits make assemblies
+  more believable.
+- TEST RANGE now clears stale mission labels and gives visible structures
+  authoritative query collision for terrain and overhead sensing.
 
 Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for the complete v0.33 and historical
+[full release notes](RELEASE_NOTES.md) for the complete v0.34 and historical
 release record.
 
 ---
