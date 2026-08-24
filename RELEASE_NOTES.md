@@ -1,4 +1,58 @@
-# KESTREL v0.32.0-alpha — the current public release
+# KESTREL v0.33.0-alpha — the current public release
+
+Published August 24, 2026. v0.33 adds the first tactical C2 layer to mission
+loading and rebuilds the WORK BENCH presentation around a darker, more legible
+armorer-style studio. Existing installations receive it through the
+auto-updater on their next `KESTREL.exe` launch.
+
+### Tactical mission loading
+
+- The loading map now shows the selected and alternate LCC launch points, the
+  ordered route, numbered waypoints, strike objectives, and designated targets.
+- Friendly points, route points, and hostile targets use distinct frame shapes
+  as well as colour, and every symbol follows the map's animated scale and
+  anchor.
+- Mission information now sits on a high-contrast command tray with stronger
+  heading, label, and range typography.
+
+### WORK BENCH and aircraft assembly
+
+- **A new aircraft starts empty.** Airframe, motors, props, battery, and camera
+  no longer inherit the shelf preview. Returning from a test flight still
+  preserves the build being tuned.
+- Manual exposure, a 32-degree product lens, a deliberate key/fill/rim rig, and
+  a neutral field replace the washed-out carbon and blue engine checker.
+- Batteries on four-inch-and-larger frames sit on the top plate; cameras clear
+  the carbon; VTX boards move behind the FC/ESC stack; and aerial bases seat on
+  a rear mount instead of floating over the frame.
+- Predicted-performance panels and the WORK BENCH stat bar now have complete
+  borders, row rules, and readable reference-band text.
+
+### Loading-state fix
+
+- Centerless worlds such as TEST RANGE clear the previous mission name before
+  reading their own title, so a prior label such as COLUMN HALT cannot leak
+  onto the next loading screen.
+
+### Package and verification notes
+
+- The public archive does not embed a Cesium access token or raw Discord
+  webhook. Existing installs retain their local `cesium_token.txt`; first-time
+  installs can provide one at `Documents\KESTREL\cesium_token.txt`. Crash
+  reports still use the protected HTTPS relay included in the package.
+- All 853 Python tests and 209 subtests passed, the UE 5.8 Development game and
+  editor targets compiled, all 94 launcher/update tests passed, the archive
+  verified, and the packaged executable completed a headless smoke launch.
+- Every catalog row resolves to a mesh. VTX, antenna, and stack are still
+  read-only auto-fitted categories; selectable electronics remain a separate
+  schema/persistence/UI wave.
+- This public package is traceable to Ceradon Sim source commit
+  `f440537c7152b5200898be881ced771d37711b9e`; the same commit is embedded in
+  `source-commit.txt` and published in `kestrel-update.json`.
+
+---
+
+# KESTREL v0.32.0-alpha (historical)
 
 Published August 24, 2026. v0.32 combines the rendered-flight rework, missions
 that fly exactly what they author, and a bench that finally explains what a

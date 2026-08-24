@@ -30,21 +30,22 @@ packs, props, or airspace.
 
 ---
 
-## Current release — v0.32.0-alpha
+## Current release — v0.33.0-alpha
 
-v0.32 makes authored missions authoritative in flight and makes aircraft feel
-easier to reason about before launch:
+v0.33 turns mission loading into a tactical picture and gives the WORK BENCH a
+focused visual/assembly pass:
 
-- Mission objectives now become the flown route, with authored per-leg AGL,
-  speed, below-datum intent, and optional live RF behavior.
-- The virtual pilot holds attitude through weather and uses coordinated bank on
-  the flight path, eliminating the persistent pitch hunt and hard-left /
-  hard-right roll relay.
-- HOVER THROTTLE and airframe-specific reference bands now appear beside the
-  HANGAR and WORK BENCH predictions.
+- The loading map shows LCC launch points, the ordered route, military-style
+  waypoints, strike objectives, and designated targets.
+- New builds start with no selected parts, while return-from-test preserves the
+  aircraft being tuned.
+- Locked studio exposure, a dark neutral backdrop, tighter framing, and more
+  realistic pack/camera/VTX/antenna placement replace the washed-out builder.
+- Mission briefs and predicted-performance panels have stronger contrast,
+  borders, and organization.
 
 Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for the complete v0.32 and historical
+[full release notes](RELEASE_NOTES.md) for the complete v0.33 and historical
 release record.
 
 ---
@@ -53,13 +54,15 @@ release record.
 
 1. [**Download**](../../releases/latest) `KESTREL-alpha-win64.zip` and unzip it
    **to its own folder**.
-2. Run **`KESTREL.exe`**. That is the only thing to click — no install, no
-   account. Terrain works out of the box.
+2. Run **`KESTREL.exe`**. That is the only thing to click — no installer.
    SmartScreen will warn (unsigned build) → *More info* → *Run anyway*.
-3. If it will not start, run the bundled **`vc_redist.x64.exe`** once. A missing
+3. Photoreal terrain requires a Cesium ion access token. Existing installations
+   retain their current token; for a first-time install, put yours in
+   **`Documents\KESTREL\cesium_token.txt`**.
+4. If it will not start, run the bundled **`vc_redist.x64.exe`** once. A missing
    Microsoft C++ runtime is the usual cause.
-4. **CALIBRATE CONTROLLER → AUTO-DETECT → SAVE → BACK.**
-5. **LOCATION** → drop a pin, or type `40.7580, -73.9855` → fly.
+5. **CALIBRATE CONTROLLER → AUTO-DETECT → SAVE → BACK.**
+6. **LOCATION** → drop a pin, or type `40.7580, -73.9855` → fly.
    Throttle down, then Enter (or your mapped switch) to arm.
 
 Needs internet for terrain streaming. Keyboard and gamepad work, but a radio in
