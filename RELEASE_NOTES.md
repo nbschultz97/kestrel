@@ -1,4 +1,73 @@
-# KESTREL v0.34.0-alpha - the current public release
+# KESTREL v0.35.0-alpha - the current public release
+
+Published August 25, 2026. v0.35 finishes named build management, promotes VTX,
+antenna, and stack hardware to selectable saved parts, and closes the remaining
+Nazgul Evoque F5 V3 assembly-fit defects. Existing installations receive it
+through the updater on their next `KESTREL.exe` launch.
+
+![A named, fully assembled Nazgul Evoque F5 V3 in the v0.35 WORK BENCH](media/ui-workbench-nazgul-v035.png)
+
+### Named aircraft and complete build flow
+
+- Every saved aircraft has a stable ID and a player-defined name. First save
+  asks for a name; HANGAR can rename, duplicate, edit, or fly that same build.
+- **SAVE BUILD** remains in the WORK BENCH alongside **SAVE & FLY**, so bench
+  work no longer forces a range launch.
+- New aircraft open genuinely empty across all eight hardware slots. Selecting
+  a part updates the assembled preview immediately, while incomplete builds
+  remain visibly incomplete and cannot masquerade as a flight-ready preset.
+
+![A genuinely empty new aircraft in the v0.35 WORK BENCH](media/ui-workbench-empty-v035.png)
+
+### Selectable electronics and live RF
+
+- VTX, antenna, and FC/ESC stack are full catalog categories with selectable,
+  saved identities rather than anonymous auto-fitted visuals.
+- The chosen VTX's transmit power and the selected antenna's gain feed the live
+  RF budget. The loading screen now reports the modeled hardware state instead
+  of the stale “VTX power is not modeled yet” placeholder.
+- Canonical loadout import now carries the antenna role, so a complete valid
+  aircraft stays complete when it crosses builder, save, load, and flight paths.
+
+### Nazgul assembly calibration and presentation
+
+- Nazgul Evoque F5 V3 battery placement now derives from an authored top-pad
+  contact plane and the selected pack's real mesh lower bound. The pack lies
+  fore/aft on the top deck with its XT60 end aft instead of floating above the
+  antenna envelope or sitting crosswise.
+- The Evoque motor layout uses the frame's real swept-X arm angles, and XING2
+  2207 bases seat on all four arm pads with prop clearance.
+- Shared prop geometry gains material-color variants, adding visible variety
+  without pretending that two catalog products use different geometry.
+- The dark neutral armorer-workstation lighting and stronger panel hierarchy
+  keep carbon dark, edge-readable, and clearly separated from the background.
+
+### Tactical brief and loading cleanup
+
+- Dense ATAK-style briefs reserve space for mission information, scale symbols
+  to the current footprint, separate overlapping anchors, and collapse residual
+  collisions into an explicit `+N STACKED` marker.
+- Location, MGRS, ingress, terrain status, and mission copy no longer overwrite
+  each other. Centerless worlds such as TEST RANGE clear all previous mission
+  identity before their own loading sequence begins.
+
+### Verification and package identity
+
+- 878 Python tests and 209 subtests passed before the final visual correction;
+  the focused post-correction set passed all 131 tests.
+- UE 5.8 Editor compiled cleanly. All six Garage automation tests, all five
+  VideoLink tests, and the complete `CeradonSim.KESTREL` automation suite passed.
+- A deterministic offscreen capture verified the empty bench, frame-only state,
+  and the fully assembled Nazgul battery/motor fit. All 94 launcher/update tests
+  and the final archive audit passed.
+- The credential-free public archive contains 14 missions, 71 audio files,
+  3,723 part files, the protected report relay, and no public Cesium token or
+  raw Discord webhook. It is traceable to Ceradon Sim source commit
+  `8808a2311815dbcd38f0c7f49c6cd0dab6cb9edb`.
+
+---
+
+# KESTREL v0.34.0-alpha (historical)
 
 Published August 24, 2026. v0.34 finishes the focused WORK BENCH and tactical
 mission-brief pass, replaces provisional map shapes with image-backed military

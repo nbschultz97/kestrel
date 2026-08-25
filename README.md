@@ -30,23 +30,24 @@ packs, props, or airspace.
 
 ---
 
-## Current release — v0.34.0-alpha
+## Current release — v0.35.0-alpha
 
-v0.34 completes the focused tactical-brief and WORK BENCH pass:
+v0.35 completes the named-aircraft and configurable-electronics pass:
 
-- The loading map uses image-backed MIL-STD-2525E-style symbols for launch
-  points, route points, and hostile targets, with map-fit scaling, leader lines,
-  and collision-aware symbol and label placement.
-- New aircraft start empty, selected parts appear immediately, and dedicated
-  SAVE BUILD and SAVE & FLY actions preserve the aircraft currently on screen.
-- Calibrated studio lighting and a dark neutral backdrop restore readable carbon
-  while corrected pack, camera, VTX, stack, and antenna fits make assemblies
-  more believable.
-- TEST RANGE now clears stale mission labels and gives visible structures
-  authoritative query collision for terrain and overhead sensing.
+- Builds now have stable identities and user-defined names. Save, rename, edit,
+  duplicate, and test-fly the same aircraft from the WORK BENCH and HANGAR.
+- VTX, antenna, and FC/ESC stack are selectable saved parts. Their exact hardware
+  identities persist, and VTX power plus antenna gain now drive the live RF link.
+- Dense tactical briefs keep MIL-STD-2525E-style symbols readable with reserved
+  information space, map-aware scaling, leader lines, and explicit stack counts.
+- The Nazgul Evoque F5 V3 fit was recalibrated against the assembled aircraft:
+  the battery runs fore/aft on the top pad with its connector aft, and XING2 2207
+  motor bases seat on the four arm pads without floating or clipping.
+
+![A complete Nazgul Evoque F5 V3 build in the v0.35 WORK BENCH](media/ui-workbench-nazgul-v035.png)
 
 Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for the complete v0.34 and historical
+[full release notes](RELEASE_NOTES.md) for the complete v0.35 and historical
 release record.
 
 ---
