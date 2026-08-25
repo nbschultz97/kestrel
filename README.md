@@ -30,24 +30,24 @@ packs, props, or airspace.
 
 ---
 
-## Current release — v0.36.0-alpha
+## Current release — v0.37.0-alpha
 
-v0.36 is the WORK BENCH physical-fit, readability, and simulator-identity pass:
+v0.37 finishes the connected-aircraft and WORK BENCH presentation pass:
 
-- Motor mounting uses the authored base plane, all phase leads point inboard,
-  5-inch batteries sit longitudinally with the connector aft, and the VTX aerial
-  lands on the rear-center adapter plane.
-- Catalog cards now say `COMPATIBLE` or `NOT COMPATIBLE` instead of relying on a
-  subtle tint. The Rooster 5 correctly rejects the 10–11-inch Avenger 3110 motor
-  class rather than inventing a false 5-inch prop fit.
-- The flat/checker turntable field is replaced by a soft-focus electronics bench,
-  type renders at a stable readable scale, and prop material variants keep their
-  distinct colors and thumbnails.
-- `CREATE MISSION` now lives inside MISSIONS, and the brighter sports-style crest
-  is replaced by a restrained avionics reticle and small-aircraft planform.
+- Cameras, batteries, motors, VTX hardware, and imported frame sockets now share
+  the correct coordinate system. The locked True-X build seats the Foxeer Micro
+  Cat 4 inside its cage instead of several inches in front of the frame.
+- Live compatible builds include battery straps, mated red/black battery leads,
+  and three inboard-routed phase wires per motor. Battery labels remain legible
+  and black carbon stays dark over the new soft-focus technician workbench.
+- Named/editable builds, selectable saved electronics, explicit compatibility,
+  ATAK-style mission briefs, and mission creation inside MISSIONS remain part of
+  the shipped release.
+- Launcher 1.1 asks for each pilot's Cesium token on first launch and stores it
+  privately; no shared terrain or reporting credential is embedded in the ZIP.
 
 Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for the complete v0.36 and historical
+[full release notes](RELEASE_NOTES.md) for the complete v0.37 and historical
 release record.
 
 ---
@@ -58,9 +58,9 @@ release record.
    **to its own folder**.
 2. Run **`KESTREL.exe`**. That is the only thing to click — no installer.
    SmartScreen will warn (unsigned build) → *More info* → *Run anyway*.
-3. Photoreal terrain requires a Cesium ion access token. Existing installations
-   retain their current token; for a first-time install, put yours in
-   **`Documents\KESTREL\cesium_token.txt`**.
+3. Photoreal terrain requires a Cesium ion access token. On first launch, paste
+   yours into the launcher's hidden prompt; it is stored only in
+   **`Documents\KESTREL\cesium_token.txt`**. Press Enter to use offline terrain.
 4. If it will not start, run the bundled **`vc_redist.x64.exe`** once. A missing
    Microsoft C++ runtime is the usual cause.
 5. **CALIBRATE CONTROLLER → AUTO-DETECT → SAVE → BACK.**

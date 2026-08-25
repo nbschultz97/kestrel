@@ -1,4 +1,56 @@
-# KESTREL v0.36.0-alpha - the current public release
+# KESTREL v0.37.0-alpha - the current public release
+
+Published August 25, 2026. v0.37 finishes the physically connected aircraft
+assembly and the in-engine WORK BENCH presentation pass. Existing installations
+receive it through the updater on their next `KESTREL.exe` launch.
+
+![The KESTREL mission-simulation identity](media/kestrel-lockup-v2.png)
+
+### Connected, correctly seated aircraft
+
+- Imported part axes now map into the frame coordinate system before sockets are
+  applied. Cameras sit in the forward cage, batteries lie longitudinally on the
+  top plate, and rear VTX hardware stays at the rear.
+- Every compatible live build has two fitted battery straps, red/black
+  pack-to-ESC leads, and three phase wires routed from each motor to the stack.
+  Motor mounting faces sit on the arm pads and their leads point inboard.
+- The locked 5-inch visual regression build uses a True-X frame, iFlight XING2
+  2207 1750 KV motors, HQProp Ethix S5 props, a 6S pack, and the Foxeer Micro
+  Cat 4 seated inside the camera cage. The Rooster 5 / Avenger 3110 mismatch is
+  still rejected explicitly instead of fabricating a physically false fit.
+
+### WORK BENCH material and presentation fidelity
+
+- The final aircraft viewer composites the model over a soft-focus FPV
+  technician's workbench. A restrained tone curve keeps black carbon opaque and
+  readable instead of washed white, while eliminating the black void and blue
+  engine checker.
+- All 17 battery meshes use higher-resolution label atlases and cooked texture
+  settings that preserve cell count, voltage, capacity, chemistry, and discharge
+  rating in the viewer.
+- Compatibility remains written and desaturated, named builds remain editable
+  from the HANGAR, and VTX, antenna, and stack selections remain part of the
+  saved aircraft rather than anonymous auto-fitted hardware.
+
+### Terrain setup and package identity
+
+- Launcher 1.1 performs the missing one-time terrain setup. A pilot's Cesium ion
+  token is entered without echo and saved only in
+  `Documents\\KESTREL\\cesium_token.txt`; the public archive contains no shared
+  Cesium token, Discord webhook, or report-relay credential. Skipping setup uses
+  the offline generated terrain.
+- The fresh UE 5.8 production cook completed 6,886 Windows packages. The archive
+  passed launcher, source-stamp, secret, entry-point, mission, audio, parts,
+  symbology, backdrop, and decompression checks.
+- 887 Python tests and 209 subtests pass; content validation reports zero errors;
+  and all 101 launcher/updater tests pass.
+- The archive is traceable to Ceradon Sim source commit
+  `631d673ca6d78b5a4c9a9042d66796688a1ba81b` and SHA-256
+  `37b868e342ebe9d9a41ff4f57cf10759b8b8618c6f6c2c73a8e71ea03b4f1fba`.
+
+---
+
+# KESTREL v0.36.0-alpha (historical)
 
 Published August 25, 2026. v0.36 corrects WORK BENCH physical placement and
 compatibility communication, replaces the flat studio field with a readable
