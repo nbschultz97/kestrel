@@ -63,7 +63,7 @@ through the updater on their next `KESTREL.exe` launch.
 - The credential-free public archive contains 14 missions, 71 audio files,
   3,723 part files, the protected report relay, and no public Cesium token or
   raw Discord webhook. It is traceable to Ceradon Sim source commit
-  `8808a2311815dbcd38f0c7f49c6cd0dab6cb9edb`.
+  `ad75fb63fc589c874ebbd1cc2ba0cb7b714ef54f`.
 
 ---
 
