@@ -1,11 +1,11 @@
 {
-    "version":  "v0.37.0-alpha",
+    "version":  "v0.38.0-alpha",
     "url":  "https://github.com/nbschultz97/kestrel/releases/latest/download/KESTREL-alpha-win64.zip",
-    "sha256":  "37b868e342ebe9d9a41ff4f57cf10759b8b8618c6f6c2c73a8e71ea03b4f1fba",
-    "size":  637659869,
+    "sha256":  "14efae420a2126bcc91af7a0681b6c912a67151c2aa2bdbbaeb4d507b29b8fac",
+    "size":  654049863,
     "minLauncherVersion":  "1.0.0",
     "sourceRepo":  "https://github.com/nbschultz97/ceradon-sim",
-    "sourceCommit":  "631d673ca6d78b5a4c9a9042d66796688a1ba81b",
-    "sourceTag":  "v0.37.0-alpha",
+    "sourceCommit":  "2db34a7e5828ed76990b6c508dcee46af798bc4f",
+    "sourceTag":  "v0.38.0-alpha",
     "notes":  "See RELEASE_NOTES.md"
 }
