@@ -30,24 +30,27 @@ packs, props, or airspace.
 
 ---
 
-## Current release — v0.37.0-alpha
+## Current release — v0.38.0-alpha
 
-v0.37 finishes the connected-aircraft and WORK BENCH presentation pass:
+v0.38 turns the WORK BENCH and mission library into complete, mouse-first
+workflows and adds weight-aware payload selection:
 
-- Cameras, batteries, motors, VTX hardware, and imported frame sockets now share
-  the correct coordinate system. The locked True-X build seats the Foxeer Micro
-  Cat 4 inside its cage instead of several inches in front of the frame.
-- Live compatible builds include battery straps, mated red/black battery leads,
-  and three inboard-routed phase wires per motor. Battery labels remain legible
-  and black carbon stays dark over the new soft-focus technician workbench.
-- Named/editable builds, selectable saved electronics, explicit compatibility,
-  ATAK-style mission briefs, and mission creation inside MISSIONS remain part of
-  the shipped release.
-- Launcher 1.1 asks for each pilot's Cesium token on first launch and stores it
-  privately; no shared terrain or reporting credential is embedded in the ZIP.
+- New aircraft begin empty. Parts, stack, VTX, antenna, payload, and prop color
+  are selectable, visible on the aircraft, and saved with named builds.
+- Exact battery meshes and labels, rigid straps, connected power/phase leads,
+  corrected camera/VTX placement, stronger compatibility states, and a soft-focus
+  technician workbench make the assembled aircraft readable and believable.
+- Eight sensing, relay, EW, trainer, and fictional simulated-effect payloads are
+  class/weight gated and change mass, endurance, agility, and predicted figures.
+- MISSIONS now has separate Build Mission and Import Mission actions; Hangar and
+  mission operations have clickable buttons, with shortcuts kept secondary.
+- Loading cards include a Test Range backdrop and collision-managed ATAK-style
+  C2 symbols. Hard landings now use pre-resolution impact speed for real damage.
+- Settings chevrons work in both directions, and the scorecard's R-to-refly action
+  now works without colliding with Rename elsewhere in the front end.
 
 Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for the complete v0.37 and historical
+[full release notes](RELEASE_NOTES.md) for the complete v0.38 and historical
 release record.
 
 ---

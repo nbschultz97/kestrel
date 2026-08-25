@@ -1,4 +1,85 @@
-# KESTREL v0.37.0-alpha - the current public release
+# KESTREL v0.38.0-alpha - the current public release
+
+Published August 25, 2026. v0.38 completes the mouse-first aircraft-build and
+mission-library pass, adds weight-aware payload selection, and closes several
+loading, damage, settings, and scorecard defects. Existing installations receive
+it through the updater on their next `KESTREL.exe` launch.
+
+![The KESTREL mission-simulation identity](media/kestrel-lockup-v2.png)
+
+### Complete, saved aircraft builds
+
+- A new build starts with no automatically selected parts. Frame, motors, props,
+  battery, camera, stack, VTX, antenna, and payload are explicit selections;
+  named builds can be saved, renamed, edited, activated, and flown from Hangar.
+- Stack and VTX cards now use the same resolved meshes as the live aircraft.
+  Selected electronics persist instead of being silently replaced by an
+  anonymous auto-fit.
+- Exact meshes and label materials ship for the 2S 550, 3S 850, 4S 650, and
+  6S 1800/2200/2900/4500 packs. Rigid straps replace the old spline artifacts,
+  battery leads mate to the aircraft, and motor phase leads route inboard.
+- Camera and rear-deck VTX/antenna placement use the authored aircraft sockets.
+  Propellers have saved factory, smoke, cyan, lime, purple, and red material
+  choices, including distinct colors where products share geometry.
+- Compatibility is written, high-contrast, and desaturated when unavailable.
+  The Rooster 5 / Avenger 3110 mismatch remains intentionally rejected rather
+  than fabricating a motor or prop fit.
+
+### Weight-aware payloads and honest predictions
+
+- WORK BENCH adds an optional saved Payload category with eight loadouts spanning
+  multispectral and EO/thermal sensing, spectrum survey/EW, communications relay,
+  inert training, and fictional simulated mission-effect pods.
+- Payload minimum class and mass are enforced. A fitted payload changes total
+  mass, thrust-to-weight, endurance, agility/inertia, cost, compatibility, and
+  the exported loadout instead of acting as a cosmetic attachment.
+- Four new textured payload archetypes mount on a centerline under-frame rail.
+  KESTREL does not model real initiators, ESAD firing circuitry, or operational
+  weapon-employment procedures; effect pods remain fictional simulation objects.
+
+### Mouse-first Hangar and Missions UI
+
+- Hangar exposes clickable Make Active, Edit Build, Rename, and Fly actions.
+  Missions exposes Fly, Export, Rename, Delete, Undo, Build Mission, and Import
+  Mission as separate buttons; creation/import are no longer fake rows mixed
+  into the mission list.
+- Rename, delete, import, collision, and build-name dialogs all expose clickable
+  confirmations and cancellations. Keyboard shortcuts remain available as a
+  secondary convenience instead of being the only discoverable control surface.
+- Predicted aircraft figures stay inside their panel, selection states use plain
+  verbs, and the Test Range has a dedicated loading backdrop.
+
+### Mission presentation, damage, and small reliability fixes
+
+- Loading-card C2 maps use packaged military-style point symbols with collision
+  management so LCC, spawn, waypoint, target, and other marks remain legible at
+  the current map scale.
+- Hard-drop damage consumes the vertical impact speed captured before collision
+  resolution zeros velocity. A roughly 17 m/s impact is covered by a regression
+  test and can no longer leave the aircraft inexplicably pristine.
+- Settings left/right chevrons now decrement and increment with the mouse. The
+  post-mission scorecard's advertised R-to-refly action is wired to the last
+  staged mission and is guarded by the loaded/finished scorecard predicate, so R
+  still means Rename on the front-end pages that own it.
+
+### Package identity and verification
+
+- The fresh UE 5.8 production cook completed 7,096 Windows packages and staged
+  3,944 part files, 14 missions, 71 audio files, 10 tactical-symbol assets, and
+  the Test Range plus menu/loading backdrop set.
+- The archive contains one KESTREL launcher and one game executable, passes the
+  decompression and source/version checks, and contains no Cesium token, Discord
+  webhook, or report-relay endpoint. Local reports are still written for manual
+  attachment when needed.
+- 898 Python tests and 209 subtests pass, the Unreal Editor and shipping targets
+  compile, and all 101 launcher/updater tests pass.
+- The 654,049,863-byte archive is traceable to Ceradon Sim source commit
+  `2db34a7e5828ed76990b6c508dcee46af798bc4f` and SHA-256
+  `14efae420a2126bcc91af7a0681b6c912a67151c2aa2bdbbaeb4d507b29b8fac`.
+
+---
+
+# KESTREL v0.37.0-alpha (historical)
 
 Published August 25, 2026. v0.37 finishes the physically connected aircraft
 assembly and the in-engine WORK BENCH presentation pass. Existing installations
