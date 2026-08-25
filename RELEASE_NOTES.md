@@ -1,4 +1,71 @@
-# KESTREL v0.35.0-alpha - the current public release
+# KESTREL v0.36.0-alpha - the current public release
+
+Published August 25, 2026. v0.36 corrects WORK BENCH physical placement and
+compatibility communication, replaces the flat studio field with a readable
+electronics bench, moves mission creation into MISSIONS, and introduces a
+quieter simulation/avionics KESTREL identity. Existing installations receive it
+through the updater on their next `KESTREL.exe` launch.
+
+![The v0.36 KESTREL mission-simulation identity](media/kestrel-lockup-v2.png)
+
+### Honest airframe assembly
+
+- High-fidelity motors seat from their authored mounting face instead of the
+  lowest point of hanging phase-wire geometry. Motor leads face inboard toward
+  the stack on every generated exposed-arm mount.
+- Batteries on 5-inch aircraft lie along the top plate with the connector aft.
+  The VTX antenna base uses the rear-center adapter surface rather than an
+  off-center mast position.
+- The BrotherHobby Avenger 3110 remains intentionally incompatible with the
+  Armattan Rooster 5. The 76 g, 19 x 19 mm motor is intended for 10–11-inch
+  propellers; the Rooster 5 is a 5-inch 22xx/23xx platform. The builder reports
+  that physical mismatch instead of fabricating a mount or a propeller choice.
+
+### WORK BENCH presentation and compatibility
+
+- The aircraft now turns over a deliberately blurred electronics workbench with
+  neutral graphite/steel lighting. It replaces both the engine checker and the
+  visually empty black field while keeping carbon and small hardware legible.
+- Every part card has a written state: `COMPATIBLE`, `NOT COMPATIBLE`, `CHECKING`,
+  or `EMPTY SLOT`. Incompatible cards are clearly desaturated, and the selected
+  part explains why it cannot fit.
+- Thumbnail caching keys on resolved mesh plus material. Products that truly
+  share geometry reuse their render; prop material variants keep distinct colors.
+- Rasterized type uses a stable quantized scale and microcopy has a readable
+  floor. Long aircraft-integration labels and bottom performance values fit their
+  panels with stronger contrast.
+
+### Navigation and identity
+
+- `CREATE MISSION` is now a permanent action inside MISSIONS. The duplicate
+  Builder destination is removed from the main menu, and editor exits return to
+  the mission catalog.
+- The old bright crest is replaced by an open instrument reticle, top-view small
+  aircraft planform, sensor truth point, and muted blue-gray palette. The result
+  reads as flight dynamics, C2, and mission rehearsal rather than a team mascot.
+
+### Verification and package identity
+
+- 880 runnable Python tests and 209 subtests pass; 5 environment-gated tests are
+  skipped. All 71 package-adjacent contracts and all 94 launcher/update tests pass.
+- The UE 5.8 Development Editor and monolithic Win64 Game targets compile. The
+  fresh public cook completed 6,883 Windows packages with zero cook errors, and
+  the archive passed path, entry-point, source-stamp, secret, and decompression
+  audits.
+- The credential-free public archive contains 14 missions, 71 audio files,
+  3,723 part files, 10 tactical-symbol assets, 7 backdrops, the protected report
+  relay, and no Cesium token or raw Discord webhook. It is traceable to Ceradon
+  Sim source commit `65e69c628210dc31a81a936fa5a36072172cb03c` and SHA-256
+  `638106764a31d1a0064ba08fb9178c0dcae6549de4eb2c580d51f1d1168fca3c`.
+- Fresh interactive screenshots are not claimed for this build: Windows
+  Application Control on the release workstation blocks newly built unsigned
+  runtime/editor binaries. Deterministic shot setup, compilation, cook, catalog,
+  and contract checks are green; a tonemapped eyes-on pass remains presentation
+  follow-up on an approved runtime host.
+
+---
+
+# KESTREL v0.35.0-alpha (historical)
 
 Published August 25, 2026. v0.35 finishes named build management, promotes VTX,
 antenna, and stack hardware to selectable saved parts, and closes the remaining

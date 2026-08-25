@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="media/kestrel-lockup-web.png" alt="KESTREL — Advanced sUAS Training Platform" width="720">
+<img src="media/kestrel-lockup-web.png" alt="KESTREL — Small UAS Mission Simulation" width="720">
 
-**Advanced sUAS training at any coordinate on Earth.**
+**Small UAS mission simulation at any coordinate on Earth.**
 
 [**Download →**](../../releases/latest)
 
@@ -30,24 +30,24 @@ packs, props, or airspace.
 
 ---
 
-## Current release — v0.35.0-alpha
+## Current release — v0.36.0-alpha
 
-v0.35 completes the named-aircraft and configurable-electronics pass:
+v0.36 is the WORK BENCH physical-fit, readability, and simulator-identity pass:
 
-- Builds now have stable identities and user-defined names. Save, rename, edit,
-  duplicate, and test-fly the same aircraft from the WORK BENCH and HANGAR.
-- VTX, antenna, and FC/ESC stack are selectable saved parts. Their exact hardware
-  identities persist, and VTX power plus antenna gain now drive the live RF link.
-- Dense tactical briefs keep MIL-STD-2525E-style symbols readable with reserved
-  information space, map-aware scaling, leader lines, and explicit stack counts.
-- The Nazgul Evoque F5 V3 fit was recalibrated against the assembled aircraft:
-  the battery runs fore/aft on the top pad with its connector aft, and XING2 2207
-  motor bases seat on the four arm pads without floating or clipping.
-
-![A complete Nazgul Evoque F5 V3 build in the v0.35 WORK BENCH](media/ui-workbench-nazgul-v035.png)
+- Motor mounting uses the authored base plane, all phase leads point inboard,
+  5-inch batteries sit longitudinally with the connector aft, and the VTX aerial
+  lands on the rear-center adapter plane.
+- Catalog cards now say `COMPATIBLE` or `NOT COMPATIBLE` instead of relying on a
+  subtle tint. The Rooster 5 correctly rejects the 10–11-inch Avenger 3110 motor
+  class rather than inventing a false 5-inch prop fit.
+- The flat/checker turntable field is replaced by a soft-focus electronics bench,
+  type renders at a stable readable scale, and prop material variants keep their
+  distinct colors and thumbnails.
+- `CREATE MISSION` now lives inside MISSIONS, and the brighter sports-style crest
+  is replaced by a restrained avionics reticle and small-aircraft planform.
 
 Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for the complete v0.35 and historical
+[full release notes](RELEASE_NOTES.md) for the complete v0.36 and historical
 release record.
 
 ---
