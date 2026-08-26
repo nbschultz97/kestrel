@@ -1,4 +1,84 @@
-# KESTREL v0.38.0-alpha - the current public release
+# KESTREL v0.40.1-alpha - the current public release
+
+Published August 26, 2026. v0.40.1 stabilizes the v0.40 aircraft-art,
+mission-authoring, and startup wave. Existing installations receive it through
+the updater on their next `KESTREL.exe` launch.
+
+![The KESTREL flight-datum identity](media/kestrel-lockup-v2.png)
+
+### Work Bench crash fixed
+
+- The v0.40 crash minidump resolved to immediate thumbnail capture forcing
+  render-state updates from inside `PlayerTick` while imported parts settled.
+  Tile and live-preview captures now run in Unreal's deferred end-of-frame pass.
+- The crash reporter writes one diagnostic per process crash rather than two
+  copies while Unreal unwinds.
+- A fresh packaged 11-screen Work Bench tour exercised empty-build startup,
+  representative assemblies, Stack thumbnails, and all 22 battery products:
+  exit 0, no crash bundle, and no new crash report.
+
+### Cleaner identity and interface
+
+- The crest/reticle and bright sports-blue treatment are replaced by a flat,
+  angular three-plane flight-datum mark, restrained cyan accent, and a clean
+  KESTREL wordmark across the game, native splash, executable, and release page.
+- Main-menu rows now read `FREE FLIGHT`, `MISSIONS`, `WORK BENCH`, and `RECORDS`
+  without parenthetical instructions or dynamic counts.
+- Saved-build row actions say `EDIT` and `RENAME` instead of unexplained `E` and
+  `R` keycaps. Test Range and Proving Ground subtitles fit their real card width.
+
+### Release verification
+
+- 996 Python tests and 208 subtests passed; 167 native Unreal tests passed with
+  0 failures. Shipping and Editor targets compiled, and the fresh cook completed
+  with 0 errors.
+- The 663,155,395-byte archive passed all 101 launcher/update tests and contains
+  exactly one public Cesium token, one protected report relay, one game payload,
+  no webhook, and no obsolete launcher.
+- Source commit: `e2bd087aa9603f3a0bddbf12c528936e6c4a5b96`.
+  SHA-256: `681fd6e9f2fafc0bb7cc2900fa94378d303aebbae4921ffb3817ca18b7c6d333`.
+
+---
+
+# KESTREL v0.40.0-alpha (historical)
+
+Published August 26, 2026. v0.40 added catalog-exact battery art, camera-valid
+ISR tasks, clearer mission types, editable tunnel missions, and a continuous
+branded startup.
+
+- Five Tattu, CNHL, and GNB 1300 mAh products gained exact imported geometry and
+  high-resolution wraps. Thumbnail capture now waits for material compilation
+  and texture residency and retains the HDR signal used by the UI composite.
+- Mission Builder can author and round-trip `AO + BUNKER TUNNEL` venues with a
+  georeferenced exterior and a procedural collidable bunker interior.
+- Recon tasks require a fitted live camera, field of view, unobstructed line of
+  sight, authored range, and dwell instead of accepting a tiny waypoint gate.
+- Missions are labelled as operations, training courses, user missions, or
+  imports. Tactical scenarios score observation or terminal effect rather than
+  arbitrary FPV route narration.
+- Public builds again bundle the intentionally public Cesium token for zero-setup
+  terrain. Weather/time controls clearly lock when the selected mission owns them.
+
+---
+
+# KESTREL v0.39.0-alpha (historical)
+
+Published August 26, 2026. v0.39 added independently selected control receivers,
+honest component ownership, explicit mission launch, and the mouse-first action
+campaign.
+
+- ELRS, Crossfire, Tracer, Ghost, diversity, and sub-GHz receiver boards became
+  visible, persisted build selections with real completeness and mass effects.
+- Cameras no longer create phantom VTX antennas; camera, VTX, antenna, receiver,
+  stack, and payload ownership save and render independently.
+- Mission rows select only. Explicit Fly, Export, Rename, Delete, Build Mission,
+  and Import Mission actions replaced surprise launches and keyboard-only flows.
+- Hangar Make Active, Edit Build, Rename, and Fly actions dispatch through the
+  selected saved build, with matching clickable controls throughout the UI.
+
+---
+
+# KESTREL v0.38.0-alpha (historical)
 
 Published August 25, 2026. v0.38 completes the mouse-first aircraft-build and
 mission-library pass, adds weight-aware payload selection, and closes several

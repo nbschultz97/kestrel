@@ -30,27 +30,28 @@ packs, props, or airspace.
 
 ---
 
-## Current release — v0.38.0-alpha
+## Current release — v0.40.1-alpha
 
-v0.38 turns the WORK BENCH and mission library into complete, mouse-first
-workflows and adds weight-aware payload selection:
+v0.40.1 is the stabilization build for the v0.40 mission, aircraft-art, and
+startup pass:
 
-- New aircraft begin empty. Parts, stack, VTX, antenna, payload, and prop color
-  are selectable, visible on the aircraft, and saved with named builds.
-- Exact battery meshes and labels, rigid straps, connected power/phase leads,
-  corrected camera/VTX placement, stronger compatibility states, and a soft-focus
-  technician workbench make the assembled aircraft readable and believable.
-- Eight sensing, relay, EW, trainer, and fictional simulated-effect payloads are
-  class/weight gated and change mass, endurance, agility, and predicted figures.
-- MISSIONS now has separate Build Mission and Import Mission actions; Hangar and
-  mission operations have clickable buttons, with shortcuts kept secondary.
-- Loading cards include a Test Range backdrop and collision-managed ATAK-style
-  C2 symbols. Hard landings now use pre-resolution impact speed for real damage.
-- Settings chevrons work in both directions, and the scorecard's R-to-refly action
-  now works without colliding with Rename elsewhere in the front end.
+- The shipped identity is now a restrained angular flight-datum mark and clean
+  KESTREL wordmark. Main-menu labels are concise, Work Bench rows say `EDIT` and
+  `RENAME`, and Test Range / Proving Ground copy stays inside its cards.
+- A Work Bench crash in immediate thumbnail capture is fixed by deferring scene
+  capture to Unreal's end-of-frame pass. The packaged 11-screen catalog tour now
+  completes without a crash or duplicate report.
+- Five 1300 mAh Tattu, CNHL, and GNB products have exact meshes and readable wrap
+  art. Thumbnail residency and dark-part compositing were tightened so batteries,
+  boards, and carbon do not cache unfinished white/grey frames.
+- Mission Builder can author an AO with a procedural bunker tunnel. Recon tasks
+  require a fitted camera, real field of view, line of sight, range, and dwell;
+  missions are labelled as operations, courses, user missions, or imports.
+- The public playtest package deliberately bundles the project's public Cesium
+  token, so photoreal terrain works without asking every player to provision one.
 
 Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for the complete v0.38 and historical
+[full release notes](RELEASE_NOTES.md) for v0.40.1, v0.40, and the historical
 release record.
 
 ---
@@ -61,13 +62,14 @@ release record.
    **to its own folder**.
 2. Run **`KESTREL.exe`**. That is the only thing to click — no installer.
    SmartScreen will warn (unsigned build) → *More info* → *Run anyway*.
-3. Photoreal terrain requires a Cesium ion access token. On first launch, paste
-   yours into the launcher's hidden prompt; it is stored only in
-   **`Documents\KESTREL\cesium_token.txt`**. Press Enter to use offline terrain.
+3. The public playtest token is bundled, so photoreal terrain works on first
+   launch. Advanced users can replace **`Documents\KESTREL\cesium_token.txt`**
+   with their own scoped Cesium ion token; the updater preserves edited tokens.
 4. If it will not start, run the bundled **`vc_redist.x64.exe`** once. A missing
    Microsoft C++ runtime is the usual cause.
 5. **CALIBRATE CONTROLLER → AUTO-DETECT → SAVE → BACK.**
-6. **LOCATION** → drop a pin, or type `40.7580, -73.9855` → fly.
+6. **FREE FLIGHT** → choose an aircraft → drop a pin, or type
+   `40.7580, -73.9855` → fly.
    Throttle down, then Enter (or your mapped switch) to arm.
 
 Needs internet for terrain streaming. Keyboard and gamepad work, but a radio in
@@ -101,11 +103,13 @@ USB-Joystick mode is the point.
 
 ## Mission training
 
-Three built-in missions cover different skills: **GAUNTLET** is a timed Chicago
-river-canyon gate run, **BRIDGE STRIKE** is a low Pittsburgh ingress with a
-terminal window, and **RELAY DASH** stretches the RF link across Seattle's
-Elliott Bay. Mission scoring grades objective completion, time, link discipline,
-power management, and crashes, while personal bests persist between sessions.
+The mission library now separates operations, handling courses, user missions,
+and imports. Camp Williams courses train link discipline, masked ingress,
+low-altitude handling, and stand-off observation; **COLUMN HALT** and **DECK
+LINE** are operations; **LOW WATER** and **UNDER THE HILL** cover confined-flight
+skills. Mission scoring grades the task actually authored—observation, terminal
+effect, or course completion—plus time, link discipline, power management, and
+crashes, while personal bests persist between sessions.
 
 A `strike` objective is a one-way attack run: fly the terminal dive onto the
 target and the warhead functions. Vehicles in the blast are wrecked rather than
