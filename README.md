@@ -30,6 +30,31 @@ packs, props, or airspace.
 
 ---
 
+## Evaluation prerelease — v0.42.3-alpha-unsigned.1
+
+An explicitly **unsigned** v0.42.3 evaluation package is available from the
+[prerelease page](../../releases/tag/v0.42.3-alpha-unsigned.1). It is separate
+from the normal download and auto-update channel: the **Download** link above,
+`releases/latest`, and installed KESTREL launchers remain on v0.40.1-alpha.
+The official KESTREL repository, Rotopter, and MilGit carry the same prerelease
+metadata and the same ZIP identity so no release mirror advertises different
+evaluation bytes.
+
+This package is for approved test environments only. Neither `KESTREL.exe` nor
+`CeradonSim/Binaries/Win64/CeradonSim.exe` has an Authenticode signature, so
+Windows SmartScreen, Smart App Control, or organization policy may warn or
+block it. Do not weaken endpoint policy to run it; wait for the signed release
+if the test environment does not explicitly permit unsigned software.
+
+- Source commit: `bac24999010eb99f5117cf7591643f15e1bc87ec`
+- Archive size: `673,203,991` bytes
+- SHA-256: `c3fea9c8ae330908302060e026db318b173a9d20fe422d8f09f3c9498cb38cbf`
+
+See the [prerelease notes](RELEASE_NOTES.md#kestrel-v0423-alpha-unsigned1--unsigned-evaluation-prerelease)
+for the changes, verification record, and known limitations.
+
+---
+
 ## Current release — v0.40.1-alpha
 
 v0.40.1 is the stabilization build for the v0.40 mission, aircraft-art, and

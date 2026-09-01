@@ -1,3 +1,82 @@
+# KESTREL v0.42.3-alpha-unsigned.1 — unsigned evaluation prerelease
+
+Prepared August 31, 2026 from the verified v0.42.3-alpha candidate. This is an
+explicitly **unsigned** evaluation artifact, not the current public release.
+It is not advertised through `kestrel-update.json`, is not the GitHub “Latest”
+release, and will not be offered to installed KESTREL launchers. The supported
+download and updater channel remain on v0.40.1-alpha.
+
+The official KESTREL repository, Rotopter, and MilGit carry this same unsigned
+evaluation prerelease. Their release assets have the identical filename, byte
+length, and SHA-256 recorded below, and their `main` branches have identical Git
+trees. This is mirror publication of an evaluation build, not promotion into
+the automatic-update channel.
+
+Use this package only in an approved test environment. Both release-owned
+executables report `NotSigned`: `KESTREL.exe` and
+`CeradonSim/Binaries/Win64/CeradonSim.exe`. Windows SmartScreen, Smart App
+Control, or organization policy may warn or block the package. Do not disable
+or weaken endpoint protections to run it; use the signed release when policy
+requires a trusted publisher.
+
+### Artifact identity
+
+- Release tag: `v0.42.3-alpha-unsigned.1`
+- Archive: `KESTREL-alpha-win64.zip`
+- Source repository: `https://github.com/nbschultz97/ceradon-sim`
+- Source commit: `bac24999010eb99f5117cf7591643f15e1bc87ec`
+- Source version stamped in the archive: `v0.42.3-alpha`
+- Archive size: `673,203,991` bytes
+- SHA-256: `c3fea9c8ae330908302060e026db318b173a9d20fe422d8f09f3c9498cb38cbf`
+
+The `.1` suffix distinguishes this unsigned distribution record from the
+canonical `v0.42.3-alpha` tag, which remains available for a future signed
+release. Publishing this prerelease must not change `kestrel-update.json` or
+the repository’s GitHub “Latest” release.
+
+### Added
+
+- A local-only `FPV / LINE OF SIGHT` camera is available from `V` or the
+  clickable pause-menu action. It stays at the launch operator’s eye and tracks
+  the local aircraft without changing replicated flight physics.
+- The catalog adds a graph-valid 2.5-inch 16x16 micro frame, with compatibility
+  coverage proving at least one complete build for every shipped frame, motor,
+  propeller, battery, FC, and ESC.
+
+### Fixed
+
+- Controller calibration remains interactive when opened from paused Settings,
+  including mouse, keyboard, and gamepad navigation, clean cancellation, and
+  refusal to persist invalid or no-device completion.
+- Prop rendering uses mutually exclusive sharp, transitional-blur, and fast-
+  halo phases with hysteresis while retaining the selected prop color.
+- Free Flight displays the AO’s resolved local solar time; the generic selector
+  now says `CURRENT TIME`.
+- BLITZ E80 FC/ESC compatibility uses its 30.5x30.5 mounting pattern, and
+  integrated ESC current limits participate in compatibility checks.
+- Release automation now refuses `-Publish -NoManifestPush`, publishes the
+  updater manifest before tagging, and verifies that the canonical release tag
+  resolves to the exact official-main manifest commit. This unsigned prerelease
+  is intentionally published manually outside that signed canonical path.
+
+### Verification and limitations
+
+- Full Python/source-contract suite: 1,242 passed plus 243 subtests.
+- Unreal Editor target built successfully.
+- Full `CeradonSim.KESTREL` automation: 203 tests, 0 failures.
+- Catalog coverage includes all 29 frames, 34 motors, 33 propellers,
+  22 batteries, 10 FCs, 12 ESCs, and all 8 payloads.
+- Archive verification confirmed the expected launcher, game payload, source
+  and version stamps, runtime content, public Cesium token, and absence of a
+  Discord webhook. The digest and byte length above identify the exact ZIP.
+- Production Authenticode signing, clean-machine publisher verification, and
+  promotion to the signed automatic-update channel remain incomplete.
+- LOS terrain/structure occlusion, lost-visual feedback, controller binding,
+  packaged single-player/two-PC acceptance, full multiplayer mission
+  replication, and automatic host migration remain open.
+
+---
+
 # KESTREL v0.40.1-alpha - the current public release
 
 Published August 26, 2026. v0.40.1 stabilizes the v0.40 aircraft-art,
