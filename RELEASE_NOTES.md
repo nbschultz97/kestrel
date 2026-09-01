@@ -1,16 +1,15 @@
-# KESTREL v0.42.3-alpha-unsigned.1 — unsigned evaluation prerelease
+# KESTREL v0.42.3-alpha-unsigned.1 — current unsigned release
 
 Prepared August 31, 2026 from the verified v0.42.3-alpha candidate. This is an
-explicitly **unsigned** evaluation artifact, not the current public release.
-It is not advertised through `kestrel-update.json`, is not the GitHub “Latest”
-release, and will not be offered to installed KESTREL launchers. The supported
-download and updater channel remain on v0.40.1-alpha.
+explicitly **unsigned** public release. It is GitHub “Latest” and is advertised
+through `kestrel-update.json` using the deterministic versioned release URL, so
+installed KESTREL launchers offer this exact archive.
 
 The official KESTREL repository, Rotopter, and MilGit carry this same unsigned
 evaluation prerelease. Their release assets have the identical filename, byte
 length, and SHA-256 recorded below, and their `main` branches have identical Git
-trees. This is mirror publication of an evaluation build, not promotion into
-the automatic-update channel.
+trees. The in-app updater uses the official GitHub asset and verifies the same
+SHA-256 before installing it.
 
 Use this package only in an approved test environment. Both release-owned
 executables report `NotSigned`: `KESTREL.exe` and
@@ -29,10 +28,10 @@ requires a trusted publisher.
 - Archive size: `673,203,991` bytes
 - SHA-256: `c3fea9c8ae330908302060e026db318b173a9d20fe422d8f09f3c9498cb38cbf`
 
-The `.1` suffix distinguishes this unsigned distribution record from the
-canonical `v0.42.3-alpha` tag, which remains available for a future signed
-release. Publishing this prerelease must not change `kestrel-update.json` or
-the repository’s GitHub “Latest” release.
+The `.1` suffix makes the unsigned distribution status explicit. Launcher 1.1
+compares only `major.minor.patch`, ignoring suffixes; after v0.42.3 is installed,
+the next signed automatic update must be v0.42.4 or newer. Reusing a v0.42.3 tag
+would compare equal and would not be offered.
 
 ### Added
 
@@ -55,9 +54,9 @@ the repository’s GitHub “Latest” release.
 - BLITZ E80 FC/ESC compatibility uses its 30.5x30.5 mounting pattern, and
   integrated ESC current limits participate in compatibility checks.
 - Release automation now refuses `-Publish -NoManifestPush`, publishes the
-  updater manifest before tagging, and verifies that the canonical release tag
-  resolves to the exact official-main manifest commit. This unsigned prerelease
-  is intentionally published manually outside that signed canonical path.
+  updater manifest before tagging, and verifies exact release metadata. This
+  manually published unsigned release uses the same fail-closed SHA-256 update
+  path with a deterministic tag-specific asset URL.
 
 ### Verification and limitations
 
@@ -69,19 +68,19 @@ the repository’s GitHub “Latest” release.
 - Archive verification confirmed the expected launcher, game payload, source
   and version stamps, runtime content, public Cesium token, and absence of a
   Discord webhook. The digest and byte length above identify the exact ZIP.
-- Production Authenticode signing, clean-machine publisher verification, and
-  promotion to the signed automatic-update channel remain incomplete.
+- Production Authenticode signing and clean-machine publisher verification
+  remain incomplete. The unsigned archive is nevertheless the current public
+  and automatic-update release by explicit release decision.
 - LOS terrain/structure occlusion, lost-visual feedback, controller binding,
   packaged single-player/two-PC acceptance, full multiplayer mission
   replication, and automatic host migration remain open.
 
 ---
 
-# KESTREL v0.40.1-alpha - the current public release
+# KESTREL v0.40.1-alpha (historical)
 
-Published August 26, 2026. v0.40.1 stabilizes the v0.40 aircraft-art,
-mission-authoring, and startup wave. Existing installations receive it through
-the updater on their next `KESTREL.exe` launch.
+Published August 26, 2026. v0.40.1 stabilized the v0.40 aircraft-art,
+mission-authoring, and startup wave. It was superseded by v0.42.3-alpha-unsigned.1.
 
 ![The KESTREL flight-datum identity](media/kestrel-lockup-v2.png)
 

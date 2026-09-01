@@ -30,15 +30,13 @@ packs, props, or airspace.
 
 ---
 
-## Evaluation prerelease — v0.42.3-alpha-unsigned.1
+## Current unsigned release — v0.42.3-alpha-unsigned.1
 
-An explicitly **unsigned** v0.42.3 evaluation package is available from the
-[prerelease page](../../releases/tag/v0.42.3-alpha-unsigned.1). It is separate
-from the normal download and auto-update channel: the **Download** link above,
-`releases/latest`, and installed KESTREL launchers remain on v0.40.1-alpha.
-The official KESTREL repository, Rotopter, and MilGit carry the same prerelease
-metadata and the same ZIP identity so no release mirror advertises different
-evaluation bytes.
+The current public v0.42.3 package is explicitly **unsigned**. The **Download**
+link above, [versioned release page](../../releases/tag/v0.42.3-alpha-unsigned.1),
+`releases/latest`, and the in-app updater all resolve to this same artifact.
+The official KESTREL repository, Rotopter, and MilGit carry the same release
+metadata and ZIP identity so no release mirror advertises different bytes.
 
 This package is for approved test environments only. Neither `KESTREL.exe` nor
 `CeradonSim/Binaries/Win64/CeradonSim.exe` has an Authenticode signature, so
@@ -50,12 +48,16 @@ if the test environment does not explicitly permit unsigned software.
 - Archive size: `673,203,991` bytes
 - SHA-256: `c3fea9c8ae330908302060e026db318b173a9d20fe422d8f09f3c9498cb38cbf`
 
-See the [prerelease notes](RELEASE_NOTES.md#kestrel-v0423-alpha-unsigned1--unsigned-evaluation-prerelease)
+Launcher 1.1 compares only the numeric `major.minor.patch` portion of a version.
+After installing this build, a later signed auto-update must therefore be
+v0.42.4 or newer; reusing v0.42.3 would compare equal and would not be offered.
+
+See the [release notes](RELEASE_NOTES.md#kestrel-v0423-alpha-unsigned1--current-unsigned-release)
 for the changes, verification record, and known limitations.
 
 ---
 
-## Current release — v0.40.1-alpha
+## Previous release — v0.40.1-alpha
 
 v0.40.1 is the stabilization build for the v0.40 mission, aircraft-art, and
 startup pass:
@@ -75,9 +77,8 @@ startup pass:
 - The public playtest package deliberately bundles the project's public Cesium
   token, so photoreal terrain works without asking every player to provision one.
 
-Existing installations update automatically when `KESTREL.exe` starts. See the
-[full release notes](RELEASE_NOTES.md) for v0.40.1, v0.40, and the historical
-release record.
+See the [full release notes](RELEASE_NOTES.md) for v0.42.3, v0.40.1, v0.40, and
+the historical release record.
 
 ---
 
