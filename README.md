@@ -30,10 +30,10 @@ packs, props, or airspace.
 
 ---
 
-## Current unsigned release — v0.42.3-alpha-unsigned.1
+## Current unsigned release — v0.42.4-alpha-unsigned.1
 
-The current public v0.42.3 package is explicitly **unsigned**. The **Download**
-link above, [versioned release page](../../releases/tag/v0.42.3-alpha-unsigned.1),
+The current public v0.42.4 package is explicitly **unsigned**. The **Download**
+link above, [versioned release page](../../releases/tag/v0.42.4-alpha-unsigned.1),
 `releases/latest`, and the in-app updater all resolve to this same artifact.
 The official KESTREL repository, Rotopter, and MilGit carry the same release
 metadata and ZIP identity so no release mirror advertises different bytes.
@@ -44,41 +44,32 @@ Windows SmartScreen, Smart App Control, or organization policy may warn or
 block it. Do not weaken endpoint policy to run it; wait for the signed release
 if the test environment does not explicitly permit unsigned software.
 
-- Source commit: `bac24999010eb99f5117cf7591643f15e1bc87ec`
-- Archive size: `673,203,991` bytes
-- SHA-256: `c3fea9c8ae330908302060e026db318b173a9d20fe422d8f09f3c9498cb38cbf`
+- Source commit: `d78b890fbaa3024c861e3dc468770caa2a0aa022`
+- Archive size: `673,206,885` bytes
+- SHA-256: `f651a3598d524f1354dfec1ea7667206e014284fe7d74625129ac444f05ae3a4`
 
 Launcher 1.1 compares only the numeric `major.minor.patch` portion of a version.
 After installing this build, a later signed auto-update must therefore be
-v0.42.4 or newer; reusing v0.42.3 would compare equal and would not be offered.
+v0.42.5 or newer; reusing v0.42.4 would compare equal and would not be offered.
 
-See the [release notes](RELEASE_NOTES.md#kestrel-v0423-alpha-unsigned1--current-unsigned-release)
+See the [release notes](RELEASE_NOTES.md#kestrel-v0424-alpha-unsigned1--current-unsigned-release)
 for the changes, verification record, and known limitations.
 
 ---
 
-## Previous release — v0.40.1-alpha
+## Previous release — v0.42.3-alpha-unsigned.1
 
-v0.40.1 is the stabilization build for the v0.40 mission, aircraft-art, and
-startup pass:
+v0.42.3 added the first local line-of-sight camera and expanded the aircraft
+catalog and controller-calibration coverage:
 
-- The shipped identity is now a restrained angular flight-datum mark and clean
-  KESTREL wordmark. Main-menu labels are concise, Work Bench rows say `EDIT` and
-  `RENAME`, and Test Range / Proving Ground copy stays inside its cards.
-- A Work Bench crash in immediate thumbnail capture is fixed by deferring scene
-  capture to Unreal's end-of-frame pass. The packaged 11-screen catalog tour now
-  completes without a crash or duplicate report.
-- Five 1300 mAh Tattu, CNHL, and GNB products have exact meshes and readable wrap
-  art. Thumbnail residency and dark-part compositing were tightened so batteries,
-  boards, and carbon do not cache unfinished white/grey frames.
-- Mission Builder can author an AO with a procedural bunker tunnel. Recon tasks
-  require a fitted camera, real field of view, line of sight, range, and dwell;
-  missions are labelled as operations, courses, user missions, or imports.
-- The public playtest package deliberately bundles the project's public Cesium
-  token, so photoreal terrain works without asking every player to provision one.
+- `V` or the pause menu switches to a launch-operator FPV / line-of-sight view.
+- A graph-valid 2.5-inch 16x16 micro frame expanded catalog coverage.
+- Controller calibration works when opened from paused Settings.
+- Propeller blur transitions retain the selected prop color.
+- Free Flight reports the AO's resolved local solar time.
 
-See the [full release notes](RELEASE_NOTES.md) for v0.42.3, v0.40.1, v0.40, and
-the historical release record.
+See the [full release notes](RELEASE_NOTES.md) for v0.42.4, v0.42.3, v0.40.1,
+and the historical release record.
 
 ---
 

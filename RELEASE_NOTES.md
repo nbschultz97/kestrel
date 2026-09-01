@@ -1,15 +1,70 @@
-# KESTREL v0.42.3-alpha-unsigned.1 — current unsigned release
+# KESTREL v0.42.4-alpha-unsigned.1 — current unsigned release
 
-Prepared August 31, 2026 from the verified v0.42.3-alpha candidate. This is an
-explicitly **unsigned** public release. It is GitHub “Latest” and is advertised
-through `kestrel-update.json` using the deterministic versioned release URL, so
-installed KESTREL launchers offer this exact archive.
+Published August 31, 2026 from the accepted v0.42.4-alpha package candidate.
+This is an explicitly **unsigned** public release. It is GitHub “Latest” and is
+advertised through `kestrel-update.json` using the immutable versioned asset URL,
+so installed KESTREL launchers offer this exact archive.
 
-The official KESTREL repository, Rotopter, and MilGit carry this same unsigned
-evaluation prerelease. Their release assets have the identical filename, byte
-length, and SHA-256 recorded below, and their `main` branches have identical Git
-trees. The in-app updater uses the official GitHub asset and verifies the same
-SHA-256 before installing it.
+The official KESTREL repository, Rotopter, and MilGit carry the same release
+copy and exact ZIP bytes. The in-app updater uses the official GitHub asset and
+verifies its SHA-256 before installing it.
+
+Use this package only in an approved test environment. Both release-owned
+executables report `NotSigned`: `KESTREL.exe` and
+`CeradonSim/Binaries/Win64/CeradonSim.exe`. Windows SmartScreen, Smart App
+Control, or organization policy may warn or block the package. Do not disable
+or weaken endpoint protections to run it; use a signed release when policy
+requires a trusted publisher.
+
+### Artifact identity
+
+- Release tag: `v0.42.4-alpha-unsigned.1`
+- Archive: `KESTREL-alpha-win64.zip`
+- Source repository: `https://github.com/nbschultz97/ceradon-sim`
+- Source commit: `d78b890fbaa3024c861e3dc468770caa2a0aa022`
+- Source version stamped in the archive: `v0.42.4-alpha`
+- Archive size: `673,206,885` bytes
+- SHA-256: `f651a3598d524f1354dfec1ea7667206e014284fe7d74625129ac444f05ae3a4`
+
+Launcher 1.1 compares only `major.minor.patch`, ignoring suffixes. After this
+release is installed, the next signed automatic update must be v0.42.5 or newer.
+Reusing a v0.42.4 tag would compare equal and would not be offered.
+
+### Fixed
+
+- The boot-menu Settings screen now caches all four controller inversion values
+  from the live aircraft or `controller.json`, so the controls work before a
+  flight pawn exists and do not perform file I/O while drawing.
+- Each inversion toggle is persisted once. A failed save restores the previous
+  value and shows a warning instead of presenting an unsaved state.
+- A live aircraft receives the new value immediately, and completing controller
+  calibration refreshes the Settings cache.
+
+### Verification and limitations
+
+- The Unreal Editor target and the packaged Windows game target built
+  successfully; the full cook and archive verifier completed without errors.
+- All 79 focused controller/Settings source-contract tests passed, as did the
+  native `Ceradon.Controller.SettingsInvert.Persistence` automation test and all
+  103 launcher/update tests.
+- Root-launcher packaged smoke testing loaded the saved controller map, menu,
+  missions, parts, audio, CLEAR environment, and playable world, then exited 0.
+- Interactive Windows acceptance confirmed the boot-menu inversion controls and
+  persistence across restart on the exact archive identified above.
+- Production Authenticode signing and clean-machine publisher verification
+  remain incomplete. Both shipped executables are unsigned.
+
+---
+
+# KESTREL v0.42.3-alpha-unsigned.1 — historical
+
+Published August 31, 2026 from the verified v0.42.3-alpha candidate. This was an
+explicitly **unsigned** public release and was superseded by
+v0.42.4-alpha-unsigned.1.
+
+The official KESTREL repository, Rotopter, and MilGit carried this same unsigned
+release. Their release assets had the identical filename, byte length, and
+SHA-256 recorded below.
 
 Use this package only in an approved test environment. Both release-owned
 executables report `NotSigned`: `KESTREL.exe` and
@@ -68,9 +123,8 @@ would compare equal and would not be offered.
 - Archive verification confirmed the expected launcher, game payload, source
   and version stamps, runtime content, public Cesium token, and absence of a
   Discord webhook. The digest and byte length above identify the exact ZIP.
-- Production Authenticode signing and clean-machine publisher verification
-  remain incomplete. The unsigned archive is nevertheless the current public
-  and automatic-update release by explicit release decision.
+- Production Authenticode signing and clean-machine publisher verification were
+  not completed for this unsigned archive.
 - LOS terrain/structure occlusion, lost-visual feedback, controller binding,
   packaged single-player/two-PC acceptance, full multiplayer mission
   replication, and automatic host migration remain open.
