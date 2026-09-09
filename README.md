@@ -10,6 +10,15 @@
 
 </div>
 
+> **Optional evaluation: v0.42.9-alpha-eval.1**
+> [Download ZIP](https://github.com/nbschultz97/kestrel/releases/download/v0.42.9-alpha-eval.1/KESTREL-alpha-win64.zip)
+> - [Verification and limitations](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1).
+> Work Bench/UI fixes only: new town search, city labels, offline base map,
+> Free Flight C2 map and custom map bindings are **not in this package**.
+> Full button mapping and thumbnail loading-speed acceptance remain unfinished.
+> Unsigned, separate-folder manual install; stable Download/updater unchanged.
+> The public Cesium configuration is bundled; no reporting endpoint is bundled.
+
 ![KESTREL trailer — fly real cities, build the aircraft, build the mission, fly it](media/gameplay.gif)
 
 <div align="center"><sub>Drop a pin anywhere on Earth and that coordinate loads in photoreal terrain. Build the aircraft from real parts, drop the objective on real ground, and fly the mission you just made.</sub>
@@ -78,12 +87,14 @@ and the historical release record.
 1. [**Download**](../../releases/latest) `KESTREL-alpha-win64.zip` and unzip it
    **to its own folder**.
 2. Run **`KESTREL.exe`**. That is the only thing to click — no installer.
-   SmartScreen will warn (unsigned build) → *More info* → *Run anyway*.
+   Unsigned builds may be blocked by Windows or organization policy. Use only
+   in approved test environments; do not weaken endpoint protections.
 3. The public playtest token is bundled, so photoreal terrain works on first
    launch. Advanced users can replace **`Documents\KESTREL\cesium_token.txt`**
    with their own scoped Cesium ion token; the updater preserves edited tokens.
-4. If it will not start, run the bundled **`vc_redist.x64.exe`** once. A missing
-   Microsoft C++ runtime is the usual cause.
+4. If it will not start, record the exact Windows/game error. The evaluation
+   ZIP does not bundle a Visual C++ runtime installer; a policy block is not
+   evidence of a missing runtime.
 5. **CALIBRATE CONTROLLER → AUTO-DETECT → SAVE → BACK.**
 6. **FREE FLIGHT** → choose an aircraft → drop a pin, or type
    `40.7580, -73.9855` → fly.

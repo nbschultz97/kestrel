@@ -1,3 +1,25 @@
+# Optional evaluation - v0.42.9-alpha-eval.1
+
+Published September 9, 2026. This is the verified 0.42.9 Work Bench/UI candidate,
+**not** the newer city-search/map/binding feature build. Town/address search,
+major-city labels, the offline base layer, Free Flight C2 map and custom map
+bindings are **not included**. The full button-mapping suite and thumbnail
+loading-speed acceptance remain unfinished.
+
+[Download the evaluation ZIP](https://github.com/nbschultz97/kestrel/releases/download/v0.42.9-alpha-eval.1/KESTREL-alpha-win64.zip)
+or read its [verification and limitations](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1).
+
+Unsigned, manual install into a separate folder; start KESTREL.exe only.
+The intended public Cesium configuration is bundled. No reporting endpoint is
+bundled. Do not weaken endpoint protections to run it. The stable updater and
+Latest release remain on v0.42.4.
+
+Source: `0635ef5645e69b723a62d68402e7d65b48e23418`
+ZIP: 676,170,597 bytes; SHA-256:
+`6354f20edec20db81244fcd4f9572e13d5cf27a84a01e46428b6e93f7aa1c89a`.
+
+---
+
 # KESTREL v0.42.4-alpha-unsigned.1 — current unsigned release
 
 Published August 31, 2026 from the accepted v0.42.4-alpha package candidate.
