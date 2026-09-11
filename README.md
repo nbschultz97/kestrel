@@ -10,14 +10,14 @@
 
 </div>
 
-> **Optional evaluation: v0.42.10-alpha-eval.1**
-> [Download ZIP](https://github.com/nbschultz97/kestrel/releases/download/v0.42.10-alpha-eval.1/KESTREL-alpha-win64.zip)
-> | [Verification and limitations](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.10-alpha-eval.1).
-> Adds offline city/coordinate preview, city labels/coarse overview, Free Flight
-> C2 navigation, map-action bindings and corrected starter aircraft. Retains the
-> earlier ten-inch compatibility and targeted Work Bench fixes.
-> Street-address lookup, full button mapping, general thumbnail-speed improvement
-> and physical two-PC/controller acceptance remain unfinished; see the save-compatibility warning.
+> **Latest published evaluation: v0.42.9-alpha-eval.1**
+> [Download ZIP](https://github.com/nbschultz97/kestrel/releases/download/v0.42.9-alpha-eval.1/KESTREL-alpha-win64.zip)
+> | [Verification and limitations](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1).
+> The newer 0.42.10 candidate is **held, not publicly released** after playtesting
+> exposed controller-binding, aircraft-selection and catalog-compatibility defects.
+> City search, city labels/overview and custom map bindings are in that held
+> candidate, **not** in the 0.42.9 download. Full action rebinding and general
+> thumbnail-speed improvements remain unfinished. See [release status](RELEASE_NOTES.md).
 > Unsigned, separate-folder manual install; stable Download/updater unchanged.
 > The public Cesium configuration is bundled; no reporting endpoint is bundled.
 

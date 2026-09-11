@@ -1,10 +1,23 @@
-# KESTREL v0.42.10-alpha-eval.1 - unsigned evaluation
+# KESTREL v0.42.10-alpha-eval.1 - HELD candidate, not publicly released
 
-September 11, 2026. A verified, optional manual evaluation, not a stable updater
-promotion. Extract into a separate folder and start **KESTREL.exe**. Run it only
-where unsigned software is permitted; do not weaken endpoint protections.
+September 11, 2026. Automated checks below passed, but the subsequent human
+playtest found defects. The uploaded release remains a draft and must not be
+treated as an available download or a stable updater promotion.
 
-## Included
+- Controller binding can wait indefinitely when a USB radio uses a different
+  Windows input path from the selected Gamepad capture. Detection feedback and
+  recovery are being corrected; physical input acceptance is still required.
+- Aircraft selection changes on mouse hover while moving toward Continue.
+- Some selectable frame/motor pairs have no compatible prop in the shipped
+  catalog, despite other ten-inch combinations passing the existing tests.
+- Missing loading hints are under investigation. Full action rebinding is not
+  delivered by the map-only binding feature.
+
+The latest published evaluation remains [v0.42.9-alpha-eval.1](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1).
+Fixes require a new build and fresh acceptance; the archive below is retained
+as the exact failed-playtest candidate, not relabeled as fixed.
+
+## Included in the held candidate
 
 - Offline city search and MGRS/latitude-longitude entry. Enter and result
   selection preview the location without launching. Adjust the pin, then choose
