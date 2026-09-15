@@ -1,24 +1,26 @@
 # KESTREL features and limits
 
-Status: September 14, 2026. This is a capability inventory, not a claim that every
-workflow has passed on every computer. [README](README.md) identifies the current
+Status: September 15, 2026. Prepared release: `v0.42.11-alpha-unsigned.1`, built
+from source `008b4834b9e62d166fafec5ba31aebe5746eb261`. Publication confirmation is
+separate from this feature inventory. Included does not mean every workflow has
+passed on every computer. [README](README.md) identifies the current
 downloads; [CHANGELOG](CHANGELOG.md) ties changes to versions; [ROADMAP](ROADMAP.md)
 tracks unfinished work.
 
 ## Which build has what?
 
-| Area | Default public v0.42.4 | Optional public v0.42.9 evaluation | Upcoming v0.42.11 candidate |
+| Area | Earlier v0.42.4 | Earlier v0.42.9 evaluation | Prepared v0.42.11 release |
 |---|---|---|---|
-| Flight, parts-based Work Bench, named aircraft, mission library/editor | Existing alpha features | Retained, with later UI/compatibility changes | Retained; fresh full-flow acceptance pending |
-| Controller inversion in boot-menu Settings | Shipped fix | Retained | Additional source/input recovery work; physical acceptance pending |
+| Flight, parts-based Work Bench, named aircraft, mission library/editor | Existing alpha features | Retained, with later UI/compatibility changes | Included; bounded packaged author-to-flight tour passes |
+| Controller inversion in boot-menu Settings | Shipped fix | Retained | Additional save/Confirm routing and input recovery fixes; physical acceptance pending |
 | Targeted ten-inch compatibility and thumbnail repairs | Do not assume later fixes | Included in this exact evaluation | Retained alongside further assembly work |
-| City-search preview, offline overview and Free Flight C2 map | Not the newer workflow | Not included | Candidate implementation |
-| Data & Catalogs panel and visible inventory switching | Not the newer workflow | Not included | Candidate implementation |
+| City-search preview, offline overview and Free Flight C2 map | Not the newer workflow | Not included | Included; live mission C2 overlay regression remains open |
+| Data & Catalogs panel and visible inventory switching | Not the newer workflow | Not included | Included; full interactive coverage remains open |
 | Full action rebinding and Work Bench OSD editor | Not complete | Not complete | Still unfinished |
 | Proven physical two-PC multiplayer or full hardware calibration | Not established | Not established | Still requires acceptance |
 
-The default public release and optional evaluation are unsigned. Candidate
-features below are not added to those downloads by updating this repository.
+These versions are unsigned. Features included in the prepared 0.42.11 package
+are not retroactively added to earlier downloads by updating this repository.
 
 ## Flight and vehicle modeling
 
@@ -46,7 +48,7 @@ The v0.42.9 evaluation specifically includes later frame/motor/prop compatibilit
 feedback, click-time validation and targeted complete ten-inch combinations. Its
 verification does not cover every possible catalog combination or all artwork.
 
-The v0.42.11 candidate adds:
+The prepared v0.42.11 release includes:
 
 - Separate **Current inventory** and saved-aircraft **Source inventory** labels.
 - A visible **Switch Inventory** route from the Work Bench/shelf to Data > Parts.
@@ -57,13 +59,14 @@ The v0.42.11 candidate adds:
 - Click-only saved-aircraft selection and predictions derived from the selected
   aircraft, rather than an unrelated editing draft.
 
-These safeguards still need the fresh package's interactive save, reopen,
-switch, cancel and fly checks. Older saved files with incomplete provenance may
+The packaged UI tour passes aircraft save and mission preflight/launch for its
+bounded fixture. Inventory-switch/cancel/reopen permutations and user-driven
+interaction still need broader coverage. Older files with incomplete provenance may
 require an explicit repair or recreation; compatibility is not assumed.
 
-## Data & Catalogs — candidate only
+## Data & Catalogs — included in v0.42.11
 
-The candidate's **Data > Parts** page exposes the active catalog and provides
+The **Data > Parts** page exposes the active catalog and provides
 Create catalog, Import catalog, Use catalog, Copy catalog, Export, Rename and
 Edit controls. The bundled base is read-only: copy it into a custom catalog
 before editing. The current editor is a validated JSON draft with Save/Cancel,
@@ -79,13 +82,13 @@ mean every part is selectable, every assembly is mechanically valid, or the
 simulation has measurements for that product. Custom inventories are local
 runtime data; public release packages must exclude them.
 
-## Assembly visuals and mounting — candidate additions
+## Assembly visuals and mounting — v0.42.11 additions
 
 The simulator uses generated part families and selected product-specific matches
 for aircraft previews and flight meshes. A representative class mesh can differ
 from the actual product's shape, connector positions or mounting hardware.
 
-Candidate work adds authored support planes for frame/board placement, visible
+This release includes authored support planes for frame/board placement, visible
 stack spacers, targeted receiver cradles and video-board supports on three
 generated tube-frame profiles, and receiver-supplied antenna ownership/mass
 labels. The Work Bench distinguishes representative support, unverified geometry
@@ -108,7 +111,7 @@ Betaflight firmware emulator or an import of every CLI option. Supported rate
 families and parameters differ in fidelity; some rate curves are approximations.
 Importing a tune does not validate the real aircraft or write its hardware.
 
-The candidate adds map-specific binding capture/recovery and input-source
+This release includes map-specific binding capture/recovery and input-source
 safeguards. **Settings > Map Controls is not full action rebinding**, and binding
 a digital map action is not radio-axis calibration. Physical USB radios,
 input backends, unplug/reconnect, switch capture and end-to-end latency require
@@ -135,7 +138,7 @@ entry. Terrain detail and coverage depend on the configured upstream services,
 network, cache, GPU memory and loading progress. The offline Test Range is a
 separate environment; it does not provide offline worldwide terrain.
 
-Candidate navigation additions include:
+Navigation additions included in v0.42.11:
 
 - Offline city-name search plus coordinate entry, with an explicit preview step.
 - A movable launch pin and separate Fly here / Build here actions.
@@ -146,13 +149,20 @@ The coarse overview is not a street map or offline imagery cache. Online
 street-address/point-of-interest search is not implemented. A city search hit
 is not a guarantee that detailed terrain can load there.
 
-Candidate terrain-lifecycle fixes classify cancelled, stale and failed requests
+Terrain-lifecycle fixes classify cancelled, stale and failed requests
 separately from confirmed missing surfaces, retain the final permitted sample,
 and keep strict loading/calibration/ground-readiness checks. They do not justify
 claiming that cold starts, world travel or all service failures are resolved.
-Fresh full-flow and cold-cache multiplayer acceptance remain required.
+The new packaged author-to-flight tour and one-PC streamed LAN flow pass.
+Broader cold-start, service-failure and physical two-PC acceptance remain open.
 
-## Local layers and connection status — candidate only
+Known live mission C2 regression: the loading brief shows launch/LCC and objective
+symbols/labels plus the connecting route, but those overlays are missing in a
+sampled live C2 view of the same area; the mission title and compass remain.
+The cause is not established and no fix is included. A successful tour reaching
+the C2 screen is not proof that its mission overlays render correctly.
+
+## Local layers and connection status — included in v0.42.11
 
 **Data > Layers** manages named local collections and item enable/disable state.
 Supported placed raster overlays require an image and placement sidecar. A flat
@@ -166,7 +176,7 @@ remain separate work.
 **Data > Cesium** shows configuration source and status without displaying the raw
 token. Check connection makes an explicit service-access check. “Configured” is
 not “Connected,” and a passed access check does not prove all requested tiles,
-imagery or collision are ready. The public evaluation includes the intended
+imagery or collision are ready. The prepared release includes the intended
 public configuration; do not post personal tokens in issues or screenshots.
 
 ## Missions and practice
@@ -184,8 +194,10 @@ terrain/collision cases still need broader acceptance.
 Private user missions and datasets must not be copied into public packages. A
 scenario shown in a trailer is not a statement that its content is bundled with
 every version.
-The candidate still needs a complete packaged author/save/select/preflight/fly
-walkthrough; isolated screenshots do not establish that flow.
+The new packaged UI tour completes its authored mission/aircraft save, selection,
+preflight, launch and live C2 sequence. This is a bounded automated fixture,
+not acceptance of every authored mission, natural shutdown or manual interaction.
+The live C2 overlay defect described above remains open.
 
 ## Records and debrief
 
@@ -204,49 +216,74 @@ recording and playback.
 Solar position/time-of-day, configurable atmosphere/weather, wind, aircraft sounds
 and environmental audio contribute to the flight experience. **Solar/seasonal**
 settings describe the model; they are not observations of current local weather.
+Live observed weather with source/time/staleness information and civil timezone/
+DST display remain unfinished; longitude-derived solar time is not a civil clock.
 
-Candidate audio work corrects per-aircraft teardown ordering while preserving
+Included audio work corrects per-aircraft teardown ordering while preserving
 other aircraft's sound. Wider flight, travel, restart, device-switching and
 multiplayer audio behavior still needs acceptance.
 
 ## Multiplayer
 
-LAN functionality is experimental. Lobby, discovery/direct-address entry,
-aircraft selection/approval, readiness and shared-range code exist, but physical
-two-computer discovery, synchronized travel, input, movement, leave/rejoin and
-host-loss behavior are not established as complete. Rotating multiplayer
-aircraft cards remain unfinished.
+LAN functionality is experimental. The exact new package passes a two-process,
+one-PC streamed-range test: discovery, aircraft/revision approval, Ready, shared
+travel, owned-pawn/server-applied input and reciprocal aircraft movement. Separate
+terrain cache databases were verified, with no fatal/ensure, SQLite or readiness-
+backstop findings in that run. The harness intentionally cleaned up its processes.
 
-Native policy tests and two processes on one PC do not prove two physical
-machines, two input devices or independent terrain caches. Do not interpret
-these docs as a validated multiplayer deployment claim.
+This does not establish two physical computers/controllers, every network,
+leave/rejoin, natural shutdown or host loss. Network missions/shared C2,
+collaborative mission building, host migration and rotating multiplayer aircraft
+cards remain unfinished. Do not interpret the one-PC result as a complete
+multiplayer deployment or hardware-acceptance claim.
 
 ## Settings, packaging and privacy
 
-Settings expose display, audio, environment and input controls. The candidate
-adds engine/display-state synchronization and a 1280x720 interactive layout
+Settings expose display, audio, environment and input controls. v0.42.11 includes
+engine/display-state synchronization and a 1280x720 interactive layout
 minimum. This does not close the reported windowed/fullscreen/borderless behavior;
 physical display-mode and focus acceptance is still required.
+
+The selected Settings value now has a readable full-value row, verified in the
+new 720p capture; compact cells still ellipsize intentionally. Remaining UI/art
+issues include builder help/property text contrast and clipping, keyboard hints
+overlapping headers, crowded prediction rows and loading attribution, dark
+battery/part labels, glossy carbon and unfinished strap/material presentation.
+Required map attribution must remain visible when its layout is corrected.
 
 The launcher checks versioned update metadata and validates archives before
 installation. Its unit checks cover update-related logic, including rejection
 and rollback cases; a new release still needs actual download/update, offline,
 corrupt-download, recovery and profile-preservation acceptance.
 
-The current evaluation has no live reporting endpoint. Local reports may contain
+The prepared package has no live reporting endpoint. Local reports may contain
 personal information and should be reviewed before sharing. Public distributions
 must exclude private profiles, inventories and datasets and carry appropriate
-third-party notices. Candidate cook policy excludes machine-local editor service
-settings; final source and cooked-container inspection remain release gates.
-Source privacy cleanup requires a replacement package. These requirements do
-not assert that historical source or artifacts have been retroactively sanitized.
+third-party notices. Cook policy excludes machine-local editor service settings.
+The replacement package has passed independent stage/container review and fresh
+archive verification. Those checks retain their opaque-content/property and
+asset-rights limitations; they do not certify every asset or assert that
+historical source/artifacts have been retroactively sanitized.
 
 ## Evidence boundary
 
-The v0.42.11 candidate code checkpoint passed 64 selected native checks (62 clean,
-2 with expected warnings) and 103 launcher/update unit checks. A full package run
-completed successfully with a validated supervisor receipt, but is not eligible
-for promotion: source privacy cleanup requires a replacement. These results do
-not establish fresh packaged runtime, hardware, physical two-PC LAN, camera
-calibration, public promotion or the whole roadmap. Consult the matching
-[change record](CHANGELOG.md) before relying on any version-specific result.
+The prepared `v0.42.11-alpha-unsigned.1` package uses source
+`008b4834b9e62d166fafec5ba31aebe5746eb261`. Its recorded checks include:
+
+- 70 native tests: 67 clean and three with expected warnings; no failures/skips.
+- 218 launcher/update checks and a completed full cook/package.
+- All 4,451 reviewed archive files checked by CRC/hash, exact topology and fresh
+  extraction; protected contents remained unchanged after runtime tests.
+- 16 focused UI screenshots, all visually reviewed. Stock preflight shows the
+  selected aircraft/Continue; battery windows cover all 22 products plus NONE.
+- A naturally completed 110-frame, 14-stage packaged UI tour. Only selected tour
+  keyframes were visually reviewed; the live C2 and other visual defects remain.
+- A passing one-PC, two-process streamed LAN flow, not a physical two-PC test.
+
+These are bounded results, not complete controller/display, multiplayer,
+camera/flight calibration, whole-catalog art or older-install updater acceptance.
+The owner approved publication with known limitations; publication confirmation
+and remote artifact parity remain separate. Full OSD editing, full action
+rebinding and rotating lobby cards are not included as completed features.
+Consult [CHANGELOG](CHANGELOG.md) and [ROADMAP](ROADMAP.md) for the matching
+release record and unfinished work.

@@ -1,36 +1,41 @@
 # KESTREL public roadmap
 
-Updated September 14, 2026. This is a work/status plan, not a release announcement
+Updated September 15, 2026. This is a work/status plan, not a release announcement
 or delivery-date promise. [README](README.md) identifies downloadable builds;
 [FEATURES](FEATURES.md) describes capabilities and limits;
 [CHANGELOG](CHANGELOG.md) records version-specific evidence.
 
 ## Release reality
 
-- Default public download and updater: **v0.42.4-alpha-unsigned.1**.
-- Optional manual-install public evaluation: **v0.42.9-alpha-eval.1**.
-- **v0.42.11-alpha remains an unpublished candidate.** Selected native64 and
-  launcher103 checks passed at the recorded code checkpoint. A full package run
-  completed with a validated supervisor receipt; source privacy cleanup requires
-  a replacement package and fresh acceptance before promotion.
+- Default public download and updater: **v0.42.11-alpha-unsigned.1**.
+- The exact tested v0.42.11 package was approved for public distribution with
+  the limitations below. Approval is not a claim that missing features passed.
+- Source `008b4834`; ZIP SHA-256
+  `b051168de33fc48afff99af7afdd635ae42a6e61650951d4d7ff8b031fc24016`.
+- Prior 0.42.4/0.42.9 releases remain historical; 0.42.10 remains held.
 
-The priority is fixes followed by validation. A code change, passing unit test,
-screenshot or successful cook alone does not complete the release. If source
-changes again, the relevant acceptance must follow the new source and archive.
+## Completed for this artifact
 
-## Current release gates
+- [x] Fresh full cook, source/provenance and reviewed staged/container inventory.
+- [x] All 4,451 archive files independently extracted and hashed.
+- [x] 70 native and 218 launcher tests; focused packaged UI captures.
+- [x] 110-frame/14-stage packaged tour; selected frames manually reviewed.
+- [x] One-PC streamed LAN: lobby/Ready/start, distinct spawns, owned input and
+  reciprocal movement. This is not a physical two-PC result.
 
-| Gate | Status and required outcome |
+## Known defects and remaining acceptance
+
+| Area | Still required |
 |---|---|
-| Fresh package identity | Replacement required after source privacy cleanup. Record its exact source/version and ZIP hash; verify cook provenance and all archive entries, then independently extract and hash every file. |
-| Public-content boundary | Inspect loose files and cooked containers. Exclude private profiles, inventories, datasets and machine-local editor settings; include only intended public configuration and distribution notices. |
-| Complete user flow | Repeat startup, location preview, mission author/save/reopen, aircraft save/select, preflight and flight on the fresh package. A loading timeout or skipped stage is not a pass. |
-| Terrain and lifecycle | Repeat cold-cache loading, world travel and teardown. Preserve loading, ground and calibration requirements; a timeout fallback must not earn verified readiness. |
-| Controls and display | Validate calibration, binding capture/recovery, saved settings, focus and windowed/fullscreen/borderless transitions with real input/display hardware. |
-| Inventory and saved aircraft | Exercise create/import/copy/edit/export/switch and save/reopen/fly. Verify unsaved-work protection, missing-inventory feedback and no silent part substitutions. |
-| Multiplayer | Physical two-PC discovery/direct address, lobby/ready/start, terrain loading, input, movement, remote-aircraft parity and leave/rejoin/host loss. One-PC two-process evidence is insufficient. |
-| Download and updater | Verify the actual candidate download, normal update, offline behavior, corrupt-download rejection, rollback/recovery and preservation of user data. Unit checks alone do not clear this gate. |
-| Publication | Promote only the reviewed artifact with matching notes, checksums, channel metadata and any supported mirrors. No candidate promotion has occurred. |
+| Live C2 markers | Fix missing launch/objective symbols, labels and route in live C2; compare loading brief and sustained in-flight map with actual pixel checks. Root cause remains unproven. |
+| UI and art | Fix overlapping preflight/help text, clipped/crowded stats and builder controls, provider-footer crowding without removing attribution, dark battery labels/thumbnails and overly bright/glossy carbon. |
+| Aircraft | Review frame-specific supports, straps, wiring, exact camera/RX/VTX seating and full camera/prop/RPM matrix. Catalog compatibility is not mechanical-fit certification. |
+| Terrain and lifecycle | Broader cold-network/service-error, constrained-memory, world-travel and material checks; preserve strict loading/ground readiness. |
+| Controls and display | Physical radio calibration/reconnect/capture, real windowed/fullscreen/borderless, Alt+Enter, resolution and restart checks. |
+| Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
+| Multiplayer | Physical two-PC discovery/direct join, shared travel, input, movement, mission parity, leave/rejoin and host loss. |
+| Updater | Real-install detect/download/install/start and user-data preservation; offline, interruption, corrupt download and rollback/recovery acceptance. Unit tests alone are not completion. |
+| Mirrors | Verify public Git trees and release assets separately on each mirror; authenticated access is required. |
 
 Unsigned distribution must remain explicitly identified and be used only where
 permitted. Production publisher signing has not been established. Do not change
@@ -59,6 +64,8 @@ make a test or release pass.
 - Remaining thumbnail latency, dark labels, battery/strap, wiring and restraint
   polish. Targeted fixes are not whole-catalog acceptance.
 - More accessible structured catalog editing beyond the current JSON draft editor.
+
+- Structured per-part catalog forms and dependency-aware catalog/SKU deletion.
 
 ### World, navigation and data
 

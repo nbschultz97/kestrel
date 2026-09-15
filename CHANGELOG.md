@@ -1,18 +1,17 @@
 # KESTREL changelog
 
-Public status checked September 14, 2026. This file distinguishes downloadable
+Public status checked September 15, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
 
-## Unreleased — v0.42.11-alpha candidate
+## v0.42.11-alpha-unsigned.1 — public default release
 
-Not a public release, not GitHub Latest and not an in-app update. A full
-cook/package run completed successfully, but source privacy cleanup requires a
-replacement package before promotion. The replacement needs its own source,
-archive/content and packaged-runtime acceptance.
+Published September 15, 2026. [Release and immutable download](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.11-alpha-unsigned.1).
+Promoted unchanged from the tested v0.42.11-alpha package, with known defects.
+The ZIP's embedded build notes retain the original candidate status.
 
-### Candidate capabilities and corrections
+### Included capabilities and corrections
 
 - Data & Catalogs provides visible custom-catalog creation, import, copy, rename,
   export, selection and validated JSON editing. The bundled base remains read-only.
@@ -24,7 +23,7 @@ archive/content and packaged-runtime acceptance.
   the panel does not expose the raw token.
 - City/coordinate search previews a movable pin before launch. Coarse offline
   map orientation, city labels and Free Flight C2 map/compass additions are included
-  in candidate source, not the v0.42.9 public evaluation.
+  in this release, not the historical v0.42.9 evaluation.
 - Click-only aircraft selection, selected-aircraft predictions, exact stock
   starter identities, targeted prop compatibility and loading hints.
 - Frame/board support metadata, visible stack spacers and targeted receiver/video
@@ -40,29 +39,40 @@ archive/content and packaged-runtime acceptance.
   third-party notices and font/source licenses; machine-local editor service
   settings excluded from cooking.
 
-### Evidence at this checkpoint
+### Verification and identity
 
-Candidate code checkpoint `a586f767ae24e98104b78f78e8d6f8a3ebace5c1`:
+Source: `008b4834b9e62d166fafec5ba31aebe5746eb261`.
+Archive: `KESTREL-alpha-win64.zip`, **676,635,054 bytes**.
+SHA-256: `b051168de33fc48afff99af7afdd635ae42a6e61650951d4d7ff8b031fc24016`.
 
-- Selected native automation: **64 passed**, comprising 62 clean results and
-  2 results with expected warnings.
-- Launcher/update unit checks: **103 passed, 0 failed**.
-- The full cook/package run exited normally with code zero, and its supervisor
-  receipt was validated. This package is not eligible for promotion because
-  source privacy cleanup requires a replacement build.
-- No completed fresh packaged-runtime, whole-app walkthrough or public
-  download/update acceptance is claimed. The replacement must pass those gates.
+- Fresh Editor build, full Game cook/package and reviewed public-content boundary.
+- All **4,451** staged/archive/extracted file identities matched.
+- **70 native tests**: 67 clean plus 3 expected-warning results.
+- **218 launcher tests**, including failed-save and HTTPS redirect/time-budget checks.
+- **16 focused UI captures**; **110-frame/14-stage** full packaged UI tour.
+  All focused images and selected full-tour frames visually reviewed.
+- Streamed **one-PC two-process LAN** passed discovery, lobby approval/Ready/start,
+  separate spawns, armed input and reciprocal motion. Not physical two-PC acceptance.
+- Settings current-value readability at 720p, actual selected-aircraft preflight
+  capture and complete battery-list capture coverage corrected. Capture coverage
+  does not certify the appearance of every part.
 
-These results belong to this code checkpoint, not every later source change.
-They do not turn prior package tests into acceptance of a new ZIP.
+### Known defects and unfinished work
 
-### Still open
+Live C2 can omit launch/objective labels, symbols and the connecting route even
+when they appear in the loading brief; root cause is still under investigation.
+Remaining preflight/help overlap, clipped/crowded UI, dark battery artwork,
+carbon appearance and exact mounts/straps/wiring are not fixed by this release.
 
-Full action rebinding; a Work Bench OSD editor; rotating multiplayer aircraft
-cards; physical USB-radio and window-mode testing; physical two-PC LAN; cold-cache
-terrain/world-travel validation; complete camera/prop/flight-feel acceptance;
-whole-catalog mechanical/artwork coverage; and the actual release download/update
-and profile-preservation path. See [ROADMAP](ROADMAP.md).
+Full action rebinding, Work Bench OSD editing and rotating lobby aircraft cards
+are deferred. Physical USB-radio/display checks, two-PC LAN and mission/host-loss
+acceptance, calibrated camera/prop/flight-feel comparisons, broader terrain stress
+and actual-install updater/rollback/profile checks remain open. Online
+street-address/POI lookup and live weather are not included. See [ROADMAP](ROADMAP.md).
+
+The intended public Cesium configuration is bundled; no live reporting endpoint
+or customer content is bundled. Unsigned software must be permitted by the
+user's environment; do not disable protections.
 
 ## Unreleased — v0.42.10 candidate line
 
@@ -91,11 +101,11 @@ were not declared complete. It did not change the default updater channel.
 Archive: `KESTREL-alpha-win64.zip`, 676,170,597 bytes.
 SHA-256: `6354f20edec20db81244fcd4f9572e13d5cf27a84a01e46428b6e93f7aa1c89a`.
 
-## v0.42.4-alpha-unsigned.1 — current default public release
+## v0.42.4-alpha-unsigned.1 — previous default public release
 
 Published September 1, 2026. [Exact release and verification record](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.4-alpha-unsigned.1).
-GitHub Latest and the current in-app updater point to this artifact; the package
-version is `v0.42.4-alpha`.
+Former GitHub Latest/updater artifact, superseded by v0.42.11 on September 15.
+The package version is `v0.42.4-alpha`.
 
 - Boot-menu Settings loads all four controller inversion values before a flight
   pawn exists.
