@@ -1,3 +1,8 @@
+> **Historical record.** For current downloads and the unreleased v0.42.11
+> candidate, use [README](README.md), [CHANGELOG](CHANGELOG.md) and
+> [ROADMAP](ROADMAP.md). Statements below belong to their named versions and
+> dates; they do not establish current candidate acceptance.
+
 # KESTREL v0.42.10-alpha-eval.1 - HELD candidate, not publicly released
 
 September 11, 2026. Automated checks below passed, but the subsequent human
@@ -644,9 +649,7 @@ installations receive it through the updater on their next `KESTREL.exe` launch.
 
 - Multi-team launch points are implemented, but one pilot flies at a time.
   Simultaneous multiplayer and multiplayer voice are not implemented.
-- Anniston/Pelham remains a planned scenario. Its DSM conversion experiment is
-  complete, but the bare-earth terrain, imagery, placed content, and playable
-  mission are not in this release.
+- Additional terrain datasets and playable scenarios remain outside this release.
 - VTX, antenna, and stack are still read-only auto-fitted categories rather
   than independently selectable saved parts. The broader game-wide UI overhaul
   also continues beyond this focused WORK BENCH/loading-screen pass.

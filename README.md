@@ -2,238 +2,127 @@
 
 <img src="media/kestrel-lockup-web.png" alt="KESTREL — Small UAS Mission Simulation" width="720">
 
-**Small UAS mission simulation at any coordinate on Earth.**
+**Build an aircraft. Choose a location. Practise the flight.**
 
-[**Download →**](../../releases/latest)
+Windows x64 · Alpha · Proprietary evaluation software
 
-*Free · Windows x64 · alpha*
+[Default download](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.4-alpha-unsigned.1) · [Optional evaluation](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
-> **Latest published evaluation: v0.42.9-alpha-eval.1**
-> [Download ZIP](https://github.com/nbschultz97/kestrel/releases/download/v0.42.9-alpha-eval.1/KESTREL-alpha-win64.zip)
-> | [Verification and limitations](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1).
-> The newer 0.42.10 candidate is **held, not publicly released** after playtesting
-> exposed controller-binding, aircraft-selection and catalog-compatibility defects.
-> City search, city labels/overview and custom map bindings are in that held
-> candidate, **not** in the 0.42.9 download. Full action rebinding and general
-> thumbnail-speed improvements remain unfinished. See [release status](RELEASE_NOTES.md).
-> Unsigned, separate-folder manual install; stable Download/updater unchanged.
-> The public Cesium configuration is bundled; no reporting endpoint is bundled.
+KESTREL is an Unreal Engine small-UAS flight simulator with a parts-based Work
+Bench, saved aircraft, FPV flight, a mission library and editor, and streamed
+real-world terrain. It is built for repeatable practice and evaluation, not
+certified navigation, engineering validation or real-aircraft flight testing.
 
-![KESTREL trailer — fly real cities, build the aircraft, build the mission, fly it](media/gameplay.gif)
+## Download status
 
-<div align="center"><sub>Drop a pin anywhere on Earth and that coordinate loads in photoreal terrain. Build the aircraft from real parts, drop the objective on real ground, and fly the mission you just made.</sub>
+Verified September 14, 2026. A higher candidate version does not mean a newer
+public download is available.
 
-[**▶ Watch the full trailer with sound**](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-trailer-v9.mp4) · [LinkedIn 35 s cut](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-short-linkedin.mp4) · [Vertical 60 s](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-short-vertical.mp4)</div>
-
-Choose a training mission, type in a grid, or drop a pin, and that exact area
-loads in photoreal terrain. Build an aircraft from real parts and it flies like
-those parts: real motor KV, prop, pack, and mass. Import a Betaflight diff to
-train on your own rates, tune, modes, and switches; the OSD uses the stock
-Betaflight MAX7456 character set—the same glyphs a real analog OSD chip draws.
-
-The point is repeatable mission rehearsal and honest stick time without burning
-packs, props, or airspace.
-
-> **This is an alpha and it is rough.** It will crash on you. Bug reports are
-> automatic and they genuinely help — see below.
-
----
-
-## Current unsigned release — v0.42.4-alpha-unsigned.1
-
-The current public v0.42.4 package is explicitly **unsigned**. The **Download**
-link above, [versioned release page](../../releases/tag/v0.42.4-alpha-unsigned.1),
-`releases/latest`, and the in-app updater all resolve to this same artifact.
-The official KESTREL repository, Rotopter, and MilGit carry the same release
-metadata and ZIP identity so no release mirror advertises different bytes.
-
-This package is for approved test environments only. Neither `KESTREL.exe` nor
-`CeradonSim/Binaries/Win64/CeradonSim.exe` has an Authenticode signature, so
-Windows SmartScreen, Smart App Control, or organization policy may warn or
-block it. Do not weaken endpoint policy to run it; wait for the signed release
-if the test environment does not explicitly permit unsigned software.
-
-- Source commit: `d78b890fbaa3024c861e3dc468770caa2a0aa022`
-- Archive size: `673,206,885` bytes
-- SHA-256: `f651a3598d524f1354dfec1ea7667206e014284fe7d74625129ac444f05ae3a4`
-
-Launcher 1.1 compares only the numeric `major.minor.patch` portion of a version.
-After installing this build, a later signed auto-update must therefore be
-v0.42.5 or newer; reusing v0.42.4 would compare equal and would not be offered.
-
-See the [release notes](RELEASE_NOTES.md#kestrel-v0424-alpha-unsigned1--current-unsigned-release)
-for the changes, verification record, and known limitations.
-
----
-
-## Previous release — v0.42.3-alpha-unsigned.1
-
-v0.42.3 added the first local line-of-sight camera and expanded the aircraft
-catalog and controller-calibration coverage:
-
-- `V` or the pause menu switches to a launch-operator FPV / line-of-sight view.
-- A graph-valid 2.5-inch 16x16 micro frame expanded catalog coverage.
-- Controller calibration works when opened from paused Settings.
-- Propeller blur transitions retain the selected prop color.
-- Free Flight reports the AO's resolved local solar time.
-
-See the [full release notes](RELEASE_NOTES.md) for v0.42.4, v0.42.3, v0.40.1,
-and the historical release record.
-
----
-
-## Get it running
-
-1. [**Download**](../../releases/latest) `KESTREL-alpha-win64.zip` and unzip it
-   **to its own folder**.
-2. Run **`KESTREL.exe`**. That is the only thing to click — no installer.
-   Unsigned builds may be blocked by Windows or organization policy. Use only
-   in approved test environments; do not weaken endpoint protections.
-3. The public playtest token is bundled, so photoreal terrain works on first
-   launch. Advanced users can replace **`Documents\KESTREL\cesium_token.txt`**
-   with their own scoped Cesium ion token; the updater preserves edited tokens.
-4. If it will not start, record the exact Windows/game error. The evaluation
-   ZIP does not bundle a Visual C++ runtime installer; a policy block is not
-   evidence of a missing runtime.
-5. **CALIBRATE CONTROLLER → AUTO-DETECT → SAVE → BACK.**
-6. **FREE FLIGHT** → choose an aircraft → drop a pin, or type
-   `40.7580, -73.9855` → fly.
-   Throttle down, then Enter (or your mapped switch) to arm.
-
-Needs internet for terrain streaming. Keyboard and gamepad work, but a radio in
-USB-Joystick mode is the point.
-
----
-
-## What is actually modelled
-
-![FPV pass through the Taipei 101 district - photoreal tiles, authentic Betaflight OSD](media/hero-taipei.png)
-
-- **Any coordinate on Earth.** Drop a pin, or type MGRS or `lat, lon`. Ground
-  elevation gets looked up and the world calibrates against the streamed
-  terrain, so you spawn on the actual street.
-- **Physics from real parts.** Mass, KV, cells, capacity, prop size. Motors top
-  out at the spec sheet's *loaded* rated point, not an impossible no-load
-  number, so thrust-to-weight and the feel of weight are honest. Checked against
-  a separate reference model with 153 tests.
-- **Batteries behave.** Nonlinear LiPo discharge, IR sag, a real voltage cliff.
-  Fly the pack down and it browns out — it falls out of the sky.
-- **The link is real.** RSSI comes from actual distance *and* line-of-sight
-  through the terrain geometry. Get a building between you and the quad at range
-  and the video tears and snows, then you lose it.
-- **Time of day and weather.** Real solar position for wherever and whenever you
-  are flying — dawn in Tucson is actually dawn in Tucson. Wind acts on airspeed,
-  so you crab into it. Density altitude is fed to the physics.
-- **Damage sticks.** Impacts crack the camera, kill individual motors, or write
-  the airframe off. Nothing is on a timer.
-
----
-
-## Mission training
-
-The mission library now separates operations, handling courses, user missions,
-and imports. Camp Williams courses train link discipline, masked ingress,
-low-altitude handling, and stand-off observation; **COLUMN HALT** and **DECK
-LINE** are operations; **LOW WATER** and **UNDER THE HILL** cover confined-flight
-skills. Mission scoring grades the task actually authored—observation, terminal
-effect, or course completion—plus time, link discipline, power management, and
-crashes, while personal bests persist between sessions.
-
-A `strike` objective is a one-way attack run: fly the terminal dive onto the
-target and the warhead functions. Vehicles in the blast are wrecked rather than
-despawned, and the feed hands off to an overhead ISR view for assessment.
-
-![Strike detonation - real fire and a building smoke column over the target](media/strike-fire.png)
-
-<div align="center"><sub>The warhead functions: live fire, dirt, and a smoke column that builds and drifts — rendered in-engine.</sub></div>
-
-![Inside the smoke column seconds after impact](media/strike-smoke.png)
-
----
-
-## Real time of day
-
-Pick a time and the sky, sun, and lighting move with it — computed from the real
-solar position at that coordinate and date, not a canned skybox. Dawn and dusk
-are genuine golden hour; noon is hard overhead light; night scales with the real
-moon phase, so a new-moon AO is genuinely dark.
-
-![FPV over a real city at midday, flight OSD burned in](media/osd-day.png)
-
-| | |
-|---|---|
-| ![Dawn over the Grand Canyon](media/canyon-dawn.png) | ![Dusk over Lower Manhattan](media/nyc-dusk.png) |
-| Dawn — terrain flying over the Grand Canyon. | Dusk — golden hour over Lower Manhattan. |
-| ![Night over the Las Vegas Strip](media/vegas-night.png) | ![Afternoon haze over Dubai Marina](media/dubai-haze.png) |
-| Night — moon-phase lighting over the Strip. | Haze — Dubai Marina in desert air. |
-
-<div align="center"><sub>The real MAX7456 OSD burned in — timer, RSSI, home arrow, battery, alt, speed, MGRS — over photoreal terrain at any time of day, anywhere on Earth.</sub></div>
-
----
-
-## Screens
-
-| | |
-|---|---|
-| ![Settings](media/settings.png) | ![Low pass](media/flight-lowpass.png) |
-| Audio, display, environment, flight. | Low pass over real streets. |
-
----
-
-## When it breaks
-
-**Reporting is automatic.** Crashes and bugs write their own reports - no
-hotkey needed. **F12** toggles a live dev-metrics overlay (audio, flight,
-mission state) so you can read off exactly what the sim was doing when
-something looked wrong. Reports land in:
-
-```
-Documents\KESTREL\reports\
-```
-
-Zip that folder and send it — or just open an
-[issue](../../issues) here and drag it in. That is everything needed; you do not
-have to write it up well.
-
-If you would rather just describe it, three things help most:
-1. **Version** — printed top-right on screen.
-2. **What you did** — "hit RANDOM AO", "mapped a switch to arm and flipped it".
-3. **What happened** vs. what you expected.
-
-Known issues ship in `CHANGELOG.md` inside the zip.
-
----
-
-## Requirements
-
-| | Minimum | Recommended |
+| Channel | Version | What it means |
 |---|---|---|
-| OS | Windows 10 64-bit (1909+) | Windows 11 64-bit |
-| CPU | Quad-core 2.5 GHz (i5-8400 / Ryzen 5 2600) | 6-core 3.5 GHz+ |
-| RAM | 8 GB | 16 GB |
-| GPU | DirectX 12, 4 GB VRAM (GTX 1060 / RX 580) | RTX 2060 / RX 5700+ |
-| Disk | 2 GB free | — |
-| Controller | Radio in USB-Joystick mode (RadioMaster / EdgeTX / TBS) | Radio |
+| Default download / in-app updater | [v0.42.4-alpha-unsigned.1](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.4-alpha-unsigned.1) | Current GitHub Latest release. The package identifies itself as v0.42.4-alpha. |
+| Optional public evaluation | [v0.42.9-alpha-eval.1](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1) | Separate-folder manual installation; not an updater promotion. |
+| Upcoming candidate | v0.42.11-alpha | Not publicly released. Selected native and launcher tests passed; a replacement package and fresh acceptance are required. |
 
-You need a **discrete GPU** — UE5 will not run acceptably on integrated
-graphics. Windows x64 only for now.
+The 0.42.10 candidate was held after playtesting. It is not a public release.
+Newer candidate work must pass its own checks; old ZIPs and test results are not
+relabelled as proof of the current build.
 
----
+Both published downloads above are **unsigned**. Windows or organization policy
+may warn or block them. Use only where unsigned applications are permitted; do
+not disable security protections to run KESTREL. “Latest” identifies the default
+release channel, not production certification.
 
-## License
+## Start here
 
-KESTREL is **free to download and fly, but it is not open source.** The
-[KESTREL Evaluation License](LICENSE.txt) covers every copy: free for U.S.
-Government personnel for training, familiarization, and evaluation, and free
-for personal non-commercial use. No redistribution outside published channels,
-no commercial use, and no reverse engineering without a written license —
-commercial licensing is available via
-[nbschultz97@gmail.com](mailto:nbschultz97@gmail.com).
-© 2026 Noah Schultz / Ceradon Systems. All rights reserved.
+1. Choose a channel above and download its `KESTREL-alpha-win64.zip`.
+2. Check the archive's SHA-256 against that exact release page. Extract it into
+   a new folder; do not mix files from different versions or run from inside the ZIP.
+3. Start **KESTREL.exe**, the player-facing launcher. Keep the rest of the
+   extracted tree beside it; the nested game executable is not the normal entry point.
+4. Open controller calibration, check the input source and axis directions, then
+   save. Keyboard/gamepad support does not establish compatibility with every USB radio.
+5. Use Free Flight or the Test Range and select a saved aircraft. Review the
+   displayed controls before arming; menu wording can differ between releases.
 
----
+The published evaluation includes the intended public Cesium configuration.
+Streamed terrain still needs Internet access, service availability and local
+loading time. An offline Test Range is not a cached copy of the streamed world.
+There is no general offline globe or street-map download.
 
-<sub>Built in Unreal Engine 5. Source is private; this repo is releases and docs.
-Terrain © Google via Cesium ion · map imagery © Esri.</sub>
+Windows x64 is the supported package platform. Plan for a modern discrete GPU,
+adequate memory, and space for the extracted game, update staging and terrain
+cache. Exact minimum/recommended hardware performance has not been certified.
+The ZIP is not a Windows runtime installer. If launch fails, retain the exact
+error; a security-policy block is not evidence that a runtime is missing.
+
+## What you can explore
+
+- **Aircraft and Work Bench:** choose catalog parts, view the assembled aircraft,
+  inspect compatibility and predicted performance, and save named builds.
+- **Flight:** FPV and line-of-sight views, Betaflight-style control/rate behavior,
+  simulated battery discharge, aerodynamic response and damage.
+- **World:** location-based terrain streaming, solar lighting, configurable
+  weather and wind. These are simulation inputs, not a live weather service.
+- **Practice:** Free Flight, an offline Test Range, a mission library and mission
+  authoring. Feature presence is not proof that every mission or full workflow
+  passes on every machine.
+
+See [FEATURES.md](FEATURES.md) for the full capability inventory, version
+boundaries and modeling limits. Screenshots and trailers below are historical
+illustrations, not acceptance evidence for the upcoming candidate.
+
+![Historical KESTREL gameplay](media/gameplay.gif)
+
+[Watch the historical trailer with sound](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-trailer-v9.mp4)
+
+## Upcoming: v0.42.11
+
+The candidate adds visible Data & Catalogs management, Work Bench inventory
+switching and saved-aircraft provenance, local image collections, city-search
+preview and map orientation tools, plus targeted assembly, input/display,
+audio and terrain-lifecycle corrections. These are **candidate capabilities**,
+not features of the current default download or the 0.42.9 evaluation.
+
+At this checkpoint, the selected native suite passed **64 tests** (62 clean,
+2 with expected warnings), and **103 launcher/update unit checks** passed.
+A full cook/package run completed with a normal zero exit and a validated
+supervisor receipt. That package is **not eligible for promotion**: source
+privacy cleanup requires a replacement build, then archive/content checks and
+fresh packaged-runtime acceptance. No public promotion is claimed.
+
+Full action rebinding, the Work Bench OSD editor and rotating multiplayer
+aircraft cards remain unfinished. Physical USB-radio testing, reliable window
+mode switching, physical two-PC LAN, the complete camera/prop matrix and the
+new release's download/update path still need acceptance. The [roadmap](ROADMAP.md)
+keeps those gaps visible.
+
+## Updates, local data and bug reports
+
+The default updater currently advertises v0.42.4-alpha-unsigned.1. The evaluation
+channel is a manual opt-in; neither an evaluation suffix nor this documentation
+moves existing installations to a candidate. Back up your local settings and
+saved aircraft before testing another version.
+
+The 0.42.9 evaluation has no bundled live reporting endpoint. Its reports remain
+local, normally under `Documents/KESTREL/reports`. Do not post that folder
+unreviewed: logs and screenshots can contain personal paths, locations or data.
+When opening an [issue](https://github.com/nbschultz97/kestrel/issues), include the
+version, steps to reproduce, expected result and actual result. Attach only
+reviewed, redacted evidence; never include tokens or private inventories.
+
+Custom inventories and user-supplied datasets are local runtime inputs. Public
+release packages must exclude them; final source and cooked-content inspection
+remain release gates. Data panel support does not authorize bundling those inputs.
+
+## License and credits
+
+KESTREL is not open source. See the [Evaluation License](LICENSE.txt) for
+permitted uses and restrictions, and the notices shipped with the selected
+release for third-party terms. Unreal Engine, Cesium and the relevant imagery,
+map, font, audio and asset providers retain their own rights and attribution.
+
+For commercial licensing, contact [Ceradon Systems](mailto:nbschultz97@gmail.com).
+Historical, version-specific detail remains in [RELEASE_NOTES.md](RELEASE_NOTES.md).
