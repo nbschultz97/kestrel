@@ -17,15 +17,13 @@ engineering validation or real-aircraft flight testing.
 
 ## Current release
 
-**v0.42.11-alpha-unsigned.1 — September 15, 2026.** This is the default public
+**KESTREL v0.42.11 — September 15, 2026.** This is the default public
 download and updater release. The package identifies itself as v0.42.11-alpha.
 It supersedes the 0.42.4 default and 0.42.9 optional evaluation. The held 0.42.10
 candidate is not a public release.
 
-This is an **unsigned alpha with known defects**, not whole-roadmap completion.
-Windows or organization policy may warn or block it. Use only where unsigned
-applications are permitted; do not disable protections. “Latest” identifies the
-download channel, not production certification.
+This is an alpha with known defects, not whole-roadmap completion. “Latest”
+identifies the download channel, not production certification.
 
 ## Start here
 
@@ -38,6 +36,9 @@ download channel, not production certification.
    Compatibility with every USB radio has not been established.
 5. Choose Free Flight or the Test Range, select a saved aircraft and review the
    displayed controls before arming.
+
+Windows signing note: this package is not publisher-signed. Windows or organization
+policy may warn or block it; use only where permitted and do not disable protections.
 
 The intended public Cesium configuration is included. Streamed terrain needs
 Internet access, service availability and loading time. The offline Test Range
@@ -70,6 +71,46 @@ runtime installer; retain the exact error if launch fails.
 Existing flight, Work Bench, named builds, missions/editor, ranges, records,
 modeled weather and wind remain. See [FEATURES.md](FEATURES.md) for boundaries.
 Configured weather is not a live weather service.
+
+## Screenshots from v0.42.11
+
+These are unedited captures from this exact release, using stock aircraft and a
+public test location—not mockups or previews of unfinished features. Click an
+image for full resolution. Existing UI/art defects remain visible.
+
+### Work Bench and inventory
+
+![Work Bench with current/source inventory and frame categories](media/v0.42.11/workbench-inventory-and-frame.png)
+
+Current/source inventory labels, separate part categories and frame compatibility.
+
+### Select an aircraft before flight
+
+![Selected stock aircraft and predictions before continuing](media/v0.42.11/preflight-selected-aircraft.png)
+
+The selected stock aircraft stays highlighted while you review its predictions
+and choose Continue. Prediction-panel crowding is still a known issue.
+
+### Mission loading brief
+
+![Loading brief with launch location and objective](media/v0.42.11/mission-loading-brief.png)
+
+The loading brief shows launch, objective, route and a flight tip. This is not
+the in-flight C2 map; its missing-marker regression remains open.
+
+### Settings readability
+
+![Settings with the selected value displayed in a full-width row](media/v0.42.11/settings-selected-value.png)
+
+The selected value is repeated below the compact controls. This is not a full
+binding suite, an OSD editor or proof that window-mode switching is fixed.
+
+### Location orientation while imagery loads
+
+![City label and location search while detailed imagery is loading](media/v0.42.11/location-city-label-preview.png)
+
+A city label and coordinates remain available while detail imagery loads.
+This capture does not show loaded street imagery or a completed offline basemap.
 
 ## Known issues and unfinished work
 

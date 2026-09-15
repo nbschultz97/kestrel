@@ -7,7 +7,7 @@ or delivery-date promise. [README](README.md) identifies downloadable builds;
 
 ## Release reality
 
-- Default public download and updater: **v0.42.11-alpha-unsigned.1**.
+- Default public download and updater: **KESTREL v0.42.11**.
 - The exact tested v0.42.11 package was approved for public distribution with
   the limitations below. Approval is not a claim that missing features passed.
 - Source `008b4834`; ZIP SHA-256
@@ -31,11 +31,11 @@ or delivery-date promise. [README](README.md) identifies downloadable builds;
 | UI and art | Fix overlapping preflight/help text, clipped/crowded stats and builder controls, provider-footer crowding without removing attribution, dark battery labels/thumbnails and overly bright/glossy carbon. |
 | Aircraft | Review frame-specific supports, straps, wiring, exact camera/RX/VTX seating and full camera/prop/RPM matrix. Catalog compatibility is not mechanical-fit certification. |
 | Terrain and lifecycle | Broader cold-network/service-error, constrained-memory, world-travel and material checks; preserve strict loading/ground readiness. |
-| Controls and display | Physical radio calibration/reconnect/capture, real windowed/fullscreen/borderless, Alt+Enter, resolution and restart checks. |
+| Controls and display | Current playtest reports radio input and window-mode trouble. Diagnose device availability separately from the confirmed keyboard-ownership/hotplug gap. Verify real windowed/fullscreen/borderless transitions, Alt+Enter, resolution and restart—not just saved mode values. |
 | Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
 | Multiplayer | Physical two-PC discovery/direct join, shared travel, input, movement, mission parity, leave/rejoin and host loss. |
 | Updater | Real-install detect/download/install/start and user-data preservation; offline, interruption, corrupt download and rollback/recovery acceptance. Unit tests alone are not completion. |
-| Mirrors | Verify public Git trees and release assets separately on each mirror; authenticated access is required. |
+| Mirrors | GitHub and Rotopter game assets match. MilGit authentication remains blocked; do not claim all mirrors synchronized. |
 
 Unsigned distribution must remain explicitly identified and be used only where
 permitted. Production publisher signing has not been established. Do not change

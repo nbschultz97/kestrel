@@ -5,7 +5,7 @@ releases from unreleased work. The updater manifest is separate from this docume
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
 
-## v0.42.11-alpha-unsigned.1 — public default release
+## KESTREL v0.42.11 — public release
 
 Published September 15, 2026. [Release and immutable download](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.11-alpha-unsigned.1).
 Promoted unchanged from the tested v0.42.11-alpha package, with known defects.

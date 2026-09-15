@@ -1,15 +1,14 @@
 # KESTREL features and limits
 
-Status: September 15, 2026. Prepared release: `v0.42.11-alpha-unsigned.1`, built
-from source `008b4834b9e62d166fafec5ba31aebe5746eb261`. Publication confirmation is
-separate from this feature inventory. Included does not mean every workflow has
+Status: September 15, 2026. Public release: **KESTREL v0.42.11**, built
+from source `008b4834b9e62d166fafec5ba31aebe5746eb261`. The official release page records publication and artifact identity. Included does not mean every workflow has
 passed on every computer. [README](README.md) identifies the current
 downloads; [CHANGELOG](CHANGELOG.md) ties changes to versions; [ROADMAP](ROADMAP.md)
 tracks unfinished work.
 
 ## Which build has what?
 
-| Area | Earlier v0.42.4 | Earlier v0.42.9 evaluation | Prepared v0.42.11 release |
+| Area | Earlier v0.42.4 | Earlier v0.42.9 evaluation | Public v0.42.11 release |
 |---|---|---|---|
 | Flight, parts-based Work Bench, named aircraft, mission library/editor | Existing alpha features | Retained, with later UI/compatibility changes | Included; bounded packaged author-to-flight tour passes |
 | Controller inversion in boot-menu Settings | Shipped fix | Retained | Additional save/Confirm routing and input recovery fixes; physical acceptance pending |
@@ -19,7 +18,7 @@ tracks unfinished work.
 | Full action rebinding and Work Bench OSD editor | Not complete | Not complete | Still unfinished |
 | Proven physical two-PC multiplayer or full hardware calibration | Not established | Not established | Still requires acceptance |
 
-These versions are unsigned. Features included in the prepared 0.42.11 package
+These versions are unsigned. Features included in the 0.42.11 package
 are not retroactively added to earlier downloads by updating this repository.
 
 ## Flight and vehicle modeling
@@ -48,7 +47,7 @@ The v0.42.9 evaluation specifically includes later frame/motor/prop compatibilit
 feedback, click-time validation and targeted complete ten-inch combinations. Its
 verification does not cover every possible catalog combination or all artwork.
 
-The prepared v0.42.11 release includes:
+The v0.42.11 release includes:
 
 - Separate **Current inventory** and saved-aircraft **Source inventory** labels.
 - A visible **Switch Inventory** route from the Work Bench/shelf to Data > Parts.
@@ -176,7 +175,7 @@ remain separate work.
 **Data > Cesium** shows configuration source and status without displaying the raw
 token. Check connection makes an explicit service-access check. “Configured” is
 not “Connected,” and a passed access check does not prove all requested tiles,
-imagery or collision are ready. The prepared release includes the intended
+imagery or collision are ready. The release includes the intended
 public configuration; do not post personal tokens in issues or screenshots.
 
 ## Missions and practice
@@ -256,7 +255,7 @@ installation. Its unit checks cover update-related logic, including rejection
 and rollback cases; a new release still needs actual download/update, offline,
 corrupt-download, recovery and profile-preservation acceptance.
 
-The prepared package has no live reporting endpoint. Local reports may contain
+The release has no live reporting endpoint. Local reports may contain
 personal information and should be reviewed before sharing. Public distributions
 must exclude private profiles, inventories and datasets and carry appropriate
 third-party notices. Cook policy excludes machine-local editor service settings.
@@ -267,7 +266,7 @@ historical source/artifacts have been retroactively sanitized.
 
 ## Evidence boundary
 
-The prepared `v0.42.11-alpha-unsigned.1` package uses source
+The public v0.42.11 package uses source
 `008b4834b9e62d166fafec5ba31aebe5746eb261`. Its recorded checks include:
 
 - 70 native tests: 67 clean and three with expected warnings; no failures/skips.
