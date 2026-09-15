@@ -72,45 +72,52 @@ Existing flight, Work Bench, named builds, missions/editor, ranges, records,
 modeled weather and wind remain. See [FEATURES.md](FEATURES.md) for boundaries.
 Configured weather is not a live weather service.
 
-## Screenshots from v0.42.11
+## See v0.42.11 in the game
 
-These are unedited captures from this exact release, using stock aircraft and a
-public test location—not mockups or previews of unfinished features. Click an
-image for full resolution. Existing UI/art defects remain visible.
+Actual captures from the released build, using stock aircraft and public terrain.
+These are not concept renders or previews of unfinished features. Open an image
+for its full-resolution view; existing UI and model limitations remain visible.
 
-### Work Bench and inventory
+### FPV flight
 
-![Work Bench with current/source inventory and frame categories](media/v0.42.11/workbench-inventory-and-frame.png)
+![Actual FPV flight in KESTREL v0.42.11](media/v0.42.11/flight.png)
 
-Current/source inventory labels, separate part categories and frame compatibility.
+The released aircraft and its own FPV view, flown by the capture pipeline's
+virtual pilot. This is an in-engine flight, not a hand-flown acceptance test.
 
-### Select an aircraft before flight
+### Work Bench
+
+![Saved stock aircraft and component inspection in Work Bench](media/v0.42.11/workbench.png)
+
+Inspect fitted components, see the aircraft's source inventory and review
+predicted weight and performance. This view shows the saved stock build's
+antenna-focused close-up; it does not certify real-world component fit.
+
+### Mission Builder
+
+![Mission Builder editing an observation objective over public Tucson terrain](media/v0.42.11/mission-builder.png)
+
+Place a launch point and edit an observation objective in the 3D environment.
+The objective settings and surrounding streamed terrain are shown together.
+
+### LAN multiplayer
+
+![Two connected game instances in the KESTREL multiplayer lobby](media/v0.42.11/multiplayer.png)
+
+Two real game instances connected on one computer. The roster and aircraft
+state are live game UI, not mockups. Physical two-computer acceptance remains open.
+
+### Before launch
 
 ![Selected stock aircraft and predictions before continuing](media/v0.42.11/preflight-selected-aircraft.png)
 
-The selected stock aircraft stays highlighted while you review its predictions
-and choose Continue. Prediction-panel crowding is still a known issue.
-
-### Mission loading brief
+Review the selected aircraft before continuing. Prediction-panel crowding
+remains a known issue.
 
 ![Loading brief with launch location and objective](media/v0.42.11/mission-loading-brief.png)
 
 The loading brief shows launch, objective, route and a flight tip. This is not
 the in-flight C2 map; its missing-marker regression remains open.
-
-### Settings readability
-
-![Settings with the selected value displayed in a full-width row](media/v0.42.11/settings-selected-value.png)
-
-The selected value is repeated below the compact controls. This is not a full
-binding suite, an OSD editor or proof that window-mode switching is fixed.
-
-### Location orientation while imagery loads
-
-![City label and location search while detailed imagery is loading](media/v0.42.11/location-city-label-preview.png)
-
-A city label and coordinates remain available while detail imagery loads.
-This capture does not show loaded street imagery or a completed offline basemap.
 
 ## Known issues and unfinished work
 
@@ -159,11 +166,6 @@ with version, reproduction steps, expected and actual results. Never post tokens
 
 Customer inventories, missions, datasets and personal profiles are not bundled.
 Generic data/catalog tools do not authorize redistribution of customer inputs.
-
-![Historical KESTREL gameplay](media/gameplay.gif)
-
-[Historical trailer with sound](https://github.com/nbschultz97/kestrel/releases/download/v0.29.1-alpha/kestrel-trailer-v9.mp4).
-These older images are illustrations, not current-release acceptance evidence.
 
 KESTREL is not open source. See the [Evaluation License](LICENSE.txt) and shipped
 third-party notices. Unreal Engine, Cesium and imagery, map, font, audio and asset
