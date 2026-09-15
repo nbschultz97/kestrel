@@ -85,6 +85,20 @@ for its full-resolution view; existing UI and model limitations remain visible.
 The released aircraft and its own FPV view, flown by the capture pipeline's
 virtual pilot. This is an in-engine flight, not a hand-flown acceptance test.
 
+### Time of day and weather
+
+The same public area and stock aircraft under different configured conditions.
+These are the game's lighting and weather presets, not a live weather feed.
+Open each image for the complete 1920 x 1080 view.
+
+| Clear morning | Clear noon |
+| --- | --- |
+| [![Morning FPV flight](media/v0.42.11/flight-morning.png)](media/v0.42.11/flight-morning.png) | [![Noon FPV flight](media/v0.42.11/flight-daylight.png)](media/v0.42.11/flight-daylight.png) |
+
+| Clear afternoon | Noon rain |
+| --- | --- |
+| [![Afternoon FPV flight](media/v0.42.11/flight-afternoon.png)](media/v0.42.11/flight-afternoon.png) | [![Rain preset during FPV flight](media/v0.42.11/flight-rain.png)](media/v0.42.11/flight-rain.png) |
+
 ### Work Bench
 
 ![Saved stock aircraft and component inspection in Work Bench](media/v0.42.11/workbench.png)
@@ -99,6 +113,19 @@ antenna-focused close-up; it does not certify real-world component fit.
 
 Place a launch point and edit an observation objective in the 3D environment.
 The objective settings and surrounding streamed terrain are shown together.
+
+### Strike effects and ISR view
+
+![FPV approach in the stock strike scenario](media/v0.42.11/strike.png)
+
+A scripted FPV pass through the stock strike scenario, captured in the current
+release.
+
+![ISR view of fire and smoke after the scripted effect](media/v0.42.11/isr.png)
+
+The separate ISR camera shows fire and smoke after the capture's scripted
+effect. The game's **Effect not confirmed** verdict is retained: these images
+are not proof of physical contact, a completed objective or damage-model validation.
 
 ### LAN multiplayer
 
@@ -132,6 +159,8 @@ the in-flight C2 map; its missing-marker regression remains open.
 - Physical radio/display-mode checks, the full camera/prop matrix and calibrated
   flight-feel comparisons remain open. No universal parts-fit claim is made.
 - Online street-address/POI search and live weather are not included.
+- Dusk/night captures expose an overbright horizon and horizontal band; the
+  cause remains under investigation. Those captures are not used in this gallery.
 
 The [roadmap](ROADMAP.md) retains the rest of the asset, animation, mission,
 UI, replay and acceptance work. This release does not complete that backlog.

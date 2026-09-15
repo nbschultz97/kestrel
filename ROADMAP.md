@@ -30,6 +30,8 @@ or delivery-date promise. [README](README.md) identifies downloadable builds;
 | Live C2 markers | Fix missing launch/objective symbols, labels and route in live C2; compare loading brief and sustained in-flight map with actual pixel checks. Root cause remains unproven. |
 | UI and art | Fix overlapping preflight/help text, clipped/crowded stats and builder controls, provider-footer crowding without removing attribution, dark battery labels/thumbnails and overly bright/glossy carbon. |
 | Aircraft | Review frame-specific supports, straps, wiring, exact camera/RX/VTX seating and full camera/prop/RPM matrix. Catalog compatibility is not mechanical-fit certification. |
+| Low-light visuals | Investigate the overbright dusk horizon and horizontal band visible in dusk/night FPV captures. Cause is not established; verify the correction without retouching captures or hiding problem geometry. |
+| Effect presentation | Review flat-looking fire cards in the strike capture and preserve the distinction between a scripted visual effect, physical contact and the actual objective verdict. |
 | Terrain and lifecycle | Broader cold-network/service-error, constrained-memory, world-travel and material checks; preserve strict loading/ground readiness. |
 | Controls and display | Current playtest reports radio input and window-mode trouble. Diagnose device availability separately from the confirmed keyboard-ownership/hotplug gap. Verify real windowed/fullscreen/borderless transitions, Alt+Enter, resolution and restart—not just saved mode values. |
 | Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
