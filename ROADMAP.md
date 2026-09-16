@@ -1,20 +1,40 @@
 # KESTREL public roadmap
 
-Updated September 15, 2026. This is a work/status plan, not a release announcement
+Updated September 16, 2026. This is a work/status plan, not a release announcement
 or delivery-date promise. [README](README.md) identifies downloadable builds;
 [FEATURES](FEATURES.md) describes capabilities and limits;
 [CHANGELOG](CHANGELOG.md) records version-specific evidence.
 
 ## Release reality
 
-- Default public download and updater: **KESTREL v0.42.11**.
-- The exact tested v0.42.11 package was approved for public distribution with
-  the limitations below. Approval is not a claim that missing features passed.
-- Source `008b4834`; ZIP SHA-256
-  `b051168de33fc48afff99af7afdd635ae42a6e61650951d4d7ff8b031fc24016`.
-- Prior 0.42.4/0.42.9 releases remain historical; 0.42.10 remains held.
+- **KESTREL v0.42.12** is the display-focused release described here.
+- Source `32401cce14394e7eef324be62738c8b813a65a3f`; ZIP size 676,690,392 bytes;
+  SHA-256 `5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
+- Publication does not mean that missing features or manual checks passed.
+- Prior 0.42.4/0.42.9/0.42.11 releases remain historical; 0.42.10 remains held.
 
-## Completed for this artifact
+## v0.42.12 display update
+
+- [x] Separate monitor selection from Windowed/Fullscreen/Borderless mode;
+  default Auto chooses the highest-resolution attached panel.
+- [x] Fit windowed sizing and mixed-DPI transitions to the chosen work area;
+  preserve the selected monitor by identity.
+- [x] Keep/Revert confirmation and real-time rollback for Settings changes;
+  route Alt+Enter/F11 through the same display and rendering logic.
+- [x] Rendered development and packaged-candidate transitions, confirmation and
+  saved-monitor restart checks on two mixed-DPI monitors.
+- [x] Final archive identity, fresh full build/cook/package and 218 launcher tests.
+- [x] Final-package rendered window-transition, confirmation and restart checks.
+- [x] Independent final-archive review, CRC validation and all 4,451 extracted hashes.
+- [ ] Disposable HTTPS installed-update check before default updater promotion.
+- [ ] Human dragging, live/fully paused-flight shortcut input and physical
+  monitor unplug/reconnect acceptance. Disabled controller ticking in a timeout
+  test is not proof of fully paused gameplay.
+
+These results do not complete physical-controller or multiplayer acceptance.
+Release publication and updater promotion are verified separately from these tests.
+
+## Historical v0.42.11 artifact evidence
 
 - [x] Fresh full cook, source/provenance and reviewed staged/container inventory.
 - [x] All 4,451 archive files independently extracted and hashed.
@@ -33,11 +53,11 @@ or delivery-date promise. [README](README.md) identifies downloadable builds;
 | Low-light visuals | Investigate the overbright dusk horizon and horizontal band visible in dusk/night FPV captures. Cause is not established; verify the correction without retouching captures or hiding problem geometry. |
 | Effect presentation | Review flat-looking fire cards in the strike capture and preserve the distinction between a scripted visual effect, physical contact and the actual objective verdict. |
 | Terrain and lifecycle | Broader cold-network/service-error, constrained-memory, world-travel and material checks; preserve strict loading/ground readiness. |
-| Controls and display | Current playtest reports radio input and window-mode trouble. Diagnose device availability separately from the confirmed keyboard-ownership/hotplug gap. Verify real windowed/fullscreen/borderless transitions, Alt+Enter, resolution and restart—not just saved mode values. |
+| Controls and display | v0.42.12 adds separate monitor/mode controls and passes bounded rendered transitions, confirmation and restart checks. Still verify human title-bar dragging, actual Alt+Enter/F11 during live and fully paused flight, focus changes and physical monitor unplug/reconnect. Physical-radio/backend availability and reconnect coverage remain separate. |
 | Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
 | Multiplayer | Physical two-PC discovery/direct join, shared travel, input, movement, mission parity, leave/rejoin and host loss. |
 | Updater | Real-install detect/download/install/start and user-data preservation; offline, interruption, corrupt download and rollback/recovery acceptance. Unit tests alone are not completion. |
-| Mirrors | GitHub and Rotopter game assets match. MilGit authentication remains blocked; do not claim all mirrors synchronized. |
+| Mirrors | Preserve verified historical v0.42.11 identities while preparing the next release. Check each new mirror's Git tree and artifact bytes separately; Rotopter anonymous access and MilGit access/parity remain unresolved. |
 
 Unsigned distribution must remain explicitly identified and be used only where
 permitted. Production publisher signing has not been established. Do not change
@@ -114,7 +134,7 @@ make a test or release pass.
   implemented, alongside frame-time, memory and load-time budgets.
 
 These are open items, not completed features or a claim that the full list ships
-in v0.42.11. The release's actual scope and any explicitly deferred work must be
+in v0.42.11 or v0.42.12. The release's actual scope and any explicitly deferred work must be
 stated before promotion.
 
 ## What counts as done

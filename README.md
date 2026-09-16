@@ -6,7 +6,7 @@
 
 Windows x64 · Alpha · Proprietary evaluation software
 
-[Download v0.42.11](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.11-alpha-unsigned.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Download v0.42.12](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.12-alpha-unsigned.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
@@ -17,17 +17,40 @@ engineering validation or real-aircraft flight testing.
 
 ## Current release
 
-**KESTREL v0.42.11 — September 15, 2026.** This is the default public
-download and updater release. The package identifies itself as v0.42.11-alpha.
-It supersedes the 0.42.4 default and 0.42.9 optional evaluation. The held 0.42.10
-candidate is not a public release.
+**KESTREL v0.42.12 — September 16, 2026.** A focused display-settings update.
+The package identifies itself as v0.42.12-alpha. Earlier releases remain
+available under their original tags; the held 0.42.10 candidate is not a public release.
 
 This is an alpha with known defects, not whole-roadmap completion. “Latest”
 identifies the download channel, not production certification.
 
+## KESTREL v0.42.12 — display reliability
+
+Display selection and window behavior can now be configured independently.
+
+- Choose **Display** separately from **Window mode**. Auto selects the
+  highest-resolution attached panel; a manual choice remembers the monitor.
+- Switch between Windowed, Fullscreen and Borderless on the selected screen.
+  Windowed sizes fit its usable desktop area, with a native title bar and
+  mixed-DPI placement handling.
+- Settings changes offer **Keep changes** and **Revert**, with a 15-second
+  real-time rollback. Unconfirmed changes do not replace the startup preference.
+- Alt+Enter and F11 use the same monitor and sizing logic. On the Settings page
+  they request confirmation; outside Settings they keep immediate toggle behavior.
+
+Rendered development and packaged checks passed display transitions, confirmation
+and saved-monitor restart on two mixed-DPI screens. The final package also passed
+its rendered window-transition, confirmation and saved-monitor restart checks. These are not human drag,
+monitor hotplug, physical-radio or live/fully paused-flight shortcut acceptance.
+
+![Display and Window mode with Keep changes and Revert in KESTREL v0.42.12](media/v0.42.12/display-confirmation.png)
+
+Actual Settings capture from the packaged v0.42.12 build, showing separate Display
+and Window mode controls with the Keep changes/Revert confirmation. Not a mockup.
+
 ## Start here
 
-1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.42.11-alpha-unsigned.1/KESTREL-alpha-win64.zip).
+1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.42.12-alpha-unsigned.1/KESTREL-alpha-win64.zip).
 2. Check its SHA-256 against the release page or attached checksum. Extract into
    a new folder; do not mix versions or run from inside the ZIP.
 3. Start **KESTREL.exe**, the player-facing launcher. Keep the entire extracted
@@ -49,7 +72,7 @@ space for game extraction, update staging and terrain caches. Exact minimum/
 recommended hardware performance is not certified. The ZIP is not a Windows
 runtime installer; retain the exact error if launch fails.
 
-## Added and improved in v0.42.11
+## Retained v0.42.11 capabilities
 
 - **Data & Catalogs:** create, import, export, copy, rename, switch and edit custom
   catalogs using validated JSON. The base catalog stays read-only.
@@ -72,11 +95,12 @@ Existing flight, Work Bench, named builds, missions/editor, ranges, records,
 modeled weather and wind remain. See [FEATURES.md](FEATURES.md) for boundaries.
 Configured weather is not a live weather service.
 
-## See v0.42.11 in the game
+## Gallery from v0.42.11
 
-Actual captures from the released build, using stock aircraft and public terrain.
+Actual captures from the v0.42.11 release, using stock aircraft and public terrain.
 These are not concept renders or previews of unfinished features. Open an image
 for its full-resolution view; existing UI and model limitations remain visible.
+These images are unchanged; they are not new v0.42.12 display-setting captures.
 
 ### FPV flight
 
@@ -118,8 +142,7 @@ The objective settings and surrounding streamed terrain are shown together.
 
 ![FPV approach in the stock strike scenario](media/v0.42.11/strike.png)
 
-A scripted FPV pass through the stock strike scenario, captured in the current
-release.
+A scripted FPV pass through the stock strike scenario, captured in v0.42.11.
 
 ![ISR view of fire and smoke after the scripted effect](media/v0.42.11/isr.png)
 
@@ -156,8 +179,10 @@ the in-flight C2 map; its missing-marker regression remains open.
   not yet accepted**. Mission networking, reconnect and host-loss need further tests.
 - Full action rebinding, the Work Bench OSD editor and rotating lobby aircraft
   cards are **not included**. Map Controls is only map-action binding.
-- Physical radio/display-mode checks, the full camera/prop matrix and calibrated
-  flight-feel comparisons remain open. No universal parts-fit claim is made.
+- Physical radio input, monitor unplug/reconnect, human title-bar dragging and
+  actual Alt+Enter/F11 input during live or fully paused flight remain open.
+  The full camera/prop matrix and calibrated flight-feel comparisons also remain
+  open. No universal parts-fit claim is made.
 - Online street-address/POI search and live weather are not included.
 - Dusk/night captures expose an overbright horizon and horizontal band; the
   cause remains under investigation. Those captures are not used in this gallery.
@@ -167,24 +192,21 @@ UI, replay and acceptance work. This release does not complete that backlog.
 
 ## Verification and updates
 
-Exact source: `008b4834b9e62d166fafec5ba31aebe5746eb261`.
-The fresh full cook and package passed; all **4,451** archived files were checked
-against the reviewed staged inventory and independently extracted.
+Exact source: `32401cce14394e7eef324be62738c8b813a65a3f`.
+The fresh full build, cook and package completed successfully, with **218 launcher
+tests** passing. The display checks above are bounded; they do not prove physical
+controller, two-PC or whole-game acceptance. Broader v0.42.11 tour and LAN results
+remain historical evidence in [CHANGELOG.md](CHANGELOG.md), not newly repeated tests.
 
-**70 native tests** passed (67 clean, 3 expected-warning results), and **218
-launcher tests** passed. Packaged checks included 16 focused UI captures, a
-110-frame/14-stage tour and streamed one-PC LAN with distinct spawns, Ready/start,
-armed input and reciprocal movement. Only selected tour images were manually
-reviewed. This does not prove physical controller, two-PC or whole-game acceptance.
+The v0.42.12 ZIP is 676,690,392 bytes. SHA-256:
+`5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
 
-The unchanged tested ZIP is 676,635,054 bytes. SHA-256:
-`b051168de33fc48afff99af7afdd635ae42a6e61650951d4d7ff8b031fc24016`.
-
-Existing launchers check the default updater manifest for this numerically newer
-release. Back up local settings and aircraft before updating. Complete real-install
-update/start/rollback and user-profile preservation acceptance remains tracked;
-unit tests are not a substitute for it. Embedded build notes retain historical
-“candidate” wording because the validated ZIP was promoted unchanged.
+Independent review and fresh ZIP extraction verified all **4,451 files**, their
+checksums and archive paths. The disposable v0.42.11-to-v0.42.12 HTTPS update check
+is recorded separately before default updater promotion. Installed-update success
+or interruption recovery is not claimed from unit tests alone.
+Back up local settings and aircraft before updating. Offline, corrupt-download,
+recovery and broader user-profile preservation acceptance remain tracked.
 
 ## Reports, privacy and credits
 

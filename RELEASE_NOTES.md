@@ -1,4 +1,4 @@
-> **Historical record.** For the current v0.42.11 public release, use [README](README.md), [CHANGELOG](CHANGELOG.md) and
+> **Historical record.** For the current public release and the v0.42.12 update status, use [README](README.md), [CHANGELOG](CHANGELOG.md) and
 > [ROADMAP](ROADMAP.md). Statements below belong to their named versions and
 > dates; they do not establish current release acceptance.
 

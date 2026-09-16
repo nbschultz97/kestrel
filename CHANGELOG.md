@@ -1,9 +1,51 @@
 # KESTREL changelog
 
-Public status checked September 15, 2026. This file distinguishes downloadable
+Public status checked September 16, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
+
+## KESTREL v0.42.12 — display reliability
+
+September 16, 2026. [Release and immutable download](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.12-alpha-unsigned.1).
+Package version `v0.42.12-alpha`; source
+`32401cce14394e7eef324be62738c8b813a65a3f`.
+The unsigned ZIP is 676,690,392 bytes; SHA-256:
+`5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
+
+- Separate Display and Window mode controls: choose Auto or an attached monitor
+  independently of Windowed, Fullscreen or Borderless.
+- Auto selects the highest-resolution connected panel. Saved manual choices
+  use the monitor identity rather than its temporary enumeration position,
+  with a fallback when that monitor is unavailable.
+- Windowed sizes fit the selected screen's usable desktop area and retain a
+  native title bar. Mixed-DPI transitions account for restored window placement.
+- Clickable Keep changes and Revert controls, with a 15-second real-time
+  rollback. Unconfirmed choices do not replace saved startup settings.
+- Alt+Enter and F11 use the same monitor selection, fitted sizing and flight
+  rendering safeguards. Settings-page shortcuts request confirmation; outside
+  Settings they retain immediate toggle behavior.
+- High-DPI game rendering and shorter display labels improve readability.
+
+Display-focused rendered development and packaged-candidate tests passed
+transitions, confirmation and saved-monitor restart on two mixed-DPI monitors.
+The restart check preserves only an isolated product profile between processes;
+fresh engine settings prevent an unrelated engine preference from masking it.
+Timeout tests disable controller ticking, not the entire game's pause state.
+
+The final full build/cook/package completed successfully and all 218 launcher
+tests passed. Rendered window-transition, confirmation and saved-monitor restart checks passed
+against the final package. The Settings confirmation image is an actual final
+packaged-build capture. Independent review, CRC checks and fresh extraction verified
+all 4,451 archive files. The disposable HTTPS installed-update check remains
+separately tracked before default updater promotion.
+
+Human title-bar dragging, actual keyboard shortcuts during live or fully paused
+flight, monitor unplug/reconnect, physical radio input and physical two-PC LAN
+remain separate acceptance items. Full action rebinding, Work Bench OSD editing,
+rotating lobby aircraft cards, broader art fixes and actual-install updater
+recovery remain unfinished. Existing v0.42.11 gallery captures stay labeled with
+their original build; no new screenshot coverage is implied.
 
 ## KESTREL v0.42.11 — public release
 

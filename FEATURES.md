@@ -1,12 +1,16 @@
 # KESTREL features and limits
 
-Status: September 15, 2026. Public release: **KESTREL v0.42.11**, built
-from source `008b4834b9e62d166fafec5ba31aebe5746eb261`. The official release page records publication and artifact identity. Included does not mean every workflow has
+Status: September 16, 2026. **KESTREL v0.42.12**, built from source
+`32401cce14394e7eef324be62738c8b813a65a3f`. The official release page records publication and artifact identity. Included does not mean every workflow has
 passed on every computer. [README](README.md) identifies the current
 downloads; [CHANGELOG](CHANGELOG.md) ties changes to versions; [ROADMAP](ROADMAP.md)
 tracks unfinished work.
 
-## Which build has what?
+The v0.42.12 display update extends the retained v0.42.11 capabilities below.
+Earlier source/test identities and gallery images remain explicitly historical;
+they are not new v0.42.12 acceptance results.
+
+## Earlier release comparison
 
 | Area | Earlier v0.42.4 | Earlier v0.42.9 evaluation | Public v0.42.11 release |
 |---|---|---|---|
@@ -20,6 +24,26 @@ tracks unfinished work.
 
 These versions are unsigned. Features included in the 0.42.11 package
 are not retroactively added to earlier downloads by updating this repository.
+
+## Display settings — v0.42.12 update
+
+Display and Window mode are separate controls. Auto chooses the highest-resolution
+attached panel; an explicit monitor choice is saved by identity and falls back
+when that monitor is absent. Choose Windowed, Fullscreen or Borderless independently.
+
+Windowed sizing fits the selected screen's usable desktop area and retains a
+native title bar. Mixed-DPI transitions account for the engine's remembered
+restore position. Settings changes offer Keep changes and Revert, with a
+15-second real-time rollback that does not commit an unconfirmed startup choice.
+Alt+Enter/F11 use the same monitor/sizing logic; Settings-page shortcuts request
+confirmation while shortcuts outside Settings remain immediate.
+
+Rendered development and packaged-candidate checks passed on two mixed-DPI
+monitors, including saved-monitor startup in a second process with fresh engine
+settings. Final-package window-transition, confirmation and restart checks passed too.
+Human dragging, live/fully paused-flight key input, monitor hotplug and
+wider physical hardware remain separate acceptance work. Existing v0.42.11
+marketing captures are retained with their original provenance.
 
 ## Flight and vehicle modeling
 
@@ -238,13 +262,13 @@ multiplayer deployment or hardware-acceptance claim.
 
 ## Settings, packaging and privacy
 
-Settings expose display, audio, environment and input controls. v0.42.11 includes
-engine/display-state synchronization and a 1280x720 interactive layout
-minimum. This does not close the reported windowed/fullscreen/borderless behavior;
-physical display-mode and focus acceptance is still required.
+Settings expose display, audio, environment and input controls. The v0.42.12
+display work above extends the earlier mode synchronization and layout handling.
+Its bounded rendered tests do not replace physical display/focus acceptance or
+complete the separate action-binding and controller-backend work.
 
-The selected Settings value now has a readable full-value row, verified in the
-new 720p capture; compact cells still ellipsize intentionally. Remaining UI/art
+The selected Settings value has a readable full-value row, verified in a
+v0.42.11 720p capture; compact cells still ellipsize intentionally. Remaining UI/art
 issues include builder help/property text contrast and clipping, keyboard hints
 overlapping headers, crowded prediction rows and loading attribution, dark
 battery/part labels, glossy carbon and unfinished strap/material presentation.
@@ -259,12 +283,12 @@ The release has no live reporting endpoint. Local reports may contain
 personal information and should be reviewed before sharing. Public distributions
 must exclude private profiles, inventories and datasets and carry appropriate
 third-party notices. Cook policy excludes machine-local editor service settings.
-The replacement package has passed independent stage/container review and fresh
+Both v0.42.11 and v0.42.12 passed independent stage/container review and fresh
 archive verification. Those checks retain their opaque-content/property and
 asset-rights limitations; they do not certify every asset or assert that
 historical source/artifacts have been retroactively sanitized.
 
-## Evidence boundary
+## Historical v0.42.11 evidence boundary
 
 The public v0.42.11 package uses source
 `008b4834b9e62d166fafec5ba31aebe5746eb261`. Its recorded checks include:
