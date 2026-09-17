@@ -1,17 +1,20 @@
 # KESTREL public roadmap
 
-Updated September 16, 2026. This is a work/status plan, not a release announcement
+Updated September 17, 2026. This is a work/status plan, not a release announcement
 or delivery-date promise. [README](README.md) identifies downloadable builds;
 [FEATURES](FEATURES.md) describes capabilities and limits;
 [CHANGELOG](CHANGELOG.md) records version-specific evidence.
 
 ## Release reality
 
-- **KESTREL v0.42.12** is the display-focused release described here.
+- **KESTREL v0.42.12** is GitHub Latest and the current direct download.
+- The automatic updater remains on **v0.42.11**. The disposable installed-update
+  test must pass before automatic updater promotion.
 - Source `32401cce14394e7eef324be62738c8b813a65a3f`; ZIP size 676,690,392 bytes;
   SHA-256 `5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
 - Publication does not mean that missing features or manual checks passed.
-- Prior 0.42.4/0.42.9/0.42.11 releases remain historical; 0.42.10 remains held.
+- Earlier releases retain their original tags and assets; v0.42.11 remains the
+  updater target and 0.42.10 remains held.
 
 ## v0.42.12 display update
 
@@ -26,7 +29,9 @@ or delivery-date promise. [README](README.md) identifies downloadable builds;
 - [x] Final archive identity, fresh full build/cook/package and 218 launcher tests.
 - [x] Final-package rendered window-transition, confirmation and restart checks.
 - [x] Independent final-archive review, CRC validation and all 4,451 extracted hashes.
-- [ ] Disposable HTTPS installed-update check before default updater promotion.
+- [x] Public HTTPS ZIP download matched the exact released size and SHA-256.
+- [ ] A passing disposable installed-update test
+  before automatic updater promotion. Download verification is not an installed upgrade.
 - [ ] Human dragging, live/fully paused-flight shortcut input and physical
   monitor unplug/reconnect acceptance. Disabled controller ticking in a timeout
   test is not proof of fully paused gameplay.
@@ -56,7 +61,7 @@ Release publication and updater promotion are verified separately from these tes
 | Controls and display | v0.42.12 adds separate monitor/mode controls and passes bounded rendered transitions, confirmation and restart checks. Still verify human title-bar dragging, actual Alt+Enter/F11 during live and fully paused flight, focus changes and physical monitor unplug/reconnect. Physical-radio/backend availability and reconnect coverage remain separate. |
 | Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
 | Multiplayer | Physical two-PC discovery/direct join, shared travel, input, movement, mission parity, leave/rejoin and host loss. |
-| Updater | Real-install detect/download/install/start and user-data preservation; offline, interruption, corrupt download and rollback/recovery acceptance. Unit tests alone are not completion. |
+| Updater | Automatic updates remain at v0.42.11 pending the disposable v0.42.11-to-v0.42.12 installed-update test. Real-install start/user-data preservation, offline, interruption, corrupt download and rollback/recovery acceptance remain separate; unit tests and public ZIP verification alone are not completion. |
 | Mirrors | Preserve verified historical v0.42.11 identities while preparing the next release. Check each new mirror's Git tree and artifact bytes separately; Rotopter anonymous access and MilGit access/parity remain unresolved. |
 
 Unsigned distribution must remain explicitly identified and be used only where

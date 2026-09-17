@@ -21,6 +21,11 @@ engineering validation or real-aircraft flight testing.
 The package identifies itself as v0.42.12-alpha. Earlier releases remain
 available under their original tags; the held 0.42.10 candidate is not a public release.
 
+**GitHub Latest and direct download: v0.42.12. Automatic updater: v0.42.11.**
+The updater remains on v0.42.11 while the older-install update check is pending.
+Publishing v0.42.12 does not
+claim that an end-to-end upgrade has passed.
+
 This is an alpha with known defects, not whole-roadmap completion. “Latest”
 identifies the download channel, not production certification.
 
@@ -201,10 +206,13 @@ remain historical evidence in [CHANGELOG.md](CHANGELOG.md), not newly repeated t
 The v0.42.12 ZIP is 676,690,392 bytes. SHA-256:
 `5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
 
-Independent review and fresh ZIP extraction verified all **4,451 files**, their
-checksums and archive paths. The disposable v0.42.11-to-v0.42.12 HTTPS update check
-is recorded separately before default updater promotion. Installed-update success
-or interruption recovery is not claimed from unit tests alone.
+Independent review, CRC validation and fresh ZIP extraction verified all
+**4,451 files**, their checksums and archive paths. The published ZIP was also
+downloaded over HTTPS and matched the exact size and SHA-256 above. This verifies
+the public download, not an installed upgrade. The disposable v0.42.11-to-v0.42.12
+installed-update test is pending; automatic updates stay
+on v0.42.11 until it passes. Installed-update success or interruption recovery is
+not claimed from unit tests or archive checks alone.
 Back up local settings and aircraft before updating. Offline, corrupt-download,
 recovery and broader user-profile preservation acceptance remain tracked.
 

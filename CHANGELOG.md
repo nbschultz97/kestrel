@@ -1,6 +1,6 @@
 # KESTREL changelog
 
-Public status checked September 16, 2026. This file distinguishes downloadable
+Public status checked September 17, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
@@ -12,6 +12,11 @@ Package version `v0.42.12-alpha`; source
 `32401cce14394e7eef324be62738c8b813a65a3f`.
 The unsigned ZIP is 676,690,392 bytes; SHA-256:
 `5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
+
+This is GitHub Latest and the current direct download. The automatic updater
+remains on v0.42.11 while the older-install update check is pending.
+The immutable v0.42.12 release tag and
+assets are unchanged; Latest promotion does not establish end-to-end upgrade success.
 
 - Separate Display and Window mode controls: choose Auto or an attached monitor
   independently of Windowed, Fullscreen or Borderless.
@@ -37,8 +42,10 @@ The final full build/cook/package completed successfully and all 218 launcher
 tests passed. Rendered window-transition, confirmation and saved-monitor restart checks passed
 against the final package. The Settings confirmation image is an actual final
 packaged-build capture. Independent review, CRC checks and fresh extraction verified
-all 4,451 archive files. The disposable HTTPS installed-update check remains
-separately tracked before default updater promotion.
+all 4,451 archive files. A fresh public HTTPS download matched the released ZIP's
+exact size and SHA-256. That download verification is separate from an installed
+upgrade; the end-to-end test has not passed and the automatic updater is held at
+v0.42.11 pending installed-update verification.
 
 Human title-bar dragging, actual keyboard shortcuts during live or fully paused
 flight, monitor unplug/reconnect, physical radio input and physical two-PC LAN
