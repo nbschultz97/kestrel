@@ -5,6 +5,44 @@ releases from unreleased work. The updater manifest is separate from this docume
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
 
+## KESTREL v0.42.13 — flight controls
+
+September 17, 2026. [Release and immutable download](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.13-alpha.1).
+Source `45974ce74aa9642bcee15c8439808e0cf2102305`. Archive size 676,720,589
+bytes; SHA-256 `e3dbdaea14151bf7a6a721b72ea36c494fa698c900e8078c28ecabafc94a5bbe`.
+
+- **Settings > Flight controls** replaces the Map-only editor with Map, Camera
+  tilt up and Camera tilt down rows. Each supports keyboard or digital gamepad
+  binding, Clear, Restore defaults, Save changes and Cancel.
+- Tilt defaults remain Up/Down, with one two-degree step per fresh press and
+  the existing 0–55-degree limit. Menu arrows remain available after reassignment.
+- Shared conflict checks protect existing flight axes and reserved controls.
+  Held/repeated controls, focus/context changes and reconnects do not synthesize
+  additional actions.
+- A versioned action section shares the existing controller-profile save
+  transaction. Legacy Map fields migrate; unknown metadata/actions survive.
+  Malformed profiles and failed writes do not publish a partial replacement.
+- Calibration reset preserves these action assignments. Restoring action
+  defaults leaves calibration intact.
+- Existing Map USB-radio digital-button capture remains. Radio tilt and
+  axis-switch actions are explicitly unsupported.
+
+Verified development scope: Editor and Game builds; 136 focused source guards;
+13 native controller tests covering production persistence, migration, failed
+writes, capture arbitration and input edges; 16 native display regressions.
+The fresh full cook/package passed 218 launcher tests. Independent complete
+stage review and all 4,451 ZIP CRC/extracted-hash checks passed. Actual packaged
+default-state offscreen captures at 720p and 1080p exited normally and were
+inspected; personal settings/controller files remained unchanged. No new cooked
+content was introduced: all five containers match the accepted v0.42.12 bytes.
+Physical input and complete interaction checks remain separate; earlier release
+images retain their original version labels.
+
+Full action rebinding, the Work Bench OSD editor, rotating lobby aircraft
+previews, physical radio/gamepad qualification and physical two-PC LAN remain
+unfinished. The automatic updater remains on v0.42.11 pending installed-update
+verification. Release publication alone will not complete those checks.
+
 ## KESTREL v0.42.12 — display reliability
 
 September 16, 2026. [Release and immutable download](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.12-alpha-unsigned.1).
@@ -13,7 +51,7 @@ Package version `v0.42.12-alpha`; source
 The unsigned ZIP is 676,690,392 bytes; SHA-256:
 `5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
 
-This is GitHub Latest and the current direct download. The automatic updater
+This was the prior GitHub Latest download, now superseded by v0.42.13. The automatic updater
 remains on v0.42.11 while the older-install update check is pending.
 The immutable v0.42.12 release tag and
 assets are unchanged; Latest promotion does not establish end-to-end upgrade success.

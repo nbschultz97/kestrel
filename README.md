@@ -6,7 +6,7 @@
 
 Windows x64 · Alpha · Proprietary evaluation software
 
-[Download v0.42.12](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.12-alpha-unsigned.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Download v0.42.13](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.13-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
@@ -17,19 +17,50 @@ engineering validation or real-aircraft flight testing.
 
 ## Current release
 
-**KESTREL v0.42.12 — September 16, 2026.** A focused display-settings update.
-The package identifies itself as v0.42.12-alpha. Earlier releases remain
+**KESTREL v0.42.13 — September 17, 2026.** A focused flight-controls update.
+The package identifies itself as v0.42.13-alpha. Earlier releases remain
 available under their original tags; the held 0.42.10 candidate is not a public release.
 
-**GitHub Latest and direct download: v0.42.12. Automatic updater: v0.42.11.**
+**GitHub Latest and direct download: v0.42.13. Automatic updater: v0.42.11.**
 The updater remains on v0.42.11 while the older-install update check is pending.
-Publishing v0.42.12 does not
+Publishing v0.42.13 does not
 claim that an end-to-end upgrade has passed.
 
 This is an alpha with known defects, not whole-roadmap completion. “Latest”
 identifies the download channel, not production certification.
 
-## KESTREL v0.42.12 — display reliability
+## v0.42.13 — flight controls
+
+This release adds **Settings > Flight controls** with three editable actions:
+**Map**, **Camera tilt up** and **Camera tilt down**.
+
+- Bind a keyboard key or digital gamepad button for each action. Clear a
+  binding, restore action defaults, then Save changes or Cancel the draft.
+- Camera tilt defaults to Up/Down and moves two degrees per fresh press within
+  0–55 degrees. Menu arrows keep working when flight tilt is reassigned.
+- Conflicting assignments are rejected. Held/repeated controls and reconnects
+  do not create extra camera steps.
+- Saved Map assignments migrate to the versioned controller profile. Failed
+  saves keep the active controls and editable draft intact.
+- Controller calibration reset preserves these action bindings; restoring
+  action defaults preserves radio calibration.
+
+Map retains digital USB-radio button support. Camera tilt currently accepts
+keyboard keys and gamepad buttons; **USB-radio tilt and axis-switch actions
+are not supported**. Arm/disarm, restart, flight mode, camera view/low-light and
+the remaining action editor are still pending.
+
+Editor/Game builds, 136 focused source checks, 13 native controller tests and
+16 native display regressions passed for the controls source. The fresh package
+passed 218 launcher tests and all 4,451 archive-file checks. Its default panel
+was reviewed from a fresh extraction at 720p and 1080p; physical-device and full
+interaction acceptance remain separate.
+
+[![Flight controls in the actual v0.42.13 package](media/v0.42.13/flight-controls.png)](media/v0.42.13/flight-controls.png)
+
+Actual v0.42.13 packaged capture, unchanged. [Capture provenance](media/v0.42.13/README.md).
+
+## Retained v0.42.12 — display reliability
 
 Display selection and window behavior can now be configured independently.
 
@@ -55,7 +86,7 @@ and Window mode controls with the Keep changes/Revert confirmation. Not a mockup
 
 ## Start here
 
-1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.42.12-alpha-unsigned.1/KESTREL-alpha-win64.zip).
+1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.42.13-alpha.1/KESTREL-alpha-win64.zip).
 2. Check its SHA-256 against the release page or attached checksum. Extract into
    a new folder; do not mix versions or run from inside the ZIP.
 3. Start **KESTREL.exe**, the player-facing launcher. Keep the entire extracted
@@ -105,7 +136,8 @@ Configured weather is not a live weather service.
 Actual captures from the v0.42.11 release, using stock aircraft and public terrain.
 These are not concept renders or previews of unfinished features. Open an image
 for its full-resolution view; existing UI and model limitations remain visible.
-These images are unchanged; they are not new v0.42.12 display-setting captures.
+The gameplay images below are unchanged v0.42.11 captures. The new v0.42.13
+controls screenshot appears in the release section above.
 
 ### FPV flight
 
@@ -183,7 +215,8 @@ the in-flight C2 map; its missing-marker regression remains open.
 - LAN passed a streamed two-process test on one PC, but **physical two-PC LAN is
   not yet accepted**. Mission networking, reconnect and host-loss need further tests.
 - Full action rebinding, the Work Bench OSD editor and rotating lobby aircraft
-  cards are **not included**. Map Controls is only map-action binding.
+  cards remain unfinished. The Flight controls panel covers Map and camera tilt
+  up/down, not the complete action inventory.
 - Physical radio input, monitor unplug/reconnect, human title-bar dragging and
   actual Alt+Enter/F11 input during live or fully paused flight remain open.
   The full camera/prop matrix and calibrated flight-feel comparisons also remain
@@ -197,19 +230,18 @@ UI, replay and acceptance work. This release does not complete that backlog.
 
 ## Verification and updates
 
-Exact source: `32401cce14394e7eef324be62738c8b813a65a3f`.
+Exact source: `45974ce74aa9642bcee15c8439808e0cf2102305`.
 The fresh full build, cook and package completed successfully, with **218 launcher
-tests** passing. The display checks above are bounded; they do not prove physical
+tests** passing. The controls and retained display checks are bounded; they do not prove physical
 controller, two-PC or whole-game acceptance. Broader v0.42.11 tour and LAN results
 remain historical evidence in [CHANGELOG.md](CHANGELOG.md), not newly repeated tests.
 
-The v0.42.12 ZIP is 676,690,392 bytes. SHA-256:
-`5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
+The v0.42.13 ZIP is 676,720,589 bytes. SHA-256:
+`e3dbdaea14151bf7a6a721b72ea36c494fa698c900e8078c28ecabafc94a5bbe`.
 
 Independent review, CRC validation and fresh ZIP extraction verified all
-**4,451 files**, their checksums and archive paths. The published ZIP was also
-downloaded over HTTPS and matched the exact size and SHA-256 above. This verifies
-the public download, not an installed upgrade. The disposable v0.42.11-to-v0.42.12
+**4,451 files**, their checksums and archive paths. Public download verification
+is recorded separately after upload. A disposable older-install-to-current
 installed-update test is pending; automatic updates stay
 on v0.42.11 until it passes. Installed-update success or interruption recovery is
 not claimed from unit tests or archive checks alone.

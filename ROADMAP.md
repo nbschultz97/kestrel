@@ -7,16 +7,40 @@ or delivery-date promise. [README](README.md) identifies downloadable builds;
 
 ## Release reality
 
-- **KESTREL v0.42.12** is GitHub Latest and the current direct download.
+- **KESTREL v0.42.13** is GitHub Latest and the current direct download.
 - The automatic updater remains on **v0.42.11**. The disposable installed-update
   test must pass before automatic updater promotion.
-- Source `32401cce14394e7eef324be62738c8b813a65a3f`; ZIP size 676,690,392 bytes;
-  SHA-256 `5ca8c620c90909f71318a8e5eae5defacf235277ddc15bdaad35abda5895098e`.
+- Source `45974ce74aa9642bcee15c8439808e0cf2102305`; ZIP size 676,720,589 bytes;
+  SHA-256 `e3dbdaea14151bf7a6a721b72ea36c494fa698c900e8078c28ecabafc94a5bbe`.
 - Publication does not mean that missing features or manual checks passed.
 - Earlier releases retain their original tags and assets; v0.42.11 remains the
   updater target and 0.42.10 remains held.
 
-## v0.42.12 display update
+## v0.42.13 flight controls
+
+- [x] Three-action editor: Map and camera tilt up/down, with keyboard and digital
+  gamepad binding, Clear, Restore defaults, Save changes and Cancel.
+- [x] Legacy Map migration, unknown-profile-data preservation, checked atomic
+  saving and retained drafts after failure.
+- [x] Independent menu arrows, one tilt step per fresh press, conflict checks
+  and held/reconnect/context suppression.
+- [x] Calibration reset preserves action bindings; action defaults preserve
+  calibration. Existing digital USB-radio Map support remains.
+- [x] Development Editor/Game builds, 136 focused source checks, 13 native
+  controller tests and 16 native display regressions.
+- [x] Default-state development panel review at 720p and 1080p.
+- [x] Fresh v0.42.13 full cook/package and all 218 launcher tests.
+- [x] Independent archive/source identity and all 4,451 extracted file hashes;
+  packaged controls captures at 720p and 1080p, with unchanged personal profiles.
+- [ ] Public download verification after upload.
+- [ ] Physical keyboard/gamepad/radio and unplug/reconnect acceptance.
+- [ ] Remaining action editor: arm/disarm, restart, flight mode, view/low-light
+  and other existing controls; USB-radio tilt and axis-switch actions.
+
+This slice does not complete the OSD editor, lobby previews or the full input
+backlog. Development captures are not packaged or physical-device acceptance.
+
+## Retained v0.42.12 display update
 
 - [x] Separate monitor selection from Windowed/Fullscreen/Borderless mode;
   default Auto chooses the highest-resolution attached panel.
@@ -58,10 +82,10 @@ Release publication and updater promotion are verified separately from these tes
 | Low-light visuals | Investigate the overbright dusk horizon and horizontal band visible in dusk/night FPV captures. Cause is not established; verify the correction without retouching captures or hiding problem geometry. |
 | Effect presentation | Review flat-looking fire cards in the strike capture and preserve the distinction between a scripted visual effect, physical contact and the actual objective verdict. |
 | Terrain and lifecycle | Broader cold-network/service-error, constrained-memory, world-travel and material checks; preserve strict loading/ground readiness. |
-| Controls and display | v0.42.12 adds separate monitor/mode controls and passes bounded rendered transitions, confirmation and restart checks. Still verify human title-bar dragging, actual Alt+Enter/F11 during live and fully paused flight, focus changes and physical monitor unplug/reconnect. Physical-radio/backend availability and reconnect coverage remain separate. |
+| Controls and display | The v0.42.13 editor covers Map and camera tilt up/down; full action mapping, radio tilt and radio axis-switch actions remain open. v0.42.12 separate monitor/mode controls retain their bounded display evidence. Still verify physical controller/backend/reconnect behavior, human title-bar dragging, actual Alt+Enter/F11 during live and fully paused flight, focus changes and monitor unplug/reconnect. |
 | Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
 | Multiplayer | Physical two-PC discovery/direct join, shared travel, input, movement, mission parity, leave/rejoin and host loss. |
-| Updater | Automatic updates remain at v0.42.11 pending the disposable v0.42.11-to-v0.42.12 installed-update test. Real-install start/user-data preservation, offline, interruption, corrupt download and rollback/recovery acceptance remain separate; unit tests and public ZIP verification alone are not completion. |
+| Updater | Automatic updates remain at v0.42.11 pending a disposable older-install-to-current installed-update test. Real-install start/user-data preservation, offline, interruption, corrupt download and rollback/recovery acceptance remain separate; unit tests and public ZIP verification alone are not completion. |
 | Mirrors | Preserve verified historical v0.42.11 identities while preparing the next release. Check each new mirror's Git tree and artifact bytes separately; Rotopter anonymous access and MilGit access/parity remain unresolved. |
 
 Unsigned distribution must remain explicitly identified and be used only where
@@ -73,8 +97,13 @@ make a test or release pass.
 
 ### Controls and OSD
 
-- Complete action rebinding, not only the map action: visible action inventory,
-  capture/cancel/conflict handling, defaults and reliable save/restart behavior.
+- Warn before leaving a controls draft with unapplied changes, keeping capture
+  cancellation separate from discarding edits. This follow-up is not in v0.42.13.
+- Complete action rebinding beyond Map and camera tilt up/down: arm/disarm,
+  restart, flight mode, camera view/low-light and other implemented actions,
+  with contexts, capture/cancel/conflicts and reliable save/restart behavior.
+- Add supported USB-radio tilt and radio axis-switch actions with explicit
+  device ownership and activation semantics.
 - A Work Bench OSD editor with analog/digital grids, element visibility and
   placement, saved layouts/profiles, reset and import/export.
 - Preview OSD layouts through the same renderer used in flight, rather than a
@@ -139,7 +168,7 @@ make a test or release pass.
   implemented, alongside frame-time, memory and load-time budgets.
 
 These are open items, not completed features or a claim that the full list ships
-in v0.42.11 or v0.42.12. The release's actual scope and any explicitly deferred work must be
+in v0.42.11, v0.42.12 or v0.42.13. The release's actual scope and any explicitly deferred work must be
 stated before promotion.
 
 ## What counts as done

@@ -1,14 +1,18 @@
 # KESTREL features and limits
 
-Status: September 16, 2026. **KESTREL v0.42.12**, built from source
-`32401cce14394e7eef324be62738c8b813a65a3f`. The official release page records publication and artifact identity. Included does not mean every workflow has
+Status: September 17, 2026. **KESTREL v0.42.13**, built from source
+`45974ce74aa9642bcee15c8439808e0cf2102305`. The official release page records publication and artifact identity. Included does not mean every workflow has
 passed on every computer. [README](README.md) identifies the current
 downloads; [CHANGELOG](CHANGELOG.md) ties changes to versions; [ROADMAP](ROADMAP.md)
 tracks unfinished work.
 
-The v0.42.12 display update extends the retained v0.42.11 capabilities below.
+The v0.42.13 controls update retains the v0.42.12 display improvements and
+v0.42.11 capabilities below.
 Earlier source/test identities and gallery images remain explicitly historical;
-they are not new v0.42.12 acceptance results.
+they are not new v0.42.13 acceptance results.
+
+The **v0.42.13 Flight controls** update is described below with its acceptance
+limits. Earlier immutable downloads do not contain this controls update.
 
 ## Earlier release comparison
 
@@ -134,11 +138,34 @@ Betaflight firmware emulator or an import of every CLI option. Supported rate
 families and parameters differ in fidelity; some rate curves are approximations.
 Importing a tune does not validate the real aircraft or write its hardware.
 
-This release includes map-specific binding capture/recovery and input-source
-safeguards. **Settings > Map Controls is not full action rebinding**, and binding
-a digital map action is not radio-axis calibration. Physical USB radios,
-input backends, unplug/reconnect, switch capture and end-to-end latency require
-separate device testing.
+The v0.42.12 release includes map-specific binding capture/recovery and
+input-source safeguards. The v0.42.13 update expands this to
+**Settings > Flight controls** with three actions:
+
+| Action | Keyboard default | Editable controller input |
+|---|---|---|
+| Map | F6 | Digital gamepad button or existing USB-radio digital button |
+| Camera tilt up | Up arrow | Digital gamepad button |
+| Camera tilt down | Down arrow | Digital gamepad button |
+
+All three actions support keyboard reassignment, Clear, Restore defaults,
+Save changes and Cancel. Conflicting controls are rejected before saving.
+Camera tilt takes one two-degree step per fresh press within 0–55 degrees;
+held/repeated controls do not add steps. Menu Up/Down remain navigation controls
+when the flight assignment changes.
+
+Bindings share the existing controller profile and save transaction. Legacy
+Map settings migrate, unrelated profile metadata survives, and failed saves
+retain both the active profile and the editable draft. Resetting controller
+axes/switches preserves these action assignments; action defaults preserve
+calibration.
+
+This is a three-action editor. Arm/disarm, restart, flight mode, camera
+view/low-light and the remaining actions are not newly rebindable here.
+USB-radio tilt and action bindings on radio axes are unsupported. Physical
+radios/gamepads, input backends, unplug/reconnect, switch capture and end-to-end
+latency require separate device testing. Development panel captures are not
+packaged interaction or physical-controller acceptance.
 
 ## FPV cameras and OSD
 
