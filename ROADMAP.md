@@ -32,7 +32,8 @@ or delivery-date promise. [README](README.md) identifies downloadable builds;
 - [x] Fresh v0.42.13 full cook/package and all 218 launcher tests.
 - [x] Independent archive/source identity and all 4,451 extracted file hashes;
   packaged controls captures at 720p and 1080p, with unchanged personal profiles.
-- [ ] Public download verification after upload.
+- [x] Unauthenticated public HTTPS ZIP download matched the exact released size
+  and SHA-256 on September 17, 2026; this is not an installed-update test.
 - [ ] Physical keyboard/gamepad/radio and unplug/reconnect acceptance.
 - [ ] Remaining action editor: arm/disarm, restart, flight mode, view/low-light
   and other existing controls; USB-radio tilt and axis-switch actions.

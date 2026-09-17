@@ -240,8 +240,9 @@ The v0.42.13 ZIP is 676,720,589 bytes. SHA-256:
 `e3dbdaea14151bf7a6a721b72ea36c494fa698c900e8078c28ecabafc94a5bbe`.
 
 Independent review, CRC validation and fresh ZIP extraction verified all
-**4,451 files**, their checksums and archive paths. Public download verification
-is recorded separately after upload. A disposable older-install-to-current
+**4,451 files**, their checksums and archive paths. An unauthenticated public HTTPS
+download on September 17, 2026 matched the exact released size and SHA-256 above.
+A disposable older-install-to-current
 installed-update test is pending; automatic updates stay
 on v0.42.11 until it passes. Installed-update success or interruption recovery is
 not claimed from unit tests or archive checks alone.
