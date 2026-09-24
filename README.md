@@ -10,6 +10,14 @@ Windows x64 · Alpha · Proprietary evaluation software
 
 </div>
 
+An opt-in [v0.43.2 controller evaluation](https://github.com/nbschultz97/kestrel/releases/tag/v0.43.2-alpha-eval.1)
+is also available as a playable Windows ZIP, with an
+[identical Rotopter mirror](https://git.rotopter.com/nschultz/Kestral/releases/tag/v0.43.2-alpha-eval.1).
+It adds Pocket radio input coverage and controller-menu repairs, but the Pocket
+SE switch did not bind in the physical check. It does **not** replace GitHub
+Latest or change automatic updates. See the release page for the checksum and
+full limitations.
+
 KESTREL is an Unreal Engine small-UAS flight simulator with a parts-based Work
 Bench, saved aircraft, FPV flight, a mission library and editor, and streamed
 real-world terrain. It is for simulation and evaluation, not certified navigation,

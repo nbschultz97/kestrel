@@ -1,9 +1,23 @@
 # KESTREL changelog
 
-Public status checked September 17, 2026. This file distinguishes downloadable
+Public status checked September 23, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
+
+## KESTREL v0.43.2 - opt-in controller evaluation
+
+September 23, 2026. [Playable ZIP and exact verification notes](https://github.com/nbschultz97/kestrel/releases/tag/v0.43.2-alpha-eval.1);
+[Rotopter mirror](https://git.rotopter.com/nschultz/Kestral/releases/tag/v0.43.2-alpha-eval.1).
+DirectInput reads eight standard Pocket axes and 24 reported buttons on the
+tested radio; Controller setup adds explicit Remap actions, live button state,
+and a 720p layout correction. Physical SA/SD binding worked, but SE did not.
+The archive was full-cooked and fresh-extraction two-process Offline/Streamed
+smokes passed. This evaluation does not move GitHub Latest or the stable updater.
+
+ZIP: 677,225,817 bytes; SHA-256
+ac52e4cde9103b9e42fe8684d9d6e6356e65cb1902ce511f264fb366152246f3.
+Source commit 70599a3c7929154c517780de24a2cb632a47577f.
 
 ## KESTREL v0.42.13 — flight controls
 
