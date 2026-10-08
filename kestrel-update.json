@@ -1,10 +1,10 @@
 {
-  "version": "v0.42.11-alpha",
-  "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.42.11-alpha-unsigned.1/KESTREL-alpha-win64.zip",
-  "sha256": "b051168de33fc48afff99af7afdd635ae42a6e61650951d4d7ff8b031fc24016",
-  "size": 676635054,
+  "version": "v0.44.0-alpha",
+  "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.44.0-alpha.1/KESTREL-alpha-win64.zip",
+  "sha256": "495d62f4f2039a40a7341f483965e7048375f9bce419b8070885c3d41611b69e",
+  "size": 679194737,
   "minLauncherVersion": "1.0.0",
   "sourceRepo": "https://github.com/nbschultz97/ceradon-sim",
-  "sourceCommit": "008b4834b9e62d166fafec5ba31aebe5746eb261",
-  "notes": "See CHANGELOG.md for changes and known limitations."
+  "sourceCommit": "5444e5238f5e884a37adc4e64df150206cd6f643",
+  "notes": "Flight Review, native ArduPilot BIN replay, and Mission Planner file inspection. See CHANGELOG.md for features and limits."
 }

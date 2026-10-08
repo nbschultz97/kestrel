@@ -4,40 +4,49 @@
 
 **Build an aircraft. Choose a location. Practise the flight.**
 
-Windows x64 · Alpha · Proprietary evaluation software
+Windows x64 · Alpha · Proprietary software
 
-[Download v0.42.13](https://github.com/nbschultz97/kestrel/releases/tag/v0.42.13-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Download v0.44](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.0-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
-
-An opt-in [v0.43.2 controller evaluation](https://github.com/nbschultz97/kestrel/releases/tag/v0.43.2-alpha-eval.1)
-is also available as a playable Windows ZIP, with an
-[identical Rotopter mirror](https://git.rotopter.com/nschultz/Kestral/releases/tag/v0.43.2-alpha-eval.1).
-It adds Pocket radio input coverage and controller-menu repairs, but the Pocket
-SE switch did not bind in the physical check. It does **not** replace GitHub
-Latest or change automatic updates. See the release page for the checksum and
-full limitations.
 
 KESTREL is an Unreal Engine small-UAS flight simulator with a parts-based Work
 Bench, saved aircraft, FPV flight, a mission library and editor, and streamed
 real-world terrain. It is for simulation and evaluation, not certified navigation,
 engineering validation or real-aircraft flight testing.
 
+![Fixed-wing flight replay in KESTREL](media/v0.44/kestrel-fixed-wing-replay.gif)
+
+User-recorded Flight Review footage.
+
 ## Current release
 
-**KESTREL v0.42.13 — September 17, 2026.** A focused flight-controls update.
-The package identifies itself as v0.42.13-alpha. Earlier releases remain
-available under their original tags; the held 0.42.10 candidate is not a public release.
+**KESTREL v0.44 - Flight Review.** Package version: `v0.44.0-alpha`.
 
-**GitHub Latest and direct download: v0.42.13. Automatic updater: v0.42.11.**
-The updater remains on v0.42.11 while the older-install update check is pending.
-Publishing v0.42.13 does not
-claim that an end-to-end upgrade has passed.
+Released October 8, 2026. Direct downloads and the automatic updater
+now offer v0.44. The isolated v0.42.11-to-v0.44 upgrade passed.
 
-This is an alpha with known defects, not whole-roadmap completion. “Latest”
-identifies the download channel, not production certification.
+- Open ArduPilot DataFlash BIN recordings directly in **Flight Review**.
+- Minimize/expand controls with Tab or the buttons; Escape opens the normal
+  pause menu. Toggle the trail with T or its checkbox. Playback controls show
+  their current state, and unavailable controls are disabled.
+- Review recordings with camera controls and telemetry. The live simulator
+  aircraft is hidden during review to prevent a duplicate vehicle.
+- Inspect Mission Planner QGC WPL 110 exports in **Data & Catalogs > Flight files**.
+  This is read-only inspection, not playable mission import or mission execution.
+- Work Bench offers an inventory-mismatch action for saved aircraft whose
+  required parts are unavailable. The supported Work Bench OSD layout editor
+  and prior controller improvements are retained.
 
-## v0.42.13 — flight controls
+Representative fixed-wing, rover and submersible shapes remain; detailed new
+vehicle art and exact-airframe identification are not included. Raw GIS and
+point-cloud references do not become rendered customer 3D scenery. Customer
+libraries remain local and are excluded from the public download.
+
+This is a normal public alpha release with known defects. Release status does
+not imply whole-roadmap completion or production certification.
+
+## Retained v0.42.13 — flight controls
 
 This release adds **Settings > Flight controls** with three editable actions:
 **Map**, **Camera tilt up** and **Camera tilt down**.
@@ -222,9 +231,9 @@ the in-flight C2 map; its missing-marker regression remains open.
   appearance, straps, wiring and exact part mounting still need visual work.
 - LAN passed a streamed two-process test on one PC, but **physical two-PC LAN is
   not yet accepted**. Mission networking, reconnect and host-loss need further tests.
-- Full action rebinding, the Work Bench OSD editor and rotating lobby aircraft
-  cards remain unfinished. The Flight controls panel covers Map and camera tilt
-  up/down, not the complete action inventory.
+- Full action rebinding and rotating lobby aircraft cards remain unfinished.
+  The Work Bench OSD editor supports a bounded set of simulator readouts; it
+  does not provide complete Betaflight Configurator parity.
 - Physical radio input, monitor unplug/reconnect, human title-bar dragging and
   actual Alt+Enter/F11 input during live or fully paused flight remain open.
   The full camera/prop matrix and calibrated flight-feel comparisons also remain
@@ -238,24 +247,29 @@ UI, replay and acceptance work. This release does not complete that backlog.
 
 ## Verification and updates
 
-Exact source: `45974ce74aa9642bcee15c8439808e0cf2102305`.
-The fresh full build, cook and package completed successfully, with **218 launcher
-tests** passing. The controls and retained display checks are bounded; they do not prove physical
-controller, two-PC or whole-game acceptance. Broader v0.42.11 tour and LAN results
-remain historical evidence in [CHANGELOG.md](CHANGELOG.md), not newly repeated tests.
+Source: `5444e5238f5e884a37adc4e64df150206cd6f643`.
+The ZIP is 679,194,737 bytes. SHA-256:
+`495d62f4f2039a40a7341f483965e7048375f9bce419b8070885c3d41611b69e`.
 
-The v0.42.13 ZIP is 676,720,589 bytes. SHA-256:
-`e3dbdaea14151bf7a6a721b72ea36c494fa698c900e8078c28ecabafc94a5bbe`.
+All 4,453 archive files and CRCs were verified. Eight packaged replay/import
+tests passed with no failures. Source and cooked-content inventories were reviewed,
+and known private-file hashes were checked. The application ZIP excludes customer
+logs, replay files, datasets and local catalogs; the featured GIF is separately
+authorized demonstration footage. An isolated v0.42.11 install downloaded the
+public HTTPS archive, verified its checksum and upgraded to v0.44. Synthetic Saved
+and profile fixtures survived. A cold root-launcher start passed the rendered
+review-menu test; a subsequent check reported up to date without reinstalling.
+Earlier version-specific tests and screenshots remain historical evidence.
 
-Independent review, CRC validation and fresh ZIP extraction verified all
-**4,451 files**, their checksums and archive paths. An unauthenticated public HTTPS
-download on September 17, 2026 matched the exact released size and SHA-256 above.
-A disposable older-install-to-current
-installed-update test is pending; automatic updates stay
-on v0.42.11 until it passes. Installed-update success or interruption recovery is
-not claimed from unit tests or archive checks alone.
-Back up local settings and aircraft before updating. Offline, corrupt-download,
-recovery and broader user-profile preservation acceptance remain tracked.
+The Windows package is not publisher-signed. Keep Windows protections enabled
+and follow your organization's software policy. Release checksums identify the
+published archive; they are not a publisher signature.
+
+The upgrade check encountered transient HTTPS manifest timeouts; the installed
+game still started, and the next check succeeded. An initial null-renderer UI
+test failed; the corrected rendered test passed. This bounded check does not
+establish full profile preservation or interruption recovery. Back up local
+settings and aircraft before updating.
 
 ## Reports, privacy and credits
 

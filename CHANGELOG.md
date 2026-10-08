@@ -1,9 +1,39 @@
 # KESTREL changelog
 
-Public status checked September 23, 2026. This file distinguishes downloadable
+Public status updated October 8, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
+
+## KESTREL v0.44 - Flight Review
+
+Release tag: `v0.44.0-alpha.1`; package version: `v0.44.0-alpha`.
+Source: `5444e5238f5e884a37adc4e64df150206cd6f643`.
+Released October 8, 2026. Direct downloads and the automatic updater offer v0.44.
+The isolated v0.42.11-to-v0.44 upgrade passed.
+
+- Opens ArduPilot DataFlash BIN logs directly in Flight Review, alongside KESTREL
+  flight JSON. Recorded, planned and simulated provenance stays distinct.
+- Removes duplicate live simulator aircraft from review; adds Minimize/Expand,
+  Tab panel toggle, T trail toggle and normal Escape pause-menu behavior.
+- Playback buttons reflect availability/state; camera controls and telemetry
+  remain available during review.
+- Adds read-only inspection of BIN and Mission Planner QGC WPL 110 waypoint
+  exports. Waypoint inspection does not create or execute playable missions.
+- Provides an inventory-mismatch action in Work Bench and rejects missing local
+  import files. Retains prior OSD and controller improvements.
+
+Existing representative vehicle shapes remain. Detailed replacement vehicle
+models, exact-airframe identity, raw geospatial conversion and customer 3D scenery
+are not included. Customer libraries and flight logs are not release content.
+The package is not publisher-signed. All 4,453 archive files and CRCs were verified;
+eight packaged replay/import tests passed with no failures. Source and cooked-content
+inventories and known private-file hashes were checked. The old launcher installed
+the public HTTPS archive with checksum verification; synthetic Saved/profile
+fixtures survived. Cold rendered menu testing passed and a repeat update check
+reported up to date. Transient manifest timeouts recovered on retry.
+ZIP size: 679,194,737 bytes. SHA-256:
+`495d62f4f2039a40a7341f483965e7048375f9bce419b8070885c3d41611b69e`.
 
 ## KESTREL v0.43.2 - opt-in controller evaluation
 

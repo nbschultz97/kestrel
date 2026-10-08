@@ -1,20 +1,32 @@
 # KESTREL public roadmap
 
-Updated September 17, 2026. This is a work/status plan, not a release announcement
+Updated October 8, 2026. This is a work/status plan, not a release announcement
 or delivery-date promise. [README](README.md) identifies downloadable builds;
 [FEATURES](FEATURES.md) describes capabilities and limits;
 [CHANGELOG](CHANGELOG.md) records version-specific evidence.
 
 ## Release reality
 
-- **KESTREL v0.42.13** is GitHub Latest and the current direct download.
-- The automatic updater remains on **v0.42.11**. The disposable installed-update
-  test must pass before automatic updater promotion.
-- Source `45974ce74aa9642bcee15c8439808e0cf2102305`; ZIP size 676,720,589 bytes;
-  SHA-256 `e3dbdaea14151bf7a6a721b72ea36c494fa698c900e8078c28ecabafc94a5bbe`.
+- **KESTREL v0.44** is published as `v0.44.0-alpha.1`; the package identifies itself as `v0.44.0-alpha`.
+- GitHub Latest and automatic updates serve v0.44. The isolated v0.42.11-to-v0.44 upgrade preserved test data, passed a cold rendered launch and reported current on a subsequent check.
+- Source `5444e5238f5e884a37adc4e64df150206cd6f643`; ZIP size 679,194,737 bytes;
+  SHA-256 `495d62f4f2039a40a7341f483965e7048375f9bce419b8070885c3d41611b69e`.
 - Publication does not mean that missing features or manual checks passed.
-- Earlier releases retain their original tags and assets; v0.42.11 remains the
-  updater target and 0.42.10 remains held.
+- Earlier releases retain their original tags and evidence; 0.42.10 remains a historical held candidate.
+
+## v0.44 Flight Review
+
+- [x] Native ArduPilot DataFlash BIN replay, timeline and camera controls, telemetry, trail toggle and duplicate live-aircraft suppression.
+- [x] Tab minimizes/expands review controls; Escape opens the normal pause menu. Unavailable playback controls are disabled.
+- [x] Read-only Mission Planner QGC WPL 110 inspection in Data & Catalogs. This does not import a playable mission or execute a flight.
+- [x] Work Bench inventory-mismatch action, supported simulator OSD layout editing and bounded Betaflight OSD text interchange retained.
+- [x] Fresh build/cook/package, 218 launcher tests, all 4,453 archive files/CRCs verified and eight packaged replay/inspection tests passed.
+- [x] Synthetic waypoint inspection UI rendered and reviewed from the extracted package.
+- [ ] Authored fixed-wing/rover/submersible visual upgrades and exact-airframe identification.
+- [ ] Customer raw GIS/point-cloud conversion and validated rendered 3D customer layers. Customer 3D rendering is not established by this release.
+- [ ] Broader recording/debrief, hardware and service-failure acceptance beyond the bounded checks above.
+
+Historical sections below retain the evidence and unfinished acceptance from their named release checkpoints.
 
 ## v0.42.13 flight controls
 
@@ -86,8 +98,8 @@ Release publication and updater promotion are verified separately from these tes
 | Controls and display | The v0.42.13 editor covers Map and camera tilt up/down; full action mapping, radio tilt and radio axis-switch actions remain open. v0.42.12 separate monitor/mode controls retain their bounded display evidence. Still verify physical controller/backend/reconnect behavior, human title-bar dragging, actual Alt+Enter/F11 during live and fully paused flight, focus changes and monitor unplug/reconnect. |
 | Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
 | Multiplayer | Physical two-PC discovery/direct join, shared travel, input, movement, mission parity, leave/rejoin and host loss. |
-| Updater | Automatic updates remain at v0.42.11 pending a disposable older-install-to-current installed-update test. Real-install start/user-data preservation, offline, interruption, corrupt download and rollback/recovery acceptance remain separate; unit tests and public ZIP verification alone are not completion. |
-| Mirrors | Preserve verified historical v0.42.11 identities while preparing the next release. Check each new mirror's Git tree and artifact bytes separately; Rotopter anonymous access and MilGit access/parity remain unresolved. |
+| Updater | The isolated v0.42.11-to-v0.44 upgrade, test-data preservation, cold rendered launch and subsequent no-reinstall check passed. Broader offline, interruption, corrupt-download and rollback/recovery acceptance remain separate. |
+| Mirrors | Preserve each public repository's history and verify new artifact bytes independently. Rotopter v0.44 release currently links the GitHub ZIP while its local archive upload is pending; MilGit access/parity remains unresolved. |
 
 Unsigned distribution must remain explicitly identified and be used only where
 permitted. Production publisher signing has not been established. Do not change
@@ -105,10 +117,8 @@ make a test or release pass.
   with contexts, capture/cancel/conflicts and reliable save/restart behavior.
 - Add supported USB-radio tilt and radio axis-switch actions with explicit
   device ownership and activation semantics.
-- A Work Bench OSD editor with analog/digital grids, element visibility and
-  placement, saved layouts/profiles, reset and import/export.
-- Preview OSD layouts through the same renderer used in flight, rather than a
-  disconnected mock-up. Existing telemetry rendering is not this editor.
+- Extend the shipped Work Bench OSD editor beyond its supported simulator readouts and bounded Betaflight text interchange; complete Configurator parity and exact-hardware behavior remain unverified.
+- Broaden saved-layout, preview and physical-display acceptance across supported configurations.
 - Broader physical controller/backend, reconnect and latency coverage.
 
 ### Aircraft confidence and Work Bench
@@ -162,14 +172,12 @@ make a test or release pass.
 - Expand isolated packaged visual tours across supported resolutions and full
   user flows. Missing/stale screenshots, timeouts and skipped stages must fail,
   with source/package identity retained beside the evidence.
-- Extend records into a coherent replay/debrief timeline with controls, events,
-  conditions and build/tune/content identity. Timeline scrubbing and comparative
-  review are future work, not capabilities established by the current Records page.
+- Extend the shipped Flight Review timeline and playback controls into broader comparative debrief, conditions and build/tune/content identity. The Records page is separate; replay inspection does not establish full recording/debrief parity.
 - Add recording/playback and save-migration regressions as those paths are
   implemented, alongside frame-time, memory and load-time budgets.
 
 These are open items, not completed features or a claim that the full list ships
-in v0.42.11, v0.42.12 or v0.42.13. The release's actual scope and any explicitly deferred work must be
+in v0.44 or earlier releases. The release's actual scope and any explicitly deferred work must be
 stated before promotion.
 
 ## What counts as done

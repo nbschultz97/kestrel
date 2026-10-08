@@ -1,18 +1,34 @@
 # KESTREL features and limits
 
-Status: September 17, 2026. **KESTREL v0.42.13**, built from source
-`45974ce74aa9642bcee15c8439808e0cf2102305`. The official release page records publication and artifact identity. Included does not mean every workflow has
-passed on every computer. [README](README.md) identifies the current
-downloads; [CHANGELOG](CHANGELOG.md) ties changes to versions; [ROADMAP](ROADMAP.md)
-tracks unfinished work.
+Status: v0.44 public release, October 8, 2026.
+Source `5444e5238f5e884a37adc4e64df150206cd6f643`. [README](README.md) identifies downloads; [CHANGELOG](CHANGELOG.md)
+ties changes to versions. Historical screenshots and version-specific tests are
+not new v0.44 acceptance evidence.
 
-The v0.42.13 controls update retains the v0.42.12 display improvements and
-v0.42.11 capabilities below.
-Earlier source/test identities and gallery images remain explicitly historical;
-they are not new v0.42.13 acceptance results.
+## Flight Review and native flight files - v0.44
 
-The **v0.42.13 Flight controls** update is described below with its acceptance
-limits. Earlier immutable downloads do not contain this controls update.
+Flight Review opens ArduPilot DataFlash BIN and KESTREL flight JSON in-game.
+Recorded, planned and simulated timelines retain distinct provenance labels.
+It hides live simulator aircraft during review, provides camera controls and
+telemetry, and allows the controls panel and trail to be toggled independently.
+Tab minimizes/expands controls, T toggles the trail, and Escape opens the normal
+pause menu. Playback controls reflect availability and state.
+
+Vehicle firmware banners select existing representative fixed-wing, rover or
+submersible visuals. They do not identify an exact airframe; detailed replacement
+vehicle art is not included. Recorded FPV video, measured rotor RPM and
+multi-vehicle timelines remain unavailable. Replay elevation is launch-relative,
+not a surveyed reconstruction.
+
+Data & Catalogs inspects native BIN logs and Mission Planner QGC WPL 110 exports
+(.waypoints, .wpl and .txt). This read-only inspection preserves mission commands
+and reference frames; it does not execute a mission or create a playable flight.
+Customer libraries stay local. Raw LiDAR and GeoPackage references are not
+converted or rendered as customer 3D scenery.
+
+The v0.44 Work Bench adds an inventory-mismatch action for saved aircraft with
+unavailable required parts. Earlier display, controller, OSD and catalog features
+remain, subject to the limits below.
 
 ## Earlier release comparison
 
@@ -174,9 +190,9 @@ propeller presentation, link effects and Betaflight-style telemetry using MAX745
 font assets. Battery, timer, navigation and flight-status readouts are simulation
 telemetry, not readings from external hardware.
 
-The **Work Bench OSD editor is not implemented**. The presence of an OSD renderer
-or imported tune is not evidence of editable analog/digital layouts, drag-to-cell
-placement, profiles, reset, or layout import/export. Those remain roadmap work.
+The **Work Bench OSD editor** edits supported simulator readouts. Its bounded
+Betaflight OSD text import/export preserves unsupported settings. This is not
+complete Betaflight Configurator parity or exact-hardware OSD validation.
 
 The full camera/prop/RPM/exposure matrix, exact per-aircraft optical matching and
 physical flight-feel comparison are also not accepted as complete.
@@ -256,10 +272,10 @@ aircraft/run context, with file-integrity status. A checksum is not a trusted
 signature, independent pilot identity or proof of calibrated flight performance.
 Records can include personal run information and need review before sharing.
 
-This results browser is not a complete replay system. Deterministic recording,
-timeline scrubbing, camera selection, annotations and comparative after-action
-review remain unfinished, including complete build/tune/content identity across
-recording and playback.
+Flight Review is a separate surface for recorded telemetry and labeled planned
+or simulated timelines. The Records browser is not deterministic replay. Complete
+build/tune/content identity, annotations and comparative after-action review
+remain unfinished.
 
 ## Environment and audio
 
