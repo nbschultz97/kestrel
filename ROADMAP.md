@@ -99,7 +99,7 @@ Release publication and updater promotion are verified separately from these tes
 | Catalogs and saves | Wider interactive CRUD/file-dialog/save/reopen/cancel/fly and legacy-save migration; do not silently substitute parts. |
 | Multiplayer | Physical two-PC discovery/direct join, shared travel, input, movement, mission parity, leave/rejoin and host loss. |
 | Updater | The isolated v0.42.11-to-v0.44 upgrade, test-data preservation, cold rendered launch and subsequent no-reinstall check passed. Broader offline, interruption, corrupt-download and rollback/recovery acceptance remain separate. |
-| Mirrors | Preserve each public repository's history and verify new artifact bytes independently. Rotopter v0.44 release currently links the GitHub ZIP while its local archive upload is pending; MilGit access/parity remains unresolved. |
+| Mirrors | GitHub and Rotopter publish v0.44; the Rotopter ZIP was downloaded back and matched the release size and SHA-256. Preserve each public repository's history and verify new artifact bytes independently. MilGit access/parity remains unresolved. |
 
 Unsigned distribution must remain explicitly identified and be used only where
 permitted. Production publisher signing has not been established. Do not change
