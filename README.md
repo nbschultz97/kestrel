@@ -103,7 +103,7 @@ and Window mode controls with the Keep changes/Revert confirmation. Not a mockup
 
 ## Start here
 
-1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.42.13-alpha.1/KESTREL-alpha-win64.zip).
+1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.0-alpha.1/KESTREL-alpha-win64.zip).
 2. Check its SHA-256 against the release page or attached checksum. Extract into
    a new folder; do not mix versions or run from inside the ZIP.
 3. Start **KESTREL.exe**, the player-facing launcher. Keep the entire extracted
