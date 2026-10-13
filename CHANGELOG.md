@@ -21,8 +21,7 @@ tests with no warnings or failures and 218 launcher tests. Rendered checks cover
 An existing Missions subtitle overlap remains at 888x500.
 Archive: 679,198,814 bytes; SHA-256 `494b18c19f2a50c2f59bcf5543afdc6b66d996755de4d513fd70b69dd9f364f9`.
 All 4,453 files and CRCs passed archive verification; cooked asset containers are
-unchanged from v0.44. The actual v0.44-to-v0.44.1 upgrade check is pending.
-The default updater manifest remains unchanged.
+unchanged from v0.44. The actual v0.44-to-v0.44.1 upgrade passed, including preserved synthetic local files, menu navigation and a rendered first-run restart. The default updater now serves v0.44.1.
 Representative vehicle art and existing hardware/network limitations remain.
 Customer libraries and recordings are excluded from public release content.
 This update does not add geographic placement behavior, new terrain features,

@@ -9,7 +9,7 @@ The final package passed 25 native tests and 218 launcher tests. Rendered layout
 were checked at 888x500 and 1280x720; the existing compact Missions subtitle overlap
 remains a cosmetic limitation. Data & Catalogs captures verified empty inspection,
 a synthetic waypoint report and honest unchecked terrain configuration.
-The default updater remains v0.44 pending the actual v0.44.1 upgrade check.
+The default updater serves v0.44.1 after a successful installed v0.44 upgrade and rendered restart.
 
 [README](README.md) identifies downloads; [CHANGELOG](CHANGELOG.md) ties changes
 to versions. Historical screenshots and version-specific tests retain their original scope.
