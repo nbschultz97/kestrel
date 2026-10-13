@@ -1,15 +1,13 @@
 # KESTREL features and limits
 
-Version: v0.44.1, package `v0.44.1-alpha`, tag `v0.44.1-alpha.1`,
-source `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
-This update adds file-inspection input handling, honest endpoint-access wording,
-uncertainty labels and responsive Hangar/Work Bench footer metrics and title hints.
-It does not change geographic placement or add vehicle art or terrain features.
-The final package passed 25 native tests and 218 launcher tests. Rendered layouts
-were checked at 888x500 and 1280x720; the existing compact Missions subtitle overlap
-remains a cosmetic limitation. Data & Catalogs captures verified empty inspection,
-a synthetic waypoint report and honest unchecked terrain configuration.
-The default updater serves v0.44.1 after a successful installed v0.44 upgrade and rendered restart.
+Version: v0.44.2, package `v0.44.2-alpha`, tag `v0.44.2-alpha.1`,
+source `b969778adf2d03f35d0bc6f9ccfc5d39508e9d88`.
+This update fits the existing six-action Controls panel into small windows;
+it does not add actions or complete input rebinding. The final package passed
+35 focused source checks, 218 launcher tests and three native controls tests.
+Rendered checks covered 888x500 and 1280x720, including the small-window
+unsaved-changes dialog. The existing Missions subtitle overlap at 888x500 remains.
+The prior v0.44-to-v0.44.1 installed upgrade passed. The v0.44.1-to-v0.44.2 installed upgrade passed payload checks, preserved synthetic local files and passed three native controls tests. The default updater now serves v0.44.2. Windows Application Control blocked the new unsigned launcher on this workstation at cold restart; cold-launch acceptance is not claimed.
 
 [README](README.md) identifies downloads; [CHANGELOG](CHANGELOG.md) ties changes
 to versions. Historical screenshots and version-specific tests retain their original scope.
@@ -163,17 +161,19 @@ Betaflight firmware emulator or an import of every CLI option. Supported rate
 families and parameters differ in fidelity; some rate curves are approximations.
 Importing a tune does not validate the real aircraft or write its hardware.
 
-The v0.42.12 release includes map-specific binding capture/recovery and
-input-source safeguards. The v0.42.13 update expands this to
-**Settings > Flight controls** with three actions:
+The current **Settings > Controls / Bindings** panel exposes six existing
+actions. Earlier v0.42.12/v0.42.13 releases introduced the Map and tilt subset:
 
 | Action | Keyboard default | Editable controller input |
 |---|---|---|
 | Map | F6 | Digital gamepad button or existing USB-radio digital button |
 | Camera tilt up | Up arrow | Digital gamepad button |
 | Camera tilt down | Down arrow | Digital gamepad button |
+| Restart | R | Digital gamepad button |
+| View / LOS | V | Digital gamepad button |
+| Arm / disarm | Enter | Digital gamepad button |
 
-All three actions support keyboard reassignment, Clear, Restore defaults,
+All six actions support keyboard reassignment, Clear, Restore defaults,
 Save changes and Cancel. Conflicting controls are rejected before saving.
 Camera tilt takes one two-degree step per fresh press within 0–55 degrees;
 held/repeated controls do not add steps. Menu Up/Down remain navigation controls
@@ -185,8 +185,8 @@ retain both the active profile and the editable draft. Resetting controller
 axes/switches preserves these action assignments; action defaults preserve
 calibration.
 
-This is a three-action editor. Arm/disarm, restart, flight mode, camera
-view/low-light and the remaining actions are not newly rebindable here.
+This is a six-action editor, not full control rebinding. Flight-mode and low-light
+shortcuts, menu navigation and flight-axis keys are not editable here.
 USB-radio tilt and action bindings on radio axes are unsupported. Physical
 radios/gamepads, input backends, unplug/reconnect, switch capture and end-to-end
 latency require separate device testing. Development panel captures are not

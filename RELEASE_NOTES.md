@@ -1,4 +1,21 @@
-> **Historical record.** For the current v0.44 public release and automatic-update status, use [README](README.md), [CHANGELOG](CHANGELOG.md) and
+## KESTREL v0.44.2 - compact Controls panel
+
+Package version: `v0.44.2-alpha`; release tag: `v0.44.2-alpha.1`.
+Source: `b969778adf2d03f35d0bc6f9ccfc5d39508e9d88`.
+
+The Controls / Bindings panel fits smaller windows with all six existing action
+rows, status guidance, Save/Cancel controls and the unsaved-changes dialog on
+screen. Standard-size windows retain their layout. This correction does not
+add actions or deliver full control rebinding.
+
+Validation passed: 35 focused source checks, 218 launcher tests and three
+packaged native controls tests. Rendered checks covered the normal panel at
+888x500 and 1280x720 and the unsaved-changes dialog at 888x500.
+All 4,453 archive entries, CRCs and extracted file hashes verified.
+This is an unsigned Windows alpha. The v0.44.1-to-v0.44.2 installed upgrade passed payload checks, preserved synthetic local files and passed three native controls tests. The default updater now serves v0.44.2. Windows Application Control blocked the new unsigned launcher on this workstation at cold restart; cold-launch acceptance is not claimed.
+Existing Flight Review and file-inspection limits remain unchanged.
+
+> **Historical record.** For the current public release and automatic-update status, use [README](README.md), [CHANGELOG](CHANGELOG.md) and
 > [ROADMAP](ROADMAP.md). Statements below belong to their named versions and
 > dates; they do not establish current release acceptance.
 

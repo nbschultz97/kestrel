@@ -1,10 +1,10 @@
 {
-  "version": "v0.44.1-alpha",
-  "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.44.1-alpha.1/KESTREL-alpha-win64.zip",
-  "sha256": "494b18c19f2a50c2f59bcf5543afdc6b66d996755de4d513fd70b69dd9f364f9",
-  "size": 679198814,
+  "version": "v0.44.2-alpha",
+  "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.44.2-alpha.1/KESTREL-alpha-win64.zip",
+  "sha256": "bb296c0e8ea5c89753bdf67f8a7b4ce91261ae23154a42c65f7d019681bd57e5",
+  "size": 679200052,
   "minLauncherVersion": "1.0.0",
   "sourceRepo": "https://github.com/nbschultz97/ceradon-sim",
-  "sourceCommit": "1b6c007a878085f4ff59a74e7d47e8124fb6d688",
-  "notes": "Clearer file inspection and terrain status, plus aircraft menu fixes for smaller windows. See CHANGELOG.md for features and limits."
+  "sourceCommit": "b969778adf2d03f35d0bc6f9ccfc5d39508e9d88",
+  "notes": "Controls / Bindings fits compact windows, including Save/Cancel and the unsaved-changes dialog. Six existing actions; full rebinding remains unfinished. Unsigned Windows alpha."
 }

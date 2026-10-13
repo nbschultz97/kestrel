@@ -5,6 +5,30 @@ releases from unreleased work. The updater manifest is separate from this docume
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
 
+## KESTREL v0.44.2 - compact Controls panel
+
+Package version: `v0.44.2-alpha`; release tag: `v0.44.2-alpha.1`.
+Source: `b969778adf2d03f35d0bc6f9ccfc5d39508e9d88`.
+
+The Controls / Bindings panel fits smaller windows with all six existing action
+rows, status guidance, Save/Cancel controls and the unsaved-changes dialog on
+screen. Standard-size windows retain their layout. This correction does not
+add actions or deliver full control rebinding.
+
+Validation passed: 35 focused source checks, 218 launcher tests and three
+packaged native controls tests. Rendered checks covered the normal panel at
+888x500 and 1280x720 and the unsaved-changes dialog at 888x500.
+All 4,453 archive entries, CRCs and extracted file hashes verified.
+This is an unsigned Windows alpha. The v0.44.1-to-v0.44.2 installed upgrade passed payload checks, preserved synthetic local files and passed three native controls tests. The default updater now serves v0.44.2. Windows Application Control blocked the new unsigned launcher on this workstation at cold restart; cold-launch acceptance is not claimed.
+Existing Flight Review and file-inspection limits remain unchanged.
+
+Archive: 679,200,052 bytes; SHA-256
+`bb296c0e8ea5c89753bdf67f8a7b4ce91261ae23154a42c65f7d019681bd57e5`.
+Cooked content matches the previously approved v0.44.1 release. Customer
+recordings and libraries are excluded. No new models, customer 3D scenery or
+playable Mission Planner import are added. The existing Missions subtitle
+overlap at 888x500 remains.
+
 ## KESTREL v0.44.1 - usability and status corrections
 
 Release tag: `v0.44.1-alpha.1`;
@@ -21,7 +45,7 @@ tests with no warnings or failures and 218 launcher tests. Rendered checks cover
 An existing Missions subtitle overlap remains at 888x500.
 Archive: 679,198,814 bytes; SHA-256 `494b18c19f2a50c2f59bcf5543afdc6b66d996755de4d513fd70b69dd9f364f9`.
 All 4,453 files and CRCs passed archive verification; cooked asset containers are
-unchanged from v0.44. The actual v0.44-to-v0.44.1 upgrade passed, including preserved synthetic local files, menu navigation and a rendered first-run restart. The default updater now serves v0.44.1.
+unchanged from v0.44. The actual v0.44-to-v0.44.1 upgrade passed, including preserved synthetic local files, menu navigation and a rendered first-run restart. At publication, the default updater was promoted to v0.44.1.
 Representative vehicle art and existing hardware/network limitations remain.
 Customer libraries and recordings are excluded from public release content.
 This update does not add geographic placement behavior, new terrain features,
@@ -31,7 +55,7 @@ new models or mission execution through file inspection.
 
 Release tag: `v0.44.0-alpha.1`; package version: `v0.44.0-alpha`.
 Source: `5444e5238f5e884a37adc4e64df150206cd6f643`.
-Released October 8, 2026. Direct downloads and the automatic updater offer v0.44.
+Released October 8, 2026. At publication, direct downloads and the automatic updater offered v0.44.
 The isolated v0.42.11-to-v0.44 upgrade passed.
 
 - Opens ArduPilot DataFlash BIN logs directly in Flight Review, alongside KESTREL

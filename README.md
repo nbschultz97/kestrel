@@ -6,7 +6,7 @@
 
 Windows x64 · Alpha · Proprietary software
 
-[Download v0.44.1](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.1-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Download v0.44.2](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.2-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
@@ -18,7 +18,24 @@ real-world terrain. This repository distributes the public Windows alpha.
 
 User-recorded Flight Review footage.
 
-## KESTREL v0.44.1 - usability and status corrections
+## KESTREL v0.44.2 - compact Controls panel
+
+Package version: `v0.44.2-alpha`; release tag: `v0.44.2-alpha.1`.
+Source: `b969778adf2d03f35d0bc6f9ccfc5d39508e9d88`.
+
+The Controls / Bindings panel fits smaller windows with all six existing action
+rows, status guidance, Save/Cancel controls and the unsaved-changes dialog on
+screen. Standard-size windows retain their layout. This correction does not
+add actions or deliver full control rebinding.
+
+Validation passed: 35 focused source checks, 218 launcher tests and three
+packaged native controls tests. Rendered checks covered the normal panel at
+888x500 and 1280x720 and the unsaved-changes dialog at 888x500.
+All 4,453 archive entries, CRCs and extracted file hashes verified.
+This is an unsigned Windows alpha. The v0.44.1-to-v0.44.2 installed upgrade passed payload checks, preserved synthetic local files and passed three native controls tests. The default updater now serves v0.44.2. Windows Application Control blocked the new unsigned launcher on this workstation at cold restart; cold-launch acceptance is not claimed.
+Existing Flight Review and file-inspection limits remain unchanged.
+
+## Retained v0.44.1 - usability and status corrections
 
 Package version: `v0.44.1-alpha`; release tag: `v0.44.1-alpha.1`.
 Source: `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
@@ -32,7 +49,7 @@ The final package passed 25 native tests with no warnings or failures and 218
 launcher tests. Rendered checks covered 888x500 and 1280x720 layouts, plus
 empty file inspection, a synthetic waypoint file and the terrain configuration panel.
 The existing Missions subtitle can still overlap the YOUR BEST label at 888x500.
-The default updater now serves v0.44.1. An actual v0.44 installation downloaded and installed this release, preserved synthetic local files, passed menu navigation and restarted into the first-flight guide.
+At v0.44.1 publication, the default updater was promoted to that version. An actual v0.44 installation downloaded and installed this release, preserved synthetic local files, passed menu navigation and restarted into the first-flight guide.
 See the [reviewer first-launch checklist](REVIEWER_GUIDE.md).
 
 ## Published v0.44 release
@@ -64,7 +81,7 @@ not imply whole-roadmap completion or production certification.
 
 ## Retained v0.42.13 — flight controls
 
-This release adds **Settings > Flight controls** with three editable actions:
+Historical v0.42.13 scope: that release added **Settings > Flight controls** with three editable actions:
 **Map**, **Camera tilt up** and **Camera tilt down**.
 
 - Bind a keyboard key or digital gamepad button for each action. Clear a
@@ -78,10 +95,12 @@ This release adds **Settings > Flight controls** with three editable actions:
 - Controller calibration reset preserves these action bindings; restoring
   action defaults preserves radio calibration.
 
-Map retains digital USB-radio button support. Camera tilt currently accepts
+That version retained digital USB-radio Map support. Camera tilt accepted
 keyboard keys and gamepad buttons; **USB-radio tilt and axis-switch actions
-are not supported**. Arm/disarm, restart, flight mode, camera view/low-light and
-the remaining action editor are still pending.
+were not supported**. At v0.42.13, arm/disarm, restart, flight mode and camera
+view/low-light rebinding were still pending. The current six-action panel includes
+Map, camera tilt up/down, Restart, View / LOS and Arm / disarm; see
+[Controls and input limits](FEATURES.md). Full rebinding remains incomplete.
 
 Editor/Game builds, 136 focused source checks, 13 native controller tests and
 16 native display regressions passed for the controls source. The fresh package
@@ -117,9 +136,9 @@ monitor hotplug, physical-radio or live/fully paused-flight shortcut acceptance.
 Actual Settings capture from the packaged v0.42.12 build, showing separate Display
 and Window mode controls with the Keep changes/Revert confirmation. Not a mockup.
 
-## Start here - v0.44.1 download
+## Start here - v0.44.2 download
 
-1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.1-alpha.1/KESTREL-alpha-win64.zip).
+1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.2-alpha.1/KESTREL-alpha-win64.zip).
 2. Check its SHA-256 against the release page or attached checksum. Extract into
    a new folder; do not mix versions or run from inside the ZIP.
 3. Start **KESTREL.exe**, the player-facing launcher. Keep the entire extracted
@@ -274,7 +293,8 @@ Source and cooked-content inventories were reviewed and known private-file hashe
 were checked. The cooked asset containers are unchanged from the reviewed v0.44
 release. Customer logs, datasets and local catalogs are excluded; the featured GIF
 is separately authorized demonstration footage. The v0.44-to-v0.44.1 updater check
-is pending; default updater promotion has not been claimed.
+passed, including preserved synthetic local files and a rendered restart, and that
+version was promoted. The v0.44.1-to-v0.44.2 installed upgrade passed payload checks, preserved synthetic local files and passed three native controls tests. The default updater now serves v0.44.2. Windows Application Control blocked the new unsigned launcher on this workstation at cold restart; cold-launch acceptance is not claimed.
 
 The Windows package is not publisher-signed. Keep Windows protections enabled
 and follow your organization's software policy. Release checksums identify the
