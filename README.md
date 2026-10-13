@@ -6,25 +6,41 @@
 
 Windows x64 · Alpha · Proprietary software
 
-[Download v0.44](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.0-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Download v0.44.1](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.1-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
 KESTREL is an Unreal Engine small-UAS flight simulator with a parts-based Work
 Bench, saved aircraft, FPV flight, a mission library and editor, and streamed
-real-world terrain. It is for simulation and evaluation, not certified navigation,
-engineering validation or real-aircraft flight testing.
+real-world terrain. This repository distributes the public Windows alpha.
 
 ![Fixed-wing flight replay in KESTREL](media/v0.44/kestrel-fixed-wing-replay.gif)
 
 User-recorded Flight Review footage.
 
-## Current release
+## KESTREL v0.44.1 - usability and status corrections
+
+Package version: `v0.44.1-alpha`; release tag: `v0.44.1-alpha.1`.
+Source: `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
+
+- Data & Catalogs: Enter submits a file for inspection; Inspect is disabled when the path is empty.
+- Connection checks distinguish endpoint access from loaded imagery without claiming a rendered result.
+- Flight Review labels uncertain placement honestly; this update does not change geographic placement behavior.
+- Hangar and Work Bench footer metrics and title hints adapt to available screen space.
+
+The final package passed 25 native tests with no warnings or failures and 218
+launcher tests. Rendered checks covered 888x500 and 1280x720 layouts, plus
+empty file inspection, a synthetic waypoint file and the terrain configuration panel.
+The existing Missions subtitle can still overlap the YOUR BEST label at 888x500.
+The default updater now serves v0.44.1. An actual v0.44 installation downloaded and installed this release, preserved synthetic local files, passed menu navigation and restarted into the first-flight guide.
+See the [reviewer first-launch checklist](REVIEWER_GUIDE.md).
+
+## Published v0.44 release
 
 **KESTREL v0.44 - Flight Review.** Package version: `v0.44.0-alpha`.
 
-Released October 8, 2026. Direct downloads and the automatic updater
-now offer v0.44. The isolated v0.42.11-to-v0.44 upgrade passed.
+Released October 8, 2026. The isolated v0.42.11-to-v0.44 upgrade passed.
+These are the retained features introduced in v0.44.
 
 - Open ArduPilot DataFlash BIN recordings directly in **Flight Review**.
 - Minimize/expand controls with Tab or the buttons; Escape opens the normal
@@ -101,9 +117,9 @@ monitor hotplug, physical-radio or live/fully paused-flight shortcut acceptance.
 Actual Settings capture from the packaged v0.42.12 build, showing separate Display
 and Window mode controls with the Keep changes/Revert confirmation. Not a mockup.
 
-## Start here
+## Start here - v0.44.1 download
 
-1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.0-alpha.1/KESTREL-alpha-win64.zip).
+1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.1-alpha.1/KESTREL-alpha-win64.zip).
 2. Check its SHA-256 against the release page or attached checksum. Extract into
    a new folder; do not mix versions or run from inside the ZIP.
 3. Start **KESTREL.exe**, the player-facing launcher. Keep the entire extracted
@@ -247,25 +263,24 @@ UI, replay and acceptance work. This release does not complete that backlog.
 
 ## Verification and updates
 
-Source: `5444e5238f5e884a37adc4e64df150206cd6f643`.
-The ZIP is 679,194,737 bytes. SHA-256:
-`495d62f4f2039a40a7341f483965e7048375f9bce419b8070885c3d41611b69e`.
+Source: `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
+The ZIP is 679,198,814 bytes. SHA-256:
+`494b18c19f2a50c2f59bcf5543afdc6b66d996755de4d513fd70b69dd9f364f9`.
 
-All 4,453 archive files and CRCs were verified. Eight packaged replay/import
-tests passed with no failures. Source and cooked-content inventories were reviewed,
-and known private-file hashes were checked. The application ZIP excludes customer
-logs, replay files, datasets and local catalogs; the featured GIF is separately
-authorized demonstration footage. An isolated v0.42.11 install downloaded the
-public HTTPS archive, verified its checksum and upgraded to v0.44. Synthetic Saved
-and profile fixtures survived. A cold root-launcher start passed the rendered
-review-menu test; a subsequent check reported up to date without reinstalling.
-Earlier version-specific tests and screenshots remain historical evidence.
+All 4,453 archive files and CRCs were verified. The final package passed 25 native
+tests with no warnings or failures; 218 launcher tests passed. Rendered checks
+covered compact and standard layouts and three Data & Catalogs inspection states.
+Source and cooked-content inventories were reviewed and known private-file hashes
+were checked. The cooked asset containers are unchanged from the reviewed v0.44
+release. Customer logs, datasets and local catalogs are excluded; the featured GIF
+is separately authorized demonstration footage. The v0.44-to-v0.44.1 updater check
+is pending; default updater promotion has not been claimed.
 
 The Windows package is not publisher-signed. Keep Windows protections enabled
 and follow your organization's software policy. Release checksums identify the
 published archive; they are not a publisher signature.
 
-The upgrade check encountered transient HTTPS manifest timeouts; the installed
+The historical v0.42.11-to-v0.44 upgrade check encountered transient HTTPS manifest timeouts; the installed
 game still started, and the next check succeeded. An initial null-renderer UI
 test failed; the corrected rendered test passed. This bounded check does not
 establish full profile preservation or interruption recovery. Back up local

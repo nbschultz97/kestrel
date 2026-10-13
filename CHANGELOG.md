@@ -1,9 +1,32 @@
 # KESTREL changelog
 
-Public status updated October 8, 2026. This file distinguishes downloadable
+Updated October 13, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
+
+## KESTREL v0.44.1 - usability and status corrections
+
+Release tag: `v0.44.1-alpha.1`;
+package version: `v0.44.1-alpha`. Source: `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
+
+- Data & Catalogs: Enter submits a file for inspection; Inspect is disabled when the path is empty.
+- Connection checks distinguish endpoint access from loaded imagery without claiming a rendered result.
+- Flight Review labels uncertain placement honestly; this update does not change geographic placement behavior.
+- Hangar and Work Bench footer metrics and title hints adapt to available screen space.
+
+Adds a concise reviewer first-launch checklist. The final package passed 25 native
+tests with no warnings or failures and 218 launcher tests. Rendered checks covered
+888x500 and 1280x720 layouts and three Data & Catalogs inspection states.
+An existing Missions subtitle overlap remains at 888x500.
+Archive: 679,198,814 bytes; SHA-256 `494b18c19f2a50c2f59bcf5543afdc6b66d996755de4d513fd70b69dd9f364f9`.
+All 4,453 files and CRCs passed archive verification; cooked asset containers are
+unchanged from v0.44. The actual v0.44-to-v0.44.1 upgrade check is pending.
+The default updater manifest remains unchanged.
+Representative vehicle art and existing hardware/network limitations remain.
+Customer libraries and recordings are excluded from public release content.
+This update does not add geographic placement behavior, new terrain features,
+new models or mission execution through file inspection.
 
 ## KESTREL v0.44 - Flight Review
 

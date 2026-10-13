@@ -1,9 +1,18 @@
 # KESTREL features and limits
 
-Status: v0.44 public release, October 8, 2026.
-Source `5444e5238f5e884a37adc4e64df150206cd6f643`. [README](README.md) identifies downloads; [CHANGELOG](CHANGELOG.md)
-ties changes to versions. Historical screenshots and version-specific tests are
-not new v0.44 acceptance evidence.
+Version: v0.44.1, package `v0.44.1-alpha`, tag `v0.44.1-alpha.1`,
+source `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
+This update adds file-inspection input handling, honest endpoint-access wording,
+uncertainty labels and responsive Hangar/Work Bench footer metrics and title hints.
+It does not change geographic placement or add vehicle art or terrain features.
+The final package passed 25 native tests and 218 launcher tests. Rendered layouts
+were checked at 888x500 and 1280x720; the existing compact Missions subtitle overlap
+remains a cosmetic limitation. Data & Catalogs captures verified empty inspection,
+a synthetic waypoint report and honest unchecked terrain configuration.
+The default updater remains v0.44 pending the actual v0.44.1 upgrade check.
+
+[README](README.md) identifies downloads; [CHANGELOG](CHANGELOG.md) ties changes
+to versions. Historical screenshots and version-specific tests retain their original scope.
 
 ## Flight Review and native flight files - v0.44
 
