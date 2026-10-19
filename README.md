@@ -6,305 +6,115 @@
 
 Windows x64 · Alpha · Proprietary software
 
-[Download v0.44.2](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.2-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Download v0.44.4](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.4-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
 KESTREL is an Unreal Engine small-UAS flight simulator with a parts-based Work
-Bench, saved aircraft, FPV flight, a mission library and editor, and streamed
-real-world terrain. This repository distributes the public Windows alpha.
+Bench, saved aircraft, FPV flight and Flight Review. This repository distributes
+the public Windows alpha; it does not distribute the private source repository.
 
 ![Fixed-wing flight replay in KESTREL](media/v0.44/kestrel-fixed-wing-replay.gif)
 
-User-recorded Flight Review footage.
-
-## KESTREL v0.44.2 - compact Controls panel
-
-Package version: `v0.44.2-alpha`; release tag: `v0.44.2-alpha.1`.
-Source: `b969778adf2d03f35d0bc6f9ccfc5d39508e9d88`.
-
-The Controls / Bindings panel fits smaller windows with all six existing action
-rows, status guidance, Save/Cancel controls and the unsaved-changes dialog on
-screen. Standard-size windows retain their layout. This correction does not
-add actions or deliver full control rebinding.
-
-Validation passed: 35 focused source checks, 218 launcher tests and three
-packaged native controls tests. Rendered checks covered the normal panel at
-888x500 and 1280x720 and the unsaved-changes dialog at 888x500.
-All 4,453 archive entries, CRCs and extracted file hashes verified.
-This is an unsigned Windows alpha. The v0.44.1-to-v0.44.2 installed upgrade passed payload checks, preserved synthetic local files and passed three native controls tests. The default updater now serves v0.44.2. Windows Application Control blocked the new unsigned launcher on this workstation at cold restart; cold-launch acceptance is not claimed.
-Existing Flight Review and file-inspection limits remain unchanged.
-
-## Retained v0.44.1 - usability and status corrections
-
-Package version: `v0.44.1-alpha`; release tag: `v0.44.1-alpha.1`.
-Source: `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
-
-- Data & Catalogs: Enter submits a file for inspection; Inspect is disabled when the path is empty.
-- Connection checks distinguish endpoint access from loaded imagery without claiming a rendered result.
-- Flight Review labels uncertain placement honestly; this update does not change geographic placement behavior.
-- Hangar and Work Bench footer metrics and title hints adapt to available screen space.
-
-The final package passed 25 native tests with no warnings or failures and 218
-launcher tests. Rendered checks covered 888x500 and 1280x720 layouts, plus
-empty file inspection, a synthetic waypoint file and the terrain configuration panel.
-The existing Missions subtitle can still overlap the YOUR BEST label at 888x500.
-At v0.44.1 publication, the default updater was promoted to that version. An actual v0.44 installation downloaded and installed this release, preserved synthetic local files, passed menu navigation and restarted into the first-flight guide.
-See the [reviewer first-launch checklist](REVIEWER_GUIDE.md).
-
-## Published v0.44 release
-
-**KESTREL v0.44 - Flight Review.** Package version: `v0.44.0-alpha`.
-
-Released October 8, 2026. The isolated v0.42.11-to-v0.44 upgrade passed.
-These are the retained features introduced in v0.44.
-
-- Open ArduPilot DataFlash BIN recordings directly in **Flight Review**.
-- Minimize/expand controls with Tab or the buttons; Escape opens the normal
-  pause menu. Toggle the trail with T or its checkbox. Playback controls show
-  their current state, and unavailable controls are disabled.
-- Review recordings with camera controls and telemetry. The live simulator
-  aircraft is hidden during review to prevent a duplicate vehicle.
-- Inspect Mission Planner QGC WPL 110 exports in **Data & Catalogs > Flight files**.
-  This is read-only inspection, not playable mission import or mission execution.
-- Work Bench offers an inventory-mismatch action for saved aircraft whose
-  required parts are unavailable. The supported Work Bench OSD layout editor
-  and prior controller improvements are retained.
-
-Representative fixed-wing, rover and submersible shapes remain; detailed new
-vehicle art and exact-airframe identification are not included. Raw GIS and
-point-cloud references do not become rendered customer 3D scenery. Customer
-libraries remain local and are excluded from the public download.
-
-This is a normal public alpha release with known defects. Release status does
-not imply whole-roadmap completion or production certification.
-
-## Retained v0.42.13 — flight controls
-
-Historical v0.42.13 scope: that release added **Settings > Flight controls** with three editable actions:
-**Map**, **Camera tilt up** and **Camera tilt down**.
-
-- Bind a keyboard key or digital gamepad button for each action. Clear a
-  binding, restore action defaults, then Save changes or Cancel the draft.
-- Camera tilt defaults to Up/Down and moves two degrees per fresh press within
-  0–55 degrees. Menu arrows keep working when flight tilt is reassigned.
-- Conflicting assignments are rejected. Held/repeated controls and reconnects
-  do not create extra camera steps.
-- Saved Map assignments migrate to the versioned controller profile. Failed
-  saves keep the active controls and editable draft intact.
-- Controller calibration reset preserves these action bindings; restoring
-  action defaults preserves radio calibration.
-
-That version retained digital USB-radio Map support. Camera tilt accepted
-keyboard keys and gamepad buttons; **USB-radio tilt and axis-switch actions
-were not supported**. At v0.42.13, arm/disarm, restart, flight mode and camera
-view/low-light rebinding were still pending. The current six-action panel includes
-Map, camera tilt up/down, Restart, View / LOS and Arm / disarm; see
-[Controls and input limits](FEATURES.md). Full rebinding remains incomplete.
-
-Editor/Game builds, 136 focused source checks, 13 native controller tests and
-16 native display regressions passed for the controls source. The fresh package
-passed 218 launcher tests and all 4,451 archive-file checks. Its default panel
-was reviewed from a fresh extraction at 720p and 1080p; physical-device and full
-interaction acceptance remain separate.
-
-[![Flight controls in the actual v0.42.13 package](media/v0.42.13/flight-controls.png)](media/v0.42.13/flight-controls.png)
-
-Actual v0.42.13 packaged capture, unchanged. [Capture provenance](media/v0.42.13/README.md).
-
-## Retained v0.42.12 — display reliability
-
-Display selection and window behavior can now be configured independently.
-
-- Choose **Display** separately from **Window mode**. Auto selects the
-  highest-resolution attached panel; a manual choice remembers the monitor.
-- Switch between Windowed, Fullscreen and Borderless on the selected screen.
-  Windowed sizes fit its usable desktop area, with a native title bar and
-  mixed-DPI placement handling.
-- Settings changes offer **Keep changes** and **Revert**, with a 15-second
-  real-time rollback. Unconfirmed changes do not replace the startup preference.
-- Alt+Enter and F11 use the same monitor and sizing logic. On the Settings page
-  they request confirmation; outside Settings they keep immediate toggle behavior.
-
-Rendered development and packaged checks passed display transitions, confirmation
-and saved-monitor restart on two mixed-DPI screens. The final package also passed
-its rendered window-transition, confirmation and saved-monitor restart checks. These are not human drag,
-monitor hotplug, physical-radio or live/fully paused-flight shortcut acceptance.
-
-![Display and Window mode with Keep changes and Revert in KESTREL v0.42.12](media/v0.42.12/display-confirmation.png)
-
-Actual Settings capture from the packaged v0.42.12 build, showing separate Display
-and Window mode controls with the Keep changes/Revert confirmation. Not a mockup.
-
-## Start here - v0.44.2 download
-
-1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.2-alpha.1/KESTREL-alpha-win64.zip).
-2. Check its SHA-256 against the release page or attached checksum. Extract into
-   a new folder; do not mix versions or run from inside the ZIP.
-3. Start **KESTREL.exe**, the player-facing launcher. Keep the entire extracted
-   tree beside it; the nested game executable is not the normal entry point.
-4. Check controller calibration, input source and axis directions, then save.
-   Compatibility with every USB radio has not been established.
-5. Choose Free Flight or the Test Range, select a saved aircraft and review the
-   displayed controls before arming.
-
-Windows signing note: this package is not publisher-signed. Windows or organization
-policy may warn or block it; use only where permitted and do not disable protections.
-
-The intended public Cesium configuration is included. Streamed terrain needs
-Internet access, service availability and loading time. The offline Test Range
-is not a cached copy of the globe; there is no offline worldwide street map.
-
-Windows x64 is supported. Plan for a modern discrete GPU, adequate memory and
-space for game extraction, update staging and terrain caches. Exact minimum/
-recommended hardware performance is not certified. The ZIP is not a Windows
-runtime installer; retain the exact error if launch fails.
-
-## Retained v0.42.11 capabilities
-
-- **Data & Catalogs:** create, import, export, copy, rename, switch and edit custom
-  catalogs using validated JSON. The base catalog stays read-only.
-- **Work Bench:** current/source inventory labels, Switch Inventory, saved-build
-  identity checks, click-only aircraft selection and selected-aircraft predictions.
-- **Navigation:** city/coordinate search previews a movable pin before launch;
-  major-city labels, a coarse offline overview, Free Flight C2, place labels
-  and a compass aid orientation.
-- **Local data:** named collections, placed image overlays and a Cesium connection
-  check. Raw GIS/point clouds still need conversion.
-- **Aircraft:** stock starters, targeted ten-inch prop compatibility, frame-grounded
-  support metadata, stack spacers and selected receiver/video-board supports.
-- **Reliability:** controller failed-save preservation, clearer Settings values,
-  targeted thumbnail residency, per-aircraft audio teardown, terrain request
-  handling and Cesium world/component lifecycle fixes.
-- **Distribution:** public notices and font licenses, bundled public terrain
-  configuration, HTTPS-only updater redirects and bounded request timing.
-
-Existing flight, Work Bench, named builds, missions/editor, ranges, records,
-modeled weather and wind remain. See [FEATURES.md](FEATURES.md) for boundaries.
-Configured weather is not a live weather service.
-
-## Gallery from v0.42.11
-
-Actual captures from the v0.42.11 release, using stock aircraft and public terrain.
-These are not concept renders or previews of unfinished features. Open an image
-for its full-resolution view; existing UI and model limitations remain visible.
-The gameplay images below are unchanged v0.42.11 captures. The new v0.42.13
-controls screenshot appears in the release section above.
-
-### FPV flight
-
-![Actual FPV flight in KESTREL v0.42.11](media/v0.42.11/flight.png)
-
-The released aircraft and its own FPV view, flown by the capture pipeline's
-virtual pilot. This is an in-engine flight, not a hand-flown acceptance test.
-
-### Time of day and weather
-
-The same public area and stock aircraft under different configured conditions.
-These are the game's lighting and weather presets, not a live weather feed.
-Open each image for the complete 1920 x 1080 view.
-
-| Clear morning | Clear noon |
-| --- | --- |
-| [![Morning FPV flight](media/v0.42.11/flight-morning.png)](media/v0.42.11/flight-morning.png) | [![Noon FPV flight](media/v0.42.11/flight-daylight.png)](media/v0.42.11/flight-daylight.png) |
-
-| Clear afternoon | Noon rain |
-| --- | --- |
-| [![Afternoon FPV flight](media/v0.42.11/flight-afternoon.png)](media/v0.42.11/flight-afternoon.png) | [![Rain preset during FPV flight](media/v0.42.11/flight-rain.png)](media/v0.42.11/flight-rain.png) |
-
-### Work Bench
-
-![Saved stock aircraft and component inspection in Work Bench](media/v0.42.11/workbench.png)
-
-Inspect fitted components, see the aircraft's source inventory and review
-predicted weight and performance. This view shows the saved stock build's
-antenna-focused close-up; it does not certify real-world component fit.
-
-### Mission Builder
-
-![Mission Builder editing an observation objective over public Tucson terrain](media/v0.42.11/mission-builder.png)
-
-Place a launch point and edit an observation objective in the 3D environment.
-The objective settings and surrounding streamed terrain are shown together.
-
-### Strike effects and ISR view
-
-![FPV approach in the stock strike scenario](media/v0.42.11/strike.png)
-
-A scripted FPV pass through the stock strike scenario, captured in v0.42.11.
-
-![ISR view of fire and smoke after the scripted effect](media/v0.42.11/isr.png)
-
-The separate ISR camera shows fire and smoke after the capture's scripted
-effect. The game's **Effect not confirmed** verdict is retained: these images
-are not proof of physical contact, a completed objective or damage-model validation.
-
-### LAN multiplayer
-
-![Two connected game instances in the KESTREL multiplayer lobby](media/v0.42.11/multiplayer.png)
-
-Two real game instances connected on one computer. The roster and aircraft
-state are live game UI, not mockups. Physical two-computer acceptance remains open.
-
-### Before launch
-
-![Selected stock aircraft and predictions before continuing](media/v0.42.11/preflight-selected-aircraft.png)
-
-Review the selected aircraft before continuing. Prediction-panel crowding
-remains a known issue.
-
-![Loading brief with launch location and objective](media/v0.42.11/mission-loading-brief.png)
-
-The loading brief shows launch, objective, route and a flight tip. This is not
-the in-flight C2 map; its missing-marker regression remains open.
-
-## Known issues and unfinished work
-
-- **Live C2 regression:** launch/objective symbols, labels and the connecting route
-  can be absent in flight even when the loading brief displays them.
-- Some menu/help text overlaps or clips; battery labels/thumbnails, carbon-fiber
-  appearance, straps, wiring and exact part mounting still need visual work.
-- LAN passed a streamed two-process test on one PC, but **physical two-PC LAN is
-  not yet accepted**. Mission networking, reconnect and host-loss need further tests.
-- Full action rebinding and rotating lobby aircraft cards remain unfinished.
-  The Work Bench OSD editor supports a bounded set of simulator readouts; it
-  does not provide complete Betaflight Configurator parity.
-- Physical radio input, monitor unplug/reconnect, human title-bar dragging and
-  actual Alt+Enter/F11 input during live or fully paused flight remain open.
-  The full camera/prop matrix and calibrated flight-feel comparisons also remain
-  open. No universal parts-fit claim is made.
-- Online street-address/POI search and live weather are not included.
-- Dusk/night captures expose an overbright horizon and horizontal band; the
-  cause remains under investigation. Those captures are not used in this gallery.
-
-The [roadmap](ROADMAP.md) retains the rest of the asset, animation, mission,
-UI, replay and acceptance work. This release does not complete that backlog.
-
-## Verification and updates
-
-Source: `1b6c007a878085f4ff59a74e7d47e8124fb6d688`.
-The ZIP is 679,198,814 bytes. SHA-256:
-`494b18c19f2a50c2f59bcf5543afdc6b66d996755de4d513fd70b69dd9f364f9`.
-
-All 4,453 archive files and CRCs were verified. The final package passed 25 native
-tests with no warnings or failures; 218 launcher tests passed. Rendered checks
-covered compact and standard layouts and three Data & Catalogs inspection states.
-Source and cooked-content inventories were reviewed and known private-file hashes
-were checked. The cooked asset containers are unchanged from the reviewed v0.44
-release. Customer logs, datasets and local catalogs are excluded; the featured GIF
-is separately authorized demonstration footage. The v0.44-to-v0.44.1 updater check
-passed, including preserved synthetic local files and a rendered restart, and that
-version was promoted. The v0.44.1-to-v0.44.2 installed upgrade passed payload checks, preserved synthetic local files and passed three native controls tests. The default updater now serves v0.44.2. Windows Application Control blocked the new unsigned launcher on this workstation at cold restart; cold-launch acceptance is not claimed.
-
-The Windows package is not publisher-signed. Keep Windows protections enabled
-and follow your organization's software policy. Release checksums identify the
-published archive; they are not a publisher signature.
-
-The historical v0.42.11-to-v0.44 upgrade check encountered transient HTTPS manifest timeouts; the installed
-game still started, and the next check succeeded. An initial null-renderer UI
-test failed; the corrected rendered test passed. This bounded check does not
-establish full profile preservation or interruption recovery. Back up local
-settings and aircraft before updating.
+Previously authorized user-recorded Flight Review footage from v0.44; retained unchanged.
+
+## KESTREL v0.44.4 - Flight Review, controls and presentation
+
+Package version: `v0.44.4-alpha`. Release tag: `v0.44.4-alpha.1`.
+See the [release page](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.4-alpha.1) for the exact source revision, archive checksum,
+package checks and remaining acceptance limits.
+
+- Open ArduPilot DataFlash BIN recordings in **Flight Review**. Tab expands or
+  minimizes controls; Escape opens the normal pause menu. Review telemetry,
+  switch cameras and toggle the trail. The simulator aircraft is hidden during
+  review to avoid a duplicate vehicle.
+- Flight Review includes detailed representative fixed-wing and rover visuals,
+  clearer controls, corrected FPV visibility and softer trails. Failed replacement
+  imports clear the previous recording, and status labels avoid missing-glyph boxes.
+- **Parts libraries** keep saved aircraft in their owning library. Transfer
+  libraries as JSON or XLSX and builds as `.build.json`. Paired transfers retain
+  library identity; conflicting imports are refused without overwriting files.
+  Removing a library warns about its saved builds.
+- Configure nine keyboard or digital-gamepad actions across two compact pages:
+  Map, camera tilt up/down, Restart, View, Arm/disarm, Mode, Low-light and Launch
+  point. Existing assignments take precedence over new defaults. This is not
+  complete axis or contextual-control rebinding.
+- Change compatible saved builds during Free Flight. The automatic desktop view
+  caps horizontal FOV at 100 degrees while preserving explicit user preferences;
+  the flight OSD uses smaller glyphs.
+- Modular character presentation, fitted pilot props, brighter framed previews,
+  menu music and navigation sounds improve the presentation. Generic effects
+  respect Master and Effects volume.
+- Inspect Mission Planner **QGC WPL 110** exports in **Data & Catalogs > Flight
+  files**. This is read-only inspection, not playable mission import or execution.
+  QGroundControl `.plan` files are not supported.
+
+Earlier features and release evidence remain in [CHANGELOG.md](CHANGELOG.md).
+[FEATURES.md](FEATURES.md) describes scope; [ROADMAP.md](ROADMAP.md) tracks unfinished work.
+
+## Download and start
+
+1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.4-alpha.1/KESTREL-alpha-win64.zip). The same release is available on
+   [GitHub](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.4-alpha.1)
+   and [Rotopter](https://git.rotopter.com/nschultz/Kestral/releases/tag/v0.44.4-alpha.1).
+2. Check SHA-256 against the release page or attached checksum, then extract the
+   entire ZIP into a new folder. Do not mix versions or run from inside the ZIP.
+3. Start **KESTREL.exe**, the player-facing launcher. Keep the extracted tree
+   intact; the nested game executable is not the normal entry point.
+4. Check input source, calibration and axis directions, then save. Choose a
+   starter aircraft in Work Bench and review controls before Free Flight.
+
+Windows binaries are unsigned. Windows or organization policy may block them.
+Checksums verify archive identity; they are not publisher signatures.
+Windows x64 and a modern discrete GPU are expected; exact minimum hardware
+performance and compatibility with every USB radio are not certified.
+
+## Updates and local data
+
+The current update channel serves **v0.44.4-alpha**. An isolated update from
+v0.44.2 passed all 4,456 payload hashes, preserved synthetic local files,
+started successfully after restart, and correctly reported current on a second
+check. This does not certify every user profile or Windows policy.
+
+The launcher checks the official GitHub-hosted update manifest. GitHub and
+Rotopter packages use the same updater channel. A versioned release link and
+GitHub Latest/default-updater promotion are separate steps: the release page
+records which upgrade checks have passed. The launcher downloads the version
+selected by the manifest and verifies its size and SHA-256 before installation.
+A published ZIP alone does not prove that an installed upgrade passed.
+
+Back up local settings and aircraft before updating. Local profiles and reports
+normally live under `Documents/KESTREL`; do not publish them accidentally.
+The public build includes the approved public terrain configuration. Streaming
+requires Internet access, provider availability, coverage and loading time.
+The offline Test Range is not an offline copy of the globe.
+
+## Known limits
+
+- Full rebinding and physical two-PC LAN acceptance remain incomplete;
+  experimental LAN is included.
+- Some dense settings rows still shorten long text. The character/equipment and
+  vehicle presentation is not a complete diversity or exact-hardware overhaul.
+- Raw GIS and point-cloud inputs need conversion; merely adding a reference
+  does not render customer 3D scenery. Customer layers, recordings and private
+  parts libraries are not bundled.
+- Configured weather is not live weather. Online street-address/POI search and
+  TAK/live-C2 integration are not included.
+- This alpha does not establish calibrated real-aircraft behavior, universal
+  component fit, whole-roadmap completion or production certification.
+
+## Historical gameplay images
+
+These existing images are from v0.42.11, not new v0.44.4 acceptance captures.
+
+![FPV view in KESTREL v0.42.11](media/v0.42.11/flight.png)
+
+Actual in-engine footage captured by a virtual pilot, not a manual-flight test.
+
+![Work Bench in KESTREL v0.42.11](media/v0.42.11/workbench.png)
+
+Inspect fitted components and saved aircraft. This older view does not establish
+real-world component fit or show the latest interface.
 
 ## Reports, privacy and credits
 
@@ -313,10 +123,7 @@ No live reporting endpoint is bundled. Reports remain local, normally under
 contain personal paths or locations. [Report issues](https://github.com/nbschultz97/kestrel/issues)
 with version, reproduction steps, expected and actual results. Never post tokens.
 
-Customer inventories, missions, datasets and personal profiles are not bundled.
-Generic data/catalog tools do not authorize redistribution of customer inputs.
-
-KESTREL is not open source. See the [Evaluation License](LICENSE.txt) and shipped
+KESTREL is not open source. See the [License](LICENSE.txt) and shipped
 third-party notices. Unreal Engine, Cesium and imagery, map, font, audio and asset
 providers retain their rights and attribution. For licensing contact
 [Ceradon Systems](mailto:nbschultz97@gmail.com). Older notes: [RELEASE_NOTES.md](RELEASE_NOTES.md).

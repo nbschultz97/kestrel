@@ -1,10 +1,10 @@
 {
-  "version": "v0.44.2-alpha",
-  "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.44.2-alpha.1/KESTREL-alpha-win64.zip",
-  "sha256": "bb296c0e8ea5c89753bdf67f8a7b4ce91261ae23154a42c65f7d019681bd57e5",
-  "size": 679200052,
+  "version": "v0.44.4-alpha",
+  "url": "https://github.com/nbschultz97/kestrel/releases/download/v0.44.4-alpha.1/KESTREL-alpha-win64.zip",
+  "sha256": "8dce244ce9c9808072aaca23cfa8a7adb98a23a61aa3a7c4042b8666dd966c58",
+  "size": 949279805,
   "minLauncherVersion": "1.0.0",
   "sourceRepo": "https://github.com/nbschultz97/ceradon-sim",
-  "sourceCommit": "b969778adf2d03f35d0bc6f9ccfc5d39508e9d88",
-  "notes": "Controls / Bindings fits compact windows, including Save/Cancel and the unsaved-changes dialog. Six existing actions; full rebinding remains unfinished. Unsigned Windows alpha."
+  "sourceCommit": "a62d0a79ad7de38be18335a5ca61af47ff775ac6",
+  "notes": "Flight Review, parts libraries, controls and character presentation improvements. Unsigned Windows release; see release notes for scope and limitations."
 }

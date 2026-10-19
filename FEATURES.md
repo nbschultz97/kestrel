@@ -1,5 +1,89 @@
 # KESTREL features and limits
 
+Version: v0.44.4, package `v0.44.4-alpha`, tag `v0.44.4-alpha.1`.
+Source: `a62d0a79ad7de38be18335a5ca61af47ff775ac6`.
+[README](README.md) links downloads; [CHANGELOG](CHANGELOG.md) records release
+history and evidence. Included features do not imply whole-roadmap completion.
+
+## Included in v0.44.4
+
+- Flight Review clears the previous recording before a failed replacement import,
+  avoids identifying custom firmware prefixes as standard vehicles, and explains
+  the difference between mission definitions and recorded flight logs.
+- Controls adds configurable Mode, Low-light and Launch-point actions, with two
+  compact pages and readable gamepad labels. Existing saved assignments take
+  precedence over added defaults. Keyboard axes and contextual replay bindings
+  are not yet fully configurable.
+- Human presentation uses modular character bodies and fitted pilot props.
+  Preview framing uses saved pose bounds, with brighter character thumbnails.
+  This is not a complete equipment or character-diversity overhaul.
+- Free Flight supports changing compatible saved builds during a session.
+- The automatic desktop view caps horizontal FOV at 100 degrees while preserving
+  explicit user preferences. The compact OSD uses smaller telemetry glyphs.
+
+- Parts libraries replace the inventory label. Work Bench lists only builds
+  belonging to the selected library; removing a library warns about its saved builds.
+- Import and export parts libraries as JSON or XLSX, and saved builds as
+  .build.json. Paired transfers retain library identity; conflicting imports
+  are refused without overwriting files. Copy creates a separate library.
+- XLSX import supports explicit part roles/categories, stable IDs and supported
+  unit headers. Values-only spreadsheets are required; arbitrary third-party
+  workbooks are not guaranteed compatible.
+- Free Flight search accepts typing reliably. Controller setup and binding
+  capture receive focus fixes, and compact settings labels no longer overlap.
+- Flight Review removes opaque trail markers and fades the glow near the camera.
+  Controls use a graphite panel with clearer button hierarchy and larger text;
+  they wrap in smaller windows. FPV hides gap and event markers.
+- Data & Catalog restores keyboard focus after form refreshes. Escape and Back
+  unwind the current form or confirmation before closing the panel, preserving
+  unsaved-draft protection.
+- Menus include original music and navigation, confirmation and back sounds.
+  Generic sound effects now respect both Master and Effects volume controls.
+- Local-scene fallback status no longer claims successful terrain streaming.
+
+- Fixed-wing and rover artwork, replay camera controls, preview corrections and
+  persistent terrain request caching are included.
+- Flight Review source-status labels use supported punctuation instead of
+  characters that could display as missing-glyph boxes.
+
+## File, hardware and service boundaries
+
+- ArduPilot SITL and Lua script execution are not available in this build; Flight Review plays recorded state.
+
+- Flight Review reads supported ArduPilot DataFlash BIN and KESTREL flight JSON;
+  recorded, planned and simulated data remain labeled separately. Representative
+  vehicle classification does not identify an exact airframe. Recorded FPV video,
+  measured rotor RPM and multi-vehicle timelines remain unavailable.
+- Mission Planner QGC WPL 110 inspection preserves commands and reference frames
+  without execution or playable import. QGroundControl `.plan` is unsupported.
+- Parts-library XLSX transfers require supported values-only tables and headers;
+  arbitrary third-party workbooks are not guaranteed compatible. Build transfers
+  require the matching library identity. Customer libraries stay local.
+- Nine keyboard/digital-gamepad actions are configurable; axes, contextual replay
+  controls and full USB-radio action assignment are not all rebindable. Calibration
+  and physical-device compatibility remain separate checks.
+- Display and window mode controls, saved OSD layouts and their existing draft/
+  save behavior remain. Some dense settings text still shortens at small widths.
+- Experimental LAN is included, but physical two-PC acceptance remains incomplete.
+- Streamed terrain needs provider access, coverage and network availability.
+  Cached requests do not provide an offline globe. Raw GIS/point-cloud references
+  are not automatically converted into rendered 3D layers; customer layers are
+  excluded from public packages. Status text does not prove imagery has loaded.
+- Weather is configured rather than live. Address/POI search and TAK/live-C2
+  integration are not included. Vehicle art and physics are not calibrated
+  real-hardware certification.
+- Binaries are unsigned. See the release page for exact-package checks and
+  observed Windows launch limitations. Download, runtime and installed-upgrade
+  acceptance are separate.
+
+<details>
+<summary>Historical feature descriptions and evidence through v0.44.2</summary>
+
+The following is retained history, not the current feature checklist. Where an
+older release calls a feature unfinished, the v0.44.4 descriptions above govern.
+
+# KESTREL features and limits
+
 Version: v0.44.2, package `v0.44.2-alpha`, tag `v0.44.2-alpha.1`,
 source `b969778adf2d03f35d0bc6f9ccfc5d39508e9d88`.
 This update fits the existing six-action Controls panel into small windows;
@@ -362,3 +446,5 @@ and remote artifact parity remain separate. Full OSD editing, full action
 rebinding and rotating lobby cards are not included as completed features.
 Consult [CHANGELOG](CHANGELOG.md) and [ROADMAP](ROADMAP.md) for the matching
 release record and unfinished work.
+
+</details>

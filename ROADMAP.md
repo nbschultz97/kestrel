@@ -1,5 +1,48 @@
 # KESTREL public roadmap
 
+Updated October 19, 2026. This records feature scope and remaining work, not a
+promise that every manual or hardware test has passed. Download and updater
+status are on the release page linked by [README](README.md).
+
+## v0.44.4 included scope
+
+- [x] BIN Flight Review, camera and telemetry controls, duplicate aircraft
+  suppression, clearer source labels and failed-import state cleanup.
+- [x] Representative fixed-wing and rover artwork, refined trails/FPV visibility,
+  modular character presentation and fitted pilot props.
+- [x] Read-only Mission Planner QGC WPL 110 inspection; no mission execution.
+- [x] Parts-library ownership, deletion warning, JSON/XLSX transfer and matching
+  saved-build transfer; compatible build switching in Free Flight.
+- [x] Nine configurable keyboard/digital-gamepad actions with migration preserving
+  explicit assignments, compact pages and saved-profile failure protection.
+- [x] Narrower automatic desktop FOV, compact OSD glyphs, menu audio and preview fixes.
+
+## Still unfinished or requiring broader acceptance
+
+- [ ] ArduPilot SITL and in-game Lua execution; Flight Review is playback, not firmware simulation.
+- [ ] Fallback 3D buildings and Earshot integration.
+- [ ] Full axis/context/USB-radio rebinding and broader physical-device testing.
+- [ ] Physical two-PC LAN, reconnect and host-loss acceptance.
+- [ ] Broader in-flight OSD readability and camera/vehicle combination review.
+- [ ] Complete character/equipment variety and exact-airframe presentation.
+- [ ] Customer raw GIS/point-cloud conversion and validated rendered customer
+  layers. Private customer inputs are not public-release content.
+- [ ] Playable external mission import, QGroundControl `.plan`, recorded FPV video
+  and multi-vehicle debrief. Current WPL support remains inspection only.
+- [ ] Address/POI search, live weather and TAK/live-C2 integration.
+- [ ] Broader updater interruption/recovery and user-profile preservation checks.
+
+Completed package and updater checks belong to their exact release artifact;
+source tests or historical builds do not establish acceptance of a new archive.
+
+<details>
+<summary>Historical roadmap checkpoints through v0.44</summary>
+
+These older checklists preserve what was known at each checkpoint. They do not
+override the current included/unfinished split above.
+
+# KESTREL public roadmap
+
 Updated October 8, 2026. This is a work/status plan, not a release announcement
 or delivery-date promise. [README](README.md) identifies downloadable builds;
 [FEATURES](FEATURES.md) describes capabilities and limits;
@@ -192,3 +235,5 @@ Evidence stays attached to its exact source, package and test scope. Tests from
 older archives remain historical. Private user content is never evidence to
 copy into public docs or artifacts. Dates and counts here are checkpoints, not
 an invitation to mark the rest of the roadmap complete.
+
+</details>

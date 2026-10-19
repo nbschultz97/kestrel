@@ -1,9 +1,69 @@
 # KESTREL changelog
 
-Updated October 13, 2026. This file distinguishes downloadable
+Updated October 19, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
+
+
+## KESTREL v0.44.4 - Flight Review, controls and presentation
+
+Published on GitHub and Rotopter. The default updater serves this version.
+Validation: 218 launcher checks, 31 packaged native checks, 12 reviewed UI
+captures, and an installed v0.44.2 upgrade with cold restart, payload verification,
+synthetic local-file preservation and a no-reinstall second check passed.
+
+Package version: `v0.44.4-alpha`; release tag: `v0.44.4-alpha.1`.
+Source: `a62d0a79ad7de38be18335a5ca61af47ff775ac6`.
+
+- Flight Review clears the previous recording before a failed replacement import,
+  avoids identifying custom firmware prefixes as standard vehicles, and explains
+  the difference between mission definitions and recorded flight logs.
+- Controls adds configurable Mode, Low-light and Launch-point actions, with two
+  compact pages and readable gamepad labels. Existing saved assignments take
+  precedence over added defaults. Keyboard axes and contextual replay bindings
+  are not yet fully configurable.
+- Human presentation uses modular character bodies and fitted pilot props.
+  Preview framing uses saved pose bounds, with brighter character thumbnails.
+  This is not a complete equipment or character-diversity overhaul.
+- Free Flight supports changing compatible saved builds during a session.
+- The automatic desktop view caps horizontal FOV at 100 degrees while preserving
+  explicit user preferences. The compact OSD uses smaller telemetry glyphs.
+
+- Parts libraries replace the inventory label. Work Bench lists only builds
+  belonging to the selected library; removing a library warns about its saved builds.
+- Import and export parts libraries as JSON or XLSX, and saved builds as
+  .build.json. Paired transfers retain library identity; conflicting imports
+  are refused without overwriting files. Copy creates a separate library.
+- XLSX import supports explicit part roles/categories, stable IDs and supported
+  unit headers. Values-only spreadsheets are required; arbitrary third-party
+  workbooks are not guaranteed compatible.
+- Free Flight search accepts typing reliably. Controller setup and binding
+  capture receive focus fixes, and compact settings labels no longer overlap.
+- Flight Review removes opaque trail markers and fades the glow near the camera.
+  Controls use a graphite panel with clearer button hierarchy and larger text;
+  they wrap in smaller windows. FPV hides gap and event markers.
+- Data & Catalog restores keyboard focus after form refreshes. Escape and Back
+  unwind the current form or confirmation before closing the panel, preserving
+  unsaved-draft protection.
+- Menus include original music and navigation, confirmation and back sounds.
+  Generic sound effects now respect both Master and Effects volume controls.
+- Local-scene fallback status no longer claims successful terrain streaming.
+
+- Fixed-wing and rover artwork, replay camera controls, preview corrections and
+  persistent terrain request caching are included.
+- Flight Review source-status labels use supported punctuation instead of
+  characters that could display as missing-glyph boxes.
+
+Mission Planner QGC WPL 110 inspection is read-only; playable mission import
+and QGroundControl `.plan` are unsupported. Full input rebinding, physical
+two-PC LAN acceptance and broader hardware/visual validation remain incomplete.
+Customer layers, recordings and private parts libraries are not bundled.
+Windows binaries are unsigned; security policies may block launch.
+
+The release page records exact archive hashes and completed package/upgrade
+checks. Historical candidate evidence is not substituted for this archive.
+
 
 ## KESTREL v0.44.2 - compact Controls panel
 
