@@ -54,6 +54,9 @@ Earlier features and release evidence remain in [CHANGELOG.md](CHANGELOG.md).
 
 ## Download and start
 
+GitHub downloads are available without signing in. The Rotopter host currently
+requires a signed-in account; both packages use the GitHub updater channel.
+
 1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.4-alpha.1/KESTREL-alpha-win64.zip). The same release is available on
    [GitHub](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.4-alpha.1)
    and [Rotopter](https://git.rotopter.com/nschultz/Kestral/releases/tag/v0.44.4-alpha.1).
