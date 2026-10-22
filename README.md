@@ -14,9 +14,10 @@ KESTREL is an Unreal Engine small-UAS flight simulator with a parts-based Work
 Bench, saved aircraft, FPV flight and Flight Review. This repository distributes
 the public Windows alpha; it does not distribute the private source repository.
 
-![Fixed-wing flight replay in KESTREL](media/v0.44/kestrel-fixed-wing-replay.gif)
+![FPV flight over photoreal San Francisco in KESTREL v0.45](media/v0.45/kestrel-v045-fpv-city.webp)
 
-Previously authorized user-recorded Flight Review footage from v0.44; retained unchanged.
+Recorded from the published v0.45.0 package: the aircraft flies a seeded cinematic route under
+KESTREL's own flight model, with the real OSD. [Watch the 42-second highlight reel](https://github.com/nbschultz97/kestrel/releases/tag/v0.45.0-alpha).
 
 ## KESTREL v0.45.0 - Flight Lab, saved areas and Mission Builder
 
@@ -41,8 +42,6 @@ package checks and remaining acceptance limits.
   blast. Items with no purpose were retired from the palette; old missions load.
 - New models for objectives, OPFOR target vehicles with destroyed versions,
   civilian cars, and SOF and support vehicles.
-
-![Saved areas in Data & Catalogs](media/v0.45/kestrel-saved-areas.png)
 
 Limits: saved-area imagery is public data and looks soft at very low altitude;
 building footprints are visual only, with estimated heights where OpenStreetMap
@@ -104,6 +103,19 @@ The offline Test Range is not an offline copy of the globe.
   TAK/live-C2 integration are not included.
 - This alpha does not establish calibrated real-aircraft behavior, universal
   component fit, whole-roadmap completion or production certification.
+
+## v0.45 footage
+
+All images below were captured from the published v0.45.0 package.
+
+![Low canyon pass in Monument Valley](media/v0.45/kestrel-v045-fpv-canyon.webp)
+
+| | |
+|---|---|
+| ![Diving between photoreal towers](media/v0.45/kestrel-v045-city.jpg) | ![Canyon flight at Monument Valley](media/v0.45/kestrel-v045-canyon.jpg) |
+| Photoreal city, 1080p | Canyon pass, 1080p |
+| ![Offline saved area built from public data](media/v0.45/kestrel-v045-saved-area.jpg) | ![Saved areas in Data & Catalogs](media/v0.45/kestrel-saved-areas.png) |
+| A saved area built in game from public elevation, imagery and OpenStreetMap buildings. It is softer than streamed photoreal tiles. | Data & Catalogs > Saved areas |
 
 ## Historical gameplay images
 

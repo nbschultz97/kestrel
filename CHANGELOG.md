@@ -1,14 +1,50 @@
 # KESTREL changelog
 
-Updated October 19, 2026. This file distinguishes downloadable
+Updated October 22, 2026. This file distinguishes downloadable
 releases from unreleased work. The updater manifest is separate from this document.
 See [README](README.md) for installation and [FEATURES](FEATURES.md) for capability
 limits. Older version-specific notes are retained in [RELEASE_NOTES](RELEASE_NOTES.md).
 
 
+## KESTREL v0.45.0 - Flight Lab, saved areas and Mission Builder
+
+Published on GitHub and Rotopter; GitHub Latest and the default updater serve this version.
+Source `3814987f4876f48e334ad54ca370c5c6cdeb4f5b`. ZIP 1,136,759,194 bytes,
+SHA-256 `725be80ceabdb307744aa2b5f9753e4e92de5079c53e54225e820ff5ab907b34`
+(verified from the public download). Before packaging: 455 native and 2,618
+repository checks passed. The packaged build launched on the release
+workstation, opened Flight Review in a streamed world and flew the cinematic
+capture route used for the README footage. An installed v0.44.4-to-v0.45.0
+upgrade has not yet been verified; the release page will record it.
+
+- **Flight Lab** combines Flight Review and Simulation in one place. Replay and
+  Simulation each have one Back button; only the hub closes to the main menu.
+- **Simulation** runs a local Lua script, unchanged, in native ArduPlane SITL
+  over streamed terrain, showing firmware messages, script errors and live
+  telemetry. You supply the SITL executable. Scripts, logs and results stay local.
+- **Saved areas** (Data & Catalogs > Saved areas) build offline terrain and
+  imagery for any location from public data and stream it like normal terrain,
+  with the same collision and ground placement. Sizes: 2, 5 or 10 km.
+- **Automatic local terrain**: when nothing streams under the launch point,
+  KESTREL builds a 4 km area from public data behind the loading screen and
+  flies there, instead of dropping you onto a flat floor.
+- **Mission Builder** no longer loses fields when you edit an existing mission,
+  saves back to the opened file, and adds undo (Ctrl+Z), duplicate (Ctrl+D),
+  stacked selection, objective reordering and a briefing field. Placed jammers
+  emit, and a strike destroys a jammer inside its blast. Six palette items with
+  no gameplay purpose were retired; existing missions that use them still load.
+- **New models** for objective markers, all seven OPFOR target vehicles plus
+  destroyed versions, civilian cars, and SOF and support vehicles.
+
+Limits: saved-area imagery is public data (USGS to about 2.4 m, NAIP 0.6 m near
+the centre in the US, Sentinel-2 10 m elsewhere) and looks soft at very low
+altitude. Building footprints come from OpenStreetMap, are visual only and use
+estimated heights where none are mapped. Terrain is generated before insertion,
+never swapped during flight. Windows binaries are unsigned.
+
 ## KESTREL v0.44.4 - Flight Review, controls and presentation
 
-Published on GitHub and Rotopter. The default updater serves this version.
+Published on GitHub and Rotopter. Superseded by v0.45.0 as the default update.
 Validation: 218 launcher checks, 31 packaged native checks, 12 reviewed UI
 captures, and an installed v0.44.2 upgrade with cold restart, payload verification,
 synthetic local-file preservation and a no-reinstall second check passed.

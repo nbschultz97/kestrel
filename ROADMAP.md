@@ -1,8 +1,19 @@
 # KESTREL public roadmap
 
-Updated October 19, 2026. This records feature scope and remaining work, not a
+Updated October 22, 2026. This records feature scope and remaining work, not a
 promise that every manual or hardware test has passed. Download and updater
 status are on the release page linked by [README](README.md).
+
+## v0.45.0 included scope
+
+- [x] Flight Lab: one entry for replay and simulation; local Lua in native
+  ArduPlane SITL over streamed terrain with live messages and telemetry.
+- [x] Saved areas: offline terrain and imagery from public data, US 0.6 m
+  detail, OpenStreetMap building footprints, offline use.
+- [x] Automatic local terrain where nothing streams, instead of a flat floor.
+- [x] Mission Builder: lossless editing, save to the opened file, undo,
+  duplicate, stacked selection, briefing; working jammers; purposeless items retired.
+- [x] New objective, OPFOR (with destroyed versions), civilian, SOF and support models.
 
 ## v0.44.4 included scope
 
@@ -19,8 +30,9 @@ status are on the release page linked by [README](README.md).
 
 ## Still unfinished or requiring broader acceptance
 
-- [ ] ArduPilot SITL and in-game Lua execution; Flight Review is playback, not firmware simulation.
-- [ ] Fallback 3D buildings and Earshot integration.
+- [ ] SITL beyond ArduPlane: copters, rovers, parameter and mission import, KESTREL-side dynamics.
+- [ ] Saved areas: trees and land cover, building roofs/materials, high-detail imagery outside the US.
+- [ ] Earshot RF visualization and prediction integration.
 - [ ] Full axis/context/USB-radio rebinding and broader physical-device testing.
 - [ ] Physical two-PC LAN, reconnect and host-loss acceptance.
 - [ ] Broader in-flight OSD readability and camera/vehicle combination review.

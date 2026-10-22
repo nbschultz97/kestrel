@@ -5,6 +5,49 @@ Source: `a62d0a79ad7de38be18335a5ca61af47ff775ac6`.
 [README](README.md) links downloads; [CHANGELOG](CHANGELOG.md) records release
 history and evidence. Included features do not imply whole-roadmap completion.
 
+## Included in v0.45.0
+
+### Flight Lab
+
+One entry for **Replay a flight** (ArduPilot DataFlash BIN or flight JSON) and
+**Run a simulation**. Simulation runs a local Lua script in native ArduPlane
+SITL over KESTREL's streamed terrain: terrain prepares automatically, the live
+view opens when ready, and firmware messages, script errors, airspeed,
+groundspeed, altitude, climb and heading are shown. Selecting a script never
+runs it; each run uses fresh working files and stops cleanly on Stop, Back or
+exit. You supply the SITL executable. ArduPlane dynamics are ArduPilot's own;
+KESTREL does not claim universal SITL or parameter/mission import compatibility.
+
+### Saved areas and local terrain
+
+**Data & Catalogs > Saved areas** builds an offline area around a latitude and
+longitude (2, 5 or 10 km wide) and keeps it on this PC:
+
+- Elevation: AWS Terrain Tiles (USGS 3DEP about 10 m in the US, about 30 m
+  elsewhere), converted to WGS84 with the bundled EGM96 geoid.
+- Imagery: USGS aerial imagery in the US, with per-tile Sentinel-2 cloudless
+  2016 fallback where USGS is blank; Sentinel-2 elsewhere. Optional 0.6 m USDA
+  NAIP detail over the inner 1.2 km in the US.
+- Buildings: OpenStreetMap footprints where mapped, extruded for visuals only.
+
+Saved areas stream through the same terrain system as online tiles, so ground
+collision, calibration and insertion behave the same, and they work offline.
+Where online terrain has no coverage, a saved area is used first; if none
+exists, KESTREL builds a small one automatically before falling back to the
+flat floor. Licensed streaming imagery is never cached. Attribution for each
+source is shown in game. Build time depends on size and connection (seconds for
+a small area, several minutes with US detail).
+
+### Mission Builder
+
+Editing an existing mission keeps its loadout, brief, annotations, jammers,
+per-objective settings and unknown fields, and saves back to the file you
+opened. Adds Ctrl+Z undo, Ctrl+D duplicate, stacked selection, objective
+reordering and a briefing field. Placed hostile jammers become real jammer
+emitters, and strikes destroy a jammer whose antenna is inside the blast.
+Objective markers, OPFOR target vehicles (with destroyed versions), civilian
+cars and SOF/support vehicles use new models.
+
 ## Included in v0.44.4
 
 - Flight Review clears the previous recording before a failed replacement import,

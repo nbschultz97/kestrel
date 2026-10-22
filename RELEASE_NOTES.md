@@ -1,3 +1,15 @@
+## KESTREL v0.45.0 - Flight Lab, saved areas and Mission Builder
+
+Package version: `v0.45.0-alpha`; release tag: `v0.45.0-alpha`.
+Source `3814987f4876f48e334ad54ca370c5c6cdeb4f5b`. ZIP 1,136,759,194 bytes,
+SHA-256 `725be80ceabdb307744aa2b5f9753e4e92de5079c53e54225e820ff5ab907b34`
+(verified from the public download). Before packaging: 455 native and 2,618
+repository checks passed. The packaged build launched on the release
+workstation, opened Flight Review in a streamed world and flew the cinematic
+capture route used for the README footage. An installed v0.44.4-to-v0.45.0
+upgrade has not yet been verified; the release page will record it.
+See [CHANGELOG](CHANGELOG.md) for the feature list and limits.
+
 ## KESTREL v0.44.2 - compact Controls panel
 
 Package version: `v0.44.2-alpha`; release tag: `v0.44.2-alpha.1`.
