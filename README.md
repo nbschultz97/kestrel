@@ -6,7 +6,7 @@
 
 Windows x64 · Alpha · Proprietary software
 
-[Download v0.44.4](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.4-alpha.1) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Download v0.45.0](https://github.com/nbschultz97/kestrel/releases/tag/v0.45.0-alpha) · [Features](FEATURES.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
 </div>
 
@@ -18,36 +18,36 @@ the public Windows alpha; it does not distribute the private source repository.
 
 Previously authorized user-recorded Flight Review footage from v0.44; retained unchanged.
 
-## KESTREL v0.44.4 - Flight Review, controls and presentation
+## KESTREL v0.45.0 - Flight Lab, saved areas and Mission Builder
 
-Package version: `v0.44.4-alpha`. Release tag: `v0.44.4-alpha.1`.
-See the [release page](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.4-alpha.1) for the exact source revision, archive checksum,
+Package version: `v0.45.0-alpha`. Release tag: `v0.45.0-alpha`.
+See the [release page](https://github.com/nbschultz97/kestrel/releases/tag/v0.45.0-alpha) for the exact source revision, archive checksum,
 package checks and remaining acceptance limits.
 
-- Open ArduPilot DataFlash BIN recordings in **Flight Review**. Tab expands or
-  minimizes controls; Escape opens the normal pause menu. Review telemetry,
-  switch cameras and toggle the trail. The simulator aircraft is hidden during
-  review to avoid a duplicate vehicle.
-- Flight Review includes detailed representative fixed-wing and rover visuals,
-  clearer controls, corrected FPV visibility and softer trails. Failed replacement
-  imports clear the previous recording, and status labels avoid missing-glyph boxes.
-- **Parts libraries** keep saved aircraft in their owning library. Transfer
-  libraries as JSON or XLSX and builds as `.build.json`. Paired transfers retain
-  library identity; conflicting imports are refused without overwriting files.
-  Removing a library warns about its saved builds.
-- Configure nine keyboard or digital-gamepad actions across two compact pages:
-  Map, camera tilt up/down, Restart, View, Arm/disarm, Mode, Low-light and Launch
-  point. Existing assignments take precedence over new defaults. This is not
-  complete axis or contextual-control rebinding.
-- Change compatible saved builds during Free Flight. The automatic desktop view
-  caps horizontal FOV at 100 degrees while preserving explicit user preferences;
-  the flight OSD uses smaller glyphs.
-- Modular character presentation, fitted pilot props, brighter framed previews,
-  menu music and navigation sounds improve the presentation. Generic effects
-  respect Master and Effects volume.
-- Inspect Mission Planner **QGC WPL 110** exports in **Data & Catalogs > Flight
-  files**. This is read-only inspection, not playable mission import or execution.
-  QGroundControl `.plan` files are not supported.
+- **Flight Lab** is one place to replay recorded flights and run simulations.
+  Simulation runs a local Lua script, unchanged, in native ArduPlane SITL over
+  streamed terrain with live firmware messages and telemetry. You supply the
+  SITL executable; scripts and results stay on your computer.
+- **Saved areas** (Data & Catalogs) build offline terrain and imagery for any
+  location from public data: about 10 m elevation in the US (30 m elsewhere),
+  USGS or Sentinel-2 imagery, optional 0.6 m US detail near the centre and
+  OpenStreetMap building footprints where mapped. They load without a
+  connection and fill in where streamed terrain has no coverage.
+- **No more flat floor**: when nothing streams under the launch point, KESTREL
+  builds a small local area on the spot (usually under a minute) and flies there.
+- **Mission Builder** keeps everything in a mission you edit and saves back to
+  the file you opened. Undo (Ctrl+Z), duplicate (Ctrl+D), stacked selection and a
+  briefing field. Placed jammers emit, and a strike destroys a jammer inside its
+  blast. Items with no purpose were retired from the palette; old missions load.
+- New models for objectives, OPFOR target vehicles with destroyed versions,
+  civilian cars, and SOF and support vehicles.
+
+![Saved areas in Data & Catalogs](media/v0.45/kestrel-saved-areas.png)
+
+Limits: saved-area imagery is public data and looks soft at very low altitude;
+building footprints are visual only, with estimated heights where OpenStreetMap
+has none. Two-PC LAN, full input rebinding and calibrated aircraft performance
+remain incomplete. Windows binaries are unsigned.
 
 Earlier features and release evidence remain in [CHANGELOG.md](CHANGELOG.md).
 [FEATURES.md](FEATURES.md) describes scope; [ROADMAP.md](ROADMAP.md) tracks unfinished work.
@@ -57,9 +57,9 @@ Earlier features and release evidence remain in [CHANGELOG.md](CHANGELOG.md).
 GitHub downloads are available without signing in. The Rotopter host currently
 requires a signed-in account; both packages use the GitHub updater channel.
 
-1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.44.4-alpha.1/KESTREL-alpha-win64.zip). The same release is available on
-   [GitHub](https://github.com/nbschultz97/kestrel/releases/tag/v0.44.4-alpha.1)
-   and [Rotopter](https://git.rotopter.com/nschultz/Kestral/releases/tag/v0.44.4-alpha.1).
+1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/download/v0.45.0-alpha/KESTREL-alpha-win64.zip). The same release is available on
+   [GitHub](https://github.com/nbschultz97/kestrel/releases/tag/v0.45.0-alpha)
+   and [Rotopter](https://git.rotopter.com/nschultz/Kestral/releases/tag/v0.45.0-alpha).
 2. Check SHA-256 against the release page or attached checksum, then extract the
    entire ZIP into a new folder. Do not mix versions or run from inside the ZIP.
 3. Start **KESTREL.exe**, the player-facing launcher. Keep the extracted tree
@@ -74,10 +74,9 @@ performance and compatibility with every USB radio are not certified.
 
 ## Updates and local data
 
-The current update channel serves **v0.44.4-alpha**. An isolated update from
-v0.44.2 passed all 4,456 payload hashes, preserved synthetic local files,
-started successfully after restart, and correctly reported current on a second
-check. This does not certify every user profile or Windows policy.
+The current update channel serves **v0.45.0-alpha**. Installed builds are
+offered it on their next launch; the release page records the upgrade checks
+that have passed. This does not certify every user profile or Windows policy.
 
 The launcher checks the official GitHub-hosted update manifest. GitHub and
 Rotopter packages use the same updater channel. A versioned release link and
@@ -108,7 +107,7 @@ The offline Test Range is not an offline copy of the globe.
 
 ## Historical gameplay images
 
-These existing images are from v0.42.11, not new v0.44.4 acceptance captures.
+These existing images are from v0.42.11, not new v0.45.0 acceptance captures.
 
 ![FPV view in KESTREL v0.42.11](media/v0.42.11/flight.png)
 
