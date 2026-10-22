@@ -119,7 +119,7 @@ All images below were captured from the published v0.45.0 package.
 | | |
 |---|---|
 | ![Diving between photoreal towers](media/v0.45/kestrel-v045-city.jpg) | ![Canyon flight at Monument Valley](media/v0.45/kestrel-v045-canyon.jpg) |
-| Photoreal city, 1080p | Canyon pass, 1080p |
+| Photoreal city, 720p | Canyon pass, 720p |
 | ![Offline saved area built from public data](media/v0.45/kestrel-v045-saved-area.jpg) | ![Saved areas in Data & Catalogs](media/v0.45/kestrel-saved-areas.png) |
 | A saved area built in game from public elevation, imagery and OpenStreetMap buildings. It is softer than streamed photoreal tiles. | Data & Catalogs > Saved areas |
 | ![Recon pass over the new OPFOR column](media/v0.45/kestrel-v045-recon-pass.jpg) | ![All 32 new v0.45 models](media/v0.45/kestrel-v045-all-models.jpg) |
