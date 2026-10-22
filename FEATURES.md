@@ -45,8 +45,10 @@ per-objective settings and unknown fields, and saves back to the file you
 opened. Adds Ctrl+Z undo, Ctrl+D duplicate, stacked selection, objective
 reordering and a briefing field. Placed hostile jammers become real jammer
 emitters, and strikes destroy a jammer whose antenna is inside the blast.
-Objective markers, OPFOR target vehicles (with destroyed versions), civilian
-cars and SOF/support vehicles use new models.
+32 new models replace the earlier box meshes: the seven OPFOR target vehicles
+with destroyed versions, an FPV drone-team position, radar trailer, EW jammer
+mast, fuel point, civilian cars, SOF and support vehicles, and landing zone,
+observation tower and recon terminal markers.
 
 ## Included in v0.44.4
 

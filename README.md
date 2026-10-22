@@ -40,8 +40,14 @@ package checks and remaining acceptance limits.
   the file you opened. Undo (Ctrl+Z), duplicate (Ctrl+D), stacked selection and a
   briefing field. Placed jammers emit, and a strike destroys a jammer inside its
   blast. Items with no purpose were retired from the palette; old missions load.
-- New models for objectives, OPFOR target vehicles with destroyed versions,
-  civilian cars, and SOF and support vehicles.
+- **New mission vehicles and positions**: 32 new models. All seven OPFOR target
+  vehicles (armed and cargo technicals, troop transport, fuel bowser, mobile
+  jammer, command van, improvised armour truck) each with a destroyed version,
+  an FPV drone-team position, radar trailer, EW jammer mast and fuel point,
+  civilian cars, SOF and support vehicles, and new objective markers (landing
+  zone, observation tower, recon terminal).
+
+![New OPFOR and mission models in KESTREL v0.45](media/v0.45/kestrel-v045-mission-vehicles.jpg)
 
 Limits: saved-area imagery is public data and looks soft at very low altitude;
 building footprints are visual only, with estimated heights where OpenStreetMap
@@ -116,6 +122,8 @@ All images below were captured from the published v0.45.0 package.
 | Photoreal city, 1080p | Canyon pass, 1080p |
 | ![Offline saved area built from public data](media/v0.45/kestrel-v045-saved-area.jpg) | ![Saved areas in Data & Catalogs](media/v0.45/kestrel-saved-areas.png) |
 | A saved area built in game from public elevation, imagery and OpenStreetMap buildings. It is softer than streamed photoreal tiles. | Data & Catalogs > Saved areas |
+| ![Recon pass over the new OPFOR column](media/v0.45/kestrel-v045-recon-pass.jpg) | ![All 32 new v0.45 models](media/v0.45/kestrel-v045-all-models.jpg) |
+| In game: a recon pass over the new OPFOR column at Monument Valley | All 32 new models (renders) |
 
 ## Historical gameplay images
 

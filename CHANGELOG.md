@@ -33,8 +33,12 @@ upgrade has not yet been verified; the release page will record it.
   stacked selection, objective reordering and a briefing field. Placed jammers
   emit, and a strike destroys a jammer inside its blast. Six palette items with
   no gameplay purpose were retired; existing missions that use them still load.
-- **New models** for objective markers, all seven OPFOR target vehicles plus
-  destroyed versions, civilian cars, and SOF and support vehicles.
+- **32 new models**: all seven OPFOR target vehicles (armed and cargo technicals,
+  troop transport, fuel bowser, mobile jammer, command van, improvised armour
+  truck) each with a destroyed version; an FPV drone-team position; radar
+  trailer, EW jammer mast and fuel point; civilian cars; SOF and support
+  vehicles; landing zone, observation tower and recon terminal markers. Each
+  model has four levels of detail.
 
 Limits: saved-area imagery is public data (USGS to about 2.4 m, NAIP 0.6 m near
 the centre in the US, Sentinel-2 10 m elsewhere) and looks soft at very low
