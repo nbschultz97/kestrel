@@ -31,7 +31,7 @@ account.
 
 ![First-person KESTREL run westbound across Monument Valley with the HD goggle OSD](media/v0.46/kestrel-hero-monument-valley.webp)
 
-<sub>Monument Valley, westbound at about 50 m. KESTREL's virtual pilot flies an authored line under the real flight model. Recorded at 1920x1080 in the v0.45.1 test build, whose HD OSD ships in v0.46.</sub>
+<sub>Monument Valley, westbound, climbing from 20 to 70 m. KESTREL's virtual pilot flies an authored line under the real flight model. Recorded at 1920x1080 in the v0.45.1 test build, whose HD OSD ships in v0.46.</sub>
 
 ## Feature tour
 
