@@ -153,6 +153,29 @@ Full notes, checksums and test status are on the
 [v0.46.0 release page](https://github.com/nbschultz97/kestrel/releases/tag/v0.46.0-alpha).
 Older versions are in [CHANGELOG.md](CHANGELOG.md).
 
+## Coming next (in development, not in v0.46)
+
+These are being built now and are **not in the current download**. Each one
+ships in a numbered release with its own notes.
+
+- **Works with your real ATAK.** KESTREL sends Cursor-on-Target over your
+  network, so your simulated drone, marks, waypoints and target grids show up on
+  your own ATAK, WinTAK or iTAK device. Points you drop in ATAK can become
+  waypoints in the sim.
+- **A map in your pocket.** Pan and zoom the flight map, measure distance and
+  azimuth in metres and mils, drop marks with their MGRS grid, and plan your own
+  waypoints. It shows your position while your GPS is healthy.
+- **Real and Training modes.** Real keeps the goggle view one-to-one with what
+  your flight controller can draw. Training adds a minimap, a waypoint compass
+  strip and 3D waypoint markers. Train with aids, qualify without them.
+- **U.S. military units by default.** MGRS, metres, mils, feet and knots, each
+  changeable in Settings.
+
+Planned after that: **land navigation**, with a topographic map, the local
+magnetic declination, GPS-denied flying where the position degrades as real
+receivers do, and find-and-report-the-target-grid missions scored by error in
+metres.
+
 ## Download and start
 
 1. [Download KESTREL-alpha-win64.zip](https://github.com/nbschultz97/kestrel/releases/latest/download/KESTREL-alpha-win64.zip)
