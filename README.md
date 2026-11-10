@@ -29,9 +29,13 @@ real task, and get a record out the other end.** It is built in Unreal Engine 5
 and ships as one Windows download. You don't need an engine install or an
 account.
 
-![First-person KESTREL run westbound across Monument Valley with the HD goggle OSD](media/v0.46/kestrel-hero-monument-valley.webp)
+![First-person view of a fiber run over a city street, with the HD goggle display showing FIB 4.8K, meters of fiber left on the reel, next to VIDEO 50 MBPS](media/v0.46/stills/02-fiber-fpv-fib-readout.jpg)
 
-<sub>Monument Valley, westbound, climbing from 20 to 70 m. KESTREL's virtual pilot flies an authored line under the real flight model. Recorded at 1920x1080 in the v0.45.1 test build, whose HD OSD ships in v0.46.</sub>
+<sub>Fiber run, FPV with the HD OSD: `FIB 4.8K` (meters left on the reel) next to `VIDEO 50 MBPS`. Fiber links have no RF fade.</sub>
+
+![KESTREL main menu with the stoop-chevron mark and the menu list: Free Flight, Missions, LAN Multiplayer, Records, Flight Lab, Work Bench, Data and Catalogs, Settings, Quit](media/v0.46/stills/09-main-menu-logo.jpg)
+
+<sub>Main menu with the KESTREL stoop-chevron mark.</sub>
 
 ## Feature tour
 
@@ -45,7 +49,13 @@ libraries import and export as JSON or XLSX. **New in v0.46:** a fiber reel
 slot with 5, 10 and 20 km reels. Bigger reels need bigger airframes (7", 10" and
 13" props).
 
-![Work Bench with a valid 5-inch build and predicted performance](media/v0.46/workbench.jpg)
+![Work Bench on a valid 5-inch build, showing all-up weight, thrust, thrust-to-weight, hover percent, hover current and time, cost and the scheduled tune](media/v0.46/stills/10-workbench-specs.jpg)
+
+<sub>Work Bench, valid 5" build: AUW, thrust, T:W, hover %, hover current and time, cost, and the scheduled tune.</sub>
+
+![Work Bench Fiber Reel slot with the 5 km reel fitted and compatible, and the 10 km and 20 km reels marked not compatible for this frame](media/v0.46/stills/01-fiber-workbench.jpg)
+
+<sub>Work Bench, Fiber Reel slot, on a valid 8" fiber build (RJX Mark4 8" frame, XING 2806.5 1300KV motors, HQ 8x4x3 props, 6S 2900 mAh pack) with the 5 km reel fitted and compatible: 2506 g all-up, 4.7:1 thrust-to-weight, 5:49 hover, Save enabled. The 10 and 20 km reels are marked NOT COMPATIBLE for this frame.</sub>
 
 ### Flight: it flies like the build
 
@@ -58,6 +68,10 @@ slot with 5, 10 and 20 km reels. Bigger reels need bigger airframes (7", 10" and
   16:9 picture, a 53x20 grid and smooth glyphs. Analog cameras keep the 4:3
   MAX7456 look. A lost video feed breaks up the way goggles do. An OSD layout
   editor moves the elements, including the horizon and compass bar.
+
+![First-person KESTREL run westbound across Monument Valley with the HD goggle OSD](media/v0.46/kestrel-hero-monument-valley.webp)
+
+<sub>Monument Valley, westbound, climbing from 20 to 70 m. KESTREL's virtual pilot flies an authored line under the real flight model. Recorded at 1920x1080 in the v0.45.1 test build, whose HD OSD ships in v0.46.</sub>
 
 ![The same Monument Valley line through an analog 4:3 feed and the HD digital OSD](media/v0.46/goggles-analog-vs-hd.jpg)
 
@@ -74,6 +88,10 @@ slot with 5, 10 and 20 km reels. Bigger reels need bigger airframes (7", 10" and
   roofs, building collision and water. If you land on water, you ditch.
 
 ![First-person view over San Francisco's Telegraph Hill with downtown ahead](media/v0.46/world-san-francisco.jpg)
+
+![Free Flight location search for Los Angeles showing six matches and the pin on a map of the US West Coast](media/v0.46/stills/12-location-search.jpg)
+
+<sub>Free Flight location search: offline city lookup ("Los Angeles", 6 matches) and the pin on the map.</sub>
 
 ### RF and EW
 
@@ -92,6 +110,15 @@ slot with 5, 10 and 20 km reels. Bigger reels need bigger airframes (7", 10" and
   aircraft goes to failsafe. The OSD shows fiber left (`FIB 7.4K`) and flashes
   FIBER CUT.
 
+![Chase camera view of a quad flying over a city street with the fiber strand trailing behind it as a thin white line](media/v0.46/stills/03-fiber-strand-chase.jpg)
+
+<sub>Chase cam on the Santa Monica pier run. The fiber strand stays visible behind the quad as it pays out.</sub>
+
+| | |
+|---|---|
+| ![Analog goggle view with FIB CUT on the display and the video breaking up in horizontal bands](media/v0.46/stills/04-fiber-cut-analog-breakup.jpg) | ![Analog goggle view a second after the cut, showing NO RF LINK - CHECK TRANSMITTER and DISARMED](media/v0.46/stills/04b-fiber-cut-failsafe.jpg) |
+| Analog fiber build flown too fast for the reel. `FIB CUT` appears and the video breaks up as the strand parts. | A second after the cut: `NO RF LINK - CHECK TRANSMITTER`, failsafe disarm, and the last frame fading out. |
+
 ### Missions: build, brief, fly
 
 Mission Builder places targets, jammers and objectives over a real area, writes
@@ -101,6 +128,15 @@ version, plus an FPV drone-team position, a radar, an EW mast, a fuel point, and
 civilian, SOF and support vehicles. Wheeled vehicles stay on drivable roads.
 Fly recon, ISR overwatch or a strike run, and the Records page keeps the
 result.
+
+![Pittsburgh mission brief card with friendly and hostile MIL-STD-2525 symbols over a satellite map, waypoints, and the recon and strike tasking](media/v0.46/stills/13-mission-brief-card.jpg)
+
+<sub>Pittsburgh mission brief card: MIL-STD-2525 friendly and hostile symbols, waypoints, and the recon/strike tasking.</sub>
+
+| | |
+|---|---|
+| <img src="media/v0.46/stills/05-missions-preview-map.jpg" alt="Missions screen with the North Shore Interdiction card selected, showing objectives, target picture, launch points and the area preview map" width="300"> | ![Mission loading card with RF coverage colours over satellite imagery, a waypoint, the mission brief and a loading progress bar](media/v0.46/stills/09b-loading-card.jpg) |
+| Missions screen, selected mission card (North Shore Interdiction, Pittsburgh): objectives, target picture, launch points, and the AO preview map. | Mission loading card: RF coverage over satellite imagery, waypoint, mission brief, and a loading progress bar. |
 
 | | |
 |---|---|
@@ -121,6 +157,10 @@ result.
   with live firmware messages and telemetry. You supply the SITL executable.
   Scripts, logs and results stay on your computer.
 
+![Flight Review replay screen with the ground track over satellite imagery, a timeline with event ticks, the sample readout and the event list](media/v0.46/stills/17-flight-review-map.jpg)
+
+<sub>Flight Review: replay ground track, timeline with event ticks, sample readout, and the event list.</sub>
+
 ### Controllers
 
 Keyboard, gamepad or an RC radio in USB-joystick mode. Channels CH1-CH8 are
@@ -130,7 +170,9 @@ every flight control, and the reset switch can't fire in flight by accident.
 **Settings > Controller > DIAGNOSTICS** shows every channel and switch the game
 sees, with plain findings and a COPY REPORT button.
 
-![Controller setup](media/v0.46/controller.jpg)
+![Controller Diagnostics with no radio connected: per-channel bars, a USB dropout counter, plain-language findings and a Copy Report button](media/v0.46/stills/08-controller-diagnostics.jpg)
+
+<sub>Controller Diagnostics with no radio connected: per-channel bars, a USB dropout counter, plain-language findings, and Copy Report.</sub>
 
 ### LAN multiplayer (experimental)
 
